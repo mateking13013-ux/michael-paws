@@ -5,7 +5,7 @@
 <header class="header">
   <div class="header-container">
     <a href="/" class="logo">
-      <img src="/images/logo.png" alt="Santa's Little Wieners Logo" class="logo-img">
+      <img src="/images/logoKennel.png" alt="Savanna Kennels Logo" class="logo-img">
     </a>
 
     <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
@@ -20,7 +20,6 @@
       <ul>
         <li><a href="/">Home</a></li>
         <li><a href="/breeds">Our Breeds</a></li>
-        <li><a href="/contact">Contact Us</a></li>
         <li><a href="/about-us">About Us</a></li>
         <li><a href="/testimonials">Testimonials</a></li>
         <li><a href="/books">Books</a></li>
@@ -38,6 +37,8 @@
         </li>
       </ul>
     </nav>
+
+    <a href="/contact" class="header-cta">Contact Us</a>
   </div>
 </header>
 
@@ -100,16 +101,16 @@
     position: sticky;
     top: 0;
     z-index: 100;
+    width: 100%;
   }
 
   .header-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1.25rem 2rem;
+    width: 100%;
+    padding: 1rem 2rem;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 3rem;
+    justify-content: space-between;
+    gap: 2rem;
   }
 
   .logo {
@@ -118,6 +119,7 @@
     gap: 0.75rem;
     text-decoration: none;
     color: var(--color-primary, #B22222);
+    flex-shrink: 0;
   }
 
   .logo-img {
@@ -129,15 +131,16 @@
   .nav-menu {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    flex: 1;
+    justify-content: center;
   }
 
   .nav-menu > ul {
     display: flex;
     list-style: none;
     margin: 0;
-    padding: 0 1.5rem;
-    gap: 2.5rem;
+    padding: 0;
+    gap: 2rem;
   }
 
   .nav-menu a {
@@ -152,7 +155,7 @@
     padding: 0.5rem 0;
   }
 
-  .nav-menu a::before {
+  .nav-menu > ul > li > a::before {
     content: '';
     position: absolute;
     bottom: 0;
@@ -167,8 +170,31 @@
     color: var(--color-primary, #B22222);
   }
 
-  .nav-menu a:hover::before {
+  .nav-menu > ul > li > a:hover::before {
     width: 100%;
+  }
+
+  /* Header CTA Button */
+  .header-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #095136;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: background 0.3s ease;
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+
+  .header-cta:hover {
+    background: #B22222;
   }
 
   /* Dropdown Styles */
@@ -294,6 +320,16 @@
     display: block;
   }
 
+  @media (max-width: 1100px) {
+    .nav-menu > ul {
+      gap: 1.5rem;
+    }
+
+    .header-container {
+      gap: 1.5rem;
+    }
+  }
+
   @media (max-width: 900px) {
     .menu-toggle {
       display: flex;
@@ -301,7 +337,6 @@
 
     .header-container {
       padding: 1rem 1.5rem;
-      justify-content: space-between;
     }
 
     .nav-menu {
@@ -316,6 +351,7 @@
       box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
       transition: right 0.3s ease;
       z-index: 99;
+      justify-content: flex-start;
     }
 
     .nav-menu.active {
@@ -333,8 +369,17 @@
       font-size: 0.95rem;
     }
 
+    .nav-menu > ul > li > a::before {
+      display: none;
+    }
+
     .logo-img {
       height: 50px;
+    }
+
+    .header-cta {
+      padding: 0.6rem 1rem;
+      font-size: 0.8rem;
     }
 
     .dropdown-menu {
@@ -362,6 +407,22 @@
     .dropdown-menu a {
       padding: 0.5rem 1.25rem;
       font-size: 0.9rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .header-container {
+      padding: 0.75rem 1rem;
+      gap: 0.75rem;
+    }
+
+    .logo-img {
+      height: 40px;
+    }
+
+    .header-cta {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.75rem;
     }
   }
 </style>
