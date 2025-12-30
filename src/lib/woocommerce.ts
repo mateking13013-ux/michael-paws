@@ -40,6 +40,57 @@ export interface Puppy {
   imageAlt: string;
   breed: string;
   breedSlug: string;
+  description: string;
+}
+
+// Generate a unique puppy description based on name and breed
+function generatePuppyDescription(name: string, breed: string): string {
+  // Extract just the name without gender
+  const puppyName = name.replace(/\s*\((Male|Female)\)\s*/i, '').trim();
+  const isMale = name.toLowerCase().includes('male') && !name.toLowerCase().includes('female');
+  const isFemale = name.toLowerCase().includes('female');
+
+  const pronoun = isFemale ? 'she' : isMale ? 'he' : 'they';
+  const possessive = isFemale ? 'her' : isMale ? 'his' : 'their';
+  const objectPronoun = isFemale ? 'her' : isMale ? 'him' : 'them';
+  const genderWord = isFemale ? 'girl' : isMale ? 'boy' : 'puppy';
+  const isAre = isFemale || isMale ? 'is' : 'are';
+
+  // Clean breed name
+  const cleanBreed = breed.replace(' Puppies', '').replace(' Dog', '').trim();
+
+  // Create a hash from name for consistent but varied descriptions
+  const nameHash = puppyName.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
+
+  const introductions = [
+    `Meet ${puppyName}, an absolutely adorable ${cleanBreed} ${genderWord} who ${isAre} ready to bring endless love and joy into your home.`,
+    `Say hello to ${puppyName}, a beautiful ${cleanBreed} ${genderWord} with a wonderful personality that will capture your heart from the moment you meet ${objectPronoun}.`,
+    `Introducing ${puppyName}, a charming ${cleanBreed} ${genderWord} who ${isAre} looking for ${possessive} forever family to share a lifetime of happiness with.`,
+    `${puppyName} is a gorgeous ${cleanBreed} ${genderWord} with an irresistible personality and a heart full of love just waiting to be shared with you.`,
+    `Welcome ${puppyName}, a delightful ${cleanBreed} ${genderWord} who ${isAre} eager to become your new best friend and loyal companion for life.`,
+  ];
+
+  const personalities = [
+    `${pronoun.charAt(0).toUpperCase() + pronoun.slice(1)} has a playful spirit combined with a gentle, affectionate nature that makes ${objectPronoun} perfect for families of all sizes.`,
+    `With ${possessive} sweet temperament and curious nature, ${puppyName} loves exploring new surroundings and making friends wherever ${pronoun} go${isFemale || isMale ? 'es' : ''}.`,
+    `${puppyName} ${isAre} incredibly smart and eager to please, making training a breeze while ${possessive} loving personality shines through in everything ${pronoun} do${isFemale || isMale ? 'es' : ''}.`,
+    `This little sweetheart has a calm yet playful demeanor, equally happy cuddling on the couch or enjoying an adventure outdoors with ${possessive} family.`,
+    `${pronoun.charAt(0).toUpperCase() + pronoun.slice(1)} ${isAre} well-socialized, confident, and has the most endearing way of showing ${possessive} affection to everyone ${pronoun} meet${isFemale || isMale ? 's' : ''}.`,
+  ];
+
+  const closings = [
+    `${puppyName} comes with all vaccinations, health guarantee, and a starter kit to help ${objectPronoun} settle into ${possessive} new home seamlessly.`,
+    `Raised with love and care, ${puppyName} ${isAre} vet-checked, healthy, and ready to start ${possessive} new chapter with a loving family like yours.`,
+    `Don't miss the chance to welcome ${puppyName} into your life – ${pronoun} ${isAre} ready to fill your days with unconditional love and unforgettable moments.`,
+    `${puppyName} ${isAre} waiting to meet you and begin a beautiful journey together. Contact us today to make ${objectPronoun} part of your family.`,
+    `This precious ${genderWord} ${isAre} ready to travel to ${possessive} forever home and can't wait to shower you with puppy kisses and endless loyalty.`,
+  ];
+
+  const introIndex = nameHash % introductions.length;
+  const personalityIndex = (nameHash + 3) % personalities.length;
+  const closingIndex = (nameHash + 7) % closings.length;
+
+  return `${introductions[introIndex]} ${personalities[personalityIndex]} ${closings[closingIndex]}`;
 }
 
 // Fetch all categories (breeds) with products
@@ -116,15 +167,19 @@ export async function getPuppiesByBreed(categoryId: number): Promise<Puppy[]> {
 
     const products: any[] = await response.json();
 
-    return products.map((product) => ({
-      id: product.id,
-      name: product.name,
-      slug: product.slug,
-      image: product.images?.[0]?.src || '',
-      imageAlt: product.images?.[0]?.alt || product.name,
-      breed: product.categories?.[0]?.name || '',
-      breedSlug: product.categories?.[0]?.slug || '',
-    }));
+    return products.map((product) => {
+      const breed = product.categories?.[0]?.name || '';
+      return {
+        id: product.id,
+        name: product.name,
+        slug: product.slug,
+        image: product.images?.[0]?.src || '',
+        imageAlt: product.images?.[0]?.alt || product.name,
+        breed: breed,
+        breedSlug: product.categories?.[0]?.slug || '',
+        description: generatePuppyDescription(product.name, breed),
+      };
+    });
   } catch (error) {
     console.error('Error fetching puppies:', error);
     return [];
