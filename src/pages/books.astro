@@ -1,0 +1,245 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
+---
+
+<BaseLayout
+  title="Books | Santa's Little Wieners"
+  description="Discover our collection of Dachshund care guides and books to help you raise a happy, healthy puppy."
+  keywords="dachshund books, puppy care guide, dog training books"
+>
+  <PageHeader
+    title="My Books"
+    subtitle="Helpful resources for Dachshund owners"
+  />
+
+  <section class="books-section">
+    <div class="books-container">
+      <div class="book-card">
+        <div class="book-image">
+          <img src="/images/The-Happy-Dachshund-You.png" alt="The Happy Dachshund & You Book">
+        </div>
+        <div class="book-content">
+          <h2>The Happy Dachshund & You</h2>
+          <p>A comprehensive guide to raising a happy, healthy Dachshund. This book covers everything from nutrition and exercise to training and health care.</p>
+          <p>Filled with valuable tips, tasty recipes, and insights into care, this guide is perfect for every Dachshund owner. Whether you're a first-time owner or an experienced dachshund lover, you'll find helpful information to strengthen your bond with your furry friend.</p>
+
+          <div class="book-features">
+            <div class="feature">
+              <span class="check">✓</span>
+              Nutrition and feeding guidelines
+            </div>
+            <div class="feature">
+              <span class="check">✓</span>
+              Training tips and tricks
+            </div>
+            <div class="feature">
+              <span class="check">✓</span>
+              Health care essentials
+            </div>
+            <div class="feature">
+              <span class="check">✓</span>
+              Fun activities and games
+            </div>
+          </div>
+
+          <p class="free-note"><strong>Free for all puppy adopters!</strong> Ask us about getting your complimentary copy when you bring home your new family member.</p>
+
+          <a href="/contact" class="btn-contact">Contact Us to Get Your Copy</a>
+        </div>
+      </div>
+
+      <div class="thank-you-message">
+        <h3>Thank You for Your Interest!</h3>
+        <p>If you've submitted an inquiry, thank you! We'll be in touch shortly. In the meantime, feel free to browse our available puppies or learn more about Dachshund care.</p>
+        <div class="action-buttons">
+          <a href="/available-puppies" class="btn-primary">View Available Puppies</a>
+          <a href="/basic-care" class="btn-secondary">Learn About Care</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .books-section {
+    padding: 4rem 1.5rem;
+    background: #faf5eb;
+  }
+
+  .books-container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .book-card {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 3rem;
+    background: white;
+    border-radius: 16px;
+    padding: 3rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    margin-bottom: 3rem;
+  }
+
+  .book-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  }
+
+  .book-content h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2a2a2a;
+    margin: 0 0 1rem;
+  }
+
+  .book-content p {
+    font-size: 1rem;
+    color: #5a5a5a;
+    line-height: 1.7;
+    margin: 0 0 1rem;
+  }
+
+  .book-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    margin: 1.5rem 0;
+  }
+
+  .feature {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+    color: #333;
+  }
+
+  .check {
+    color: #095136;
+    font-weight: 700;
+  }
+
+  .free-note {
+    background: #f0fff0;
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 3px solid #095136;
+    margin: 1.5rem 0;
+  }
+
+  .btn-contact {
+    display: inline-block;
+    background: #095136;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .btn-contact:hover {
+    background: #B22222;
+    transform: translateY(-2px);
+  }
+
+  .thank-you-message {
+    background: linear-gradient(135deg, #095136, #0a6b47);
+    color: white;
+    border-radius: 16px;
+    padding: 3rem;
+    text-align: center;
+  }
+
+  .thank-you-message h3 {
+    font-size: 1.75rem;
+    margin: 0 0 1rem;
+  }
+
+  .thank-you-message p {
+    font-size: 1.05rem;
+    opacity: 0.9;
+    margin: 0 0 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .action-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    background: #B22222;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .btn-primary:hover {
+    background: #d63c3c;
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border: 2px solid white;
+    transition: all 0.3s ease;
+  }
+
+  .btn-secondary:hover {
+    background: white;
+    color: #095136;
+  }
+
+  @media (max-width: 768px) {
+    .books-section {
+      padding: 3rem 1rem;
+    }
+
+    .book-card {
+      grid-template-columns: 1fr;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .book-image {
+      max-width: 250px;
+      margin: 0 auto;
+    }
+
+    .book-features {
+      grid-template-columns: 1fr;
+    }
+
+    .feature {
+      justify-content: center;
+    }
+
+    .thank-you-message {
+      padding: 2rem;
+    }
+
+    .action-buttons {
+      flex-direction: column;
+    }
+  }
+</style>

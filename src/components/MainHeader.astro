@@ -1,0 +1,367 @@
+---
+// MainHeader component - Main navigation
+---
+
+<header class="header">
+  <div class="header-container">
+    <a href="/" class="logo">
+      <img src="/images/logo.png" alt="Santa's Little Wieners Logo" class="logo-img">
+    </a>
+
+    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <div class="nav-overlay"></div>
+
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/breeds">Our Breeds</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+        <li><a href="/about-us">About Us</a></li>
+        <li><a href="/testimonials">Testimonials</a></li>
+        <li><a href="/books">Books</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Useful Info</a>
+          <ul class="dropdown-menu">
+            <li><a href="/health-guarantee">Health Guarantee</a></li>
+            <li><a href="/faqs">F.A.Qs</a></li>
+            <li><a href="/vaccinations">Vaccinations</a></li>
+            <li><a href="/basic-care">Basic Care</a></li>
+            <li><a href="/about-the-breed">About The Breed</a></li>
+            <li><a href="/return-refund-policy">Return & Refund</a></li>
+            <li><a href="/pickup-delivery">Pickup & Delivery</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<script>
+  // Mobile menu toggle
+  const menuToggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('.nav-menu');
+  const overlay = document.querySelector('.nav-overlay');
+  const dropdown = document.querySelector('.dropdown');
+  const dropdownToggle = document.querySelector('.dropdown-toggle');
+
+  let isMenuOpen = false;
+  let isDropdownOpen = false;
+
+  menuToggle?.addEventListener('click', () => {
+    isMenuOpen = !isMenuOpen;
+    nav?.classList.toggle('active', isMenuOpen);
+    overlay?.classList.toggle('active', isMenuOpen);
+    menuToggle?.classList.toggle('active', isMenuOpen);
+    menuToggle?.setAttribute('aria-expanded', String(isMenuOpen));
+  });
+
+  overlay?.addEventListener('click', () => {
+    isMenuOpen = false;
+    nav?.classList.remove('active');
+    overlay?.classList.remove('active');
+    menuToggle?.classList.remove('active');
+    menuToggle?.setAttribute('aria-expanded', 'false');
+  });
+
+  // Desktop hover behavior
+  dropdown?.addEventListener('mouseenter', () => {
+    if (window.innerWidth > 900) {
+      dropdown?.classList.add('active');
+    }
+  });
+
+  dropdown?.addEventListener('mouseleave', () => {
+    if (window.innerWidth > 900) {
+      dropdown?.classList.remove('active');
+    }
+  });
+
+  // Mobile click behavior
+  dropdownToggle?.addEventListener('click', (e) => {
+    if (window.innerWidth <= 900) {
+      e.preventDefault();
+      isDropdownOpen = !isDropdownOpen;
+      dropdown?.classList.toggle('active', isDropdownOpen);
+    }
+  });
+</script>
+
+<style>
+  .header {
+    display: block;
+    font-family: var(--font-family, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif);
+    background: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.25rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    color: var(--color-primary, #B22222);
+  }
+
+  .logo-img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+  }
+
+  .nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .nav-menu > ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0 1.5rem;
+    gap: 2.5rem;
+  }
+
+  .nav-menu a {
+    text-decoration: none;
+    color: #3a3a3a;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+    position: relative;
+    padding: 0.5rem 0;
+  }
+
+  .nav-menu a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--color-primary, #B22222);
+    transition: width 0.3s ease;
+  }
+
+  .nav-menu a:hover {
+    color: var(--color-primary, #B22222);
+  }
+
+  .nav-menu a:hover::before {
+    width: 100%;
+  }
+
+  /* Dropdown Styles */
+  .dropdown {
+    position: relative;
+  }
+
+  .dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    cursor: pointer;
+  }
+
+  .dropdown-toggle::after {
+    content: '';
+    border: none;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid currentColor;
+    transition: transform 0.3s ease;
+    margin-left: 2px;
+  }
+
+  .dropdown.active .dropdown-toggle::after {
+    transform: rotate(180deg);
+  }
+
+  .dropdown-menu {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    min-width: 200px;
+    border-radius: 6px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+    border: 1px solid #e8e0d5;
+    z-index: 100;
+    padding: 0;
+    margin-top: 0.5rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s ease, padding 0.25s ease;
+  }
+
+  .dropdown.active .dropdown-menu {
+    max-height: 400px;
+    padding: 0.5rem 0;
+  }
+
+  .dropdown-menu li {
+    list-style: none;
+  }
+
+  .dropdown-menu a {
+    display: block;
+    padding: 0.625rem 1.25rem;
+    color: #3a3a3a;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: 0;
+    transition: all 0.2s ease;
+  }
+
+  .dropdown-menu a:hover {
+    background: #faf5eb;
+    color: var(--color-primary, #B22222);
+  }
+
+  .dropdown-menu a::before {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    padding: 0.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 101;
+  }
+
+  .menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: var(--color-primary, #B22222);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+  }
+
+  .menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+  }
+
+  .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+
+  .nav-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 98;
+  }
+
+  .nav-overlay.active {
+    display: block;
+  }
+
+  @media (max-width: 900px) {
+    .menu-toggle {
+      display: flex;
+    }
+
+    .header-container {
+      padding: 1rem 1.5rem;
+      justify-content: space-between;
+    }
+
+    .nav-menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 300px;
+      height: 100vh;
+      background: white;
+      flex-direction: column;
+      padding: 5rem 2rem 2rem;
+      box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
+      transition: right 0.3s ease;
+      z-index: 99;
+    }
+
+    .nav-menu.active {
+      right: 0;
+    }
+
+    .nav-menu > ul {
+      flex-direction: column;
+      gap: 1.25rem;
+      width: 100%;
+      padding: 0;
+    }
+
+    .nav-menu a {
+      font-size: 0.95rem;
+    }
+
+    .logo-img {
+      height: 50px;
+    }
+
+    .dropdown-menu {
+      position: static;
+      transform: none;
+      box-shadow: none;
+      border: none;
+      opacity: 1;
+      visibility: visible;
+      max-height: 0;
+      overflow: hidden;
+      padding: 0;
+      margin: 0;
+      background: #faf5eb;
+      border-radius: 6px;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+    }
+
+    .dropdown.active .dropdown-menu {
+      max-height: 500px;
+      padding: 0.5rem 0;
+      margin-top: 0.5rem;
+    }
+
+    .dropdown-menu a {
+      padding: 0.5rem 1.25rem;
+      font-size: 0.9rem;
+    }
+  }
+</style>

@@ -1,0 +1,25 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import PuppiesSection from '../components/PuppiesSection.astro';
+import TestimonialsPreview from '../components/TestimonialsPreview.astro';
+import ExpensesSection from '../components/ExpensesSection.astro';
+import FaqBooksSection from '../components/FaqBooksSection.astro';
+---
+
+<BaseLayout
+  title="Available Puppies | Santa's Little Wieners"
+  description="Browse our available Dachshund puppies at Santa's Little Wieners. Find your perfect furry companion this holiday season."
+  keywords="dachshund puppies for sale, available puppies, wiener dogs, miniature dachshund"
+  ogTitle="Available Puppies | Santa's Little Wieners"
+  ogDescription="Browse our adorable Dachshund puppies available for adoption. Health guaranteed, vet checked, and ready for their forever homes."
+>
+  <PageHeader
+    title="Available Puppies"
+    subtitle="Find your perfect furry companion from our adorable Dachshund puppies"
+  />
+  <PuppiesSection />
+  <TestimonialsPreview />
+  <ExpensesSection />
+  <FaqBooksSection />
+</BaseLayout>
