@@ -3,6 +3,7 @@ import '../styles/global.css';
 import TopBar from '../components/TopBar.astro';
 import MainHeader from '../components/MainHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
+import WhatsAppChat from '../components/WhatsAppChat.astro';
 
 interface Props {
   title: string;
@@ -54,5 +55,15 @@ const {
   </main>
 
   <SiteFooter />
+  <WhatsAppChat />
+
+  <!-- Google Analytics (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MGXK2HP063"></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-MGXK2HP063');
+  </script>
 </body>
 </html>
