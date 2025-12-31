@@ -15,9 +15,9 @@ const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(m
     bottom: 20px;
     right: 20px;
     z-index: 9999;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -34,13 +34,13 @@ const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(m
   .whatsapp-chat img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
   }
 
   @media (max-width: 768px) {
     .whatsapp-chat {
-      width: 55px;
-      height: 55px;
+      width: 60px;
+      height: 60px;
       bottom: 15px;
       right: 15px;
     }
