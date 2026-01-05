@@ -35,17 +35,6 @@ const {
   <meta name="keywords" content={keywords}>
   <meta name="author" content="Jarocas Kennels">
 
-  <!-- Google Tag Manager -->
-  <script is:inline>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-P23MFT6D');</script>
-  <!-- End Google Tag Manager -->
-
-  <!-- Google Site Verification -->
-  <meta name="google-site-verification" content="fQ6_ce_KXrgcGmY-ON-JgtqgTaYnNHmWQPBhhX7SldE" />
-
   <!-- Open Graph / Social Media -->
   <meta property="og:title" content={ogTitle || title}>
   <meta property="og:description" content={ogDescription || description}>
@@ -67,32 +56,5 @@ const {
 
   <SiteFooter />
   <WhatsAppChat />
-
-  <!-- Google Analytics (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MGXK2HP063"></script>
-  <script is:inline>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-MGXK2HP063');
-  </script>
-
-  <!-- Google Ads Conversion Tracking -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11011636949"></script>
-  <script is:inline>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'AW-11011636949');
-  </script>
-
-  <!-- Event snippet for Contact conversion page -->
-  <script is:inline>
-    gtag('event', 'conversion', {
-        'send_to': 'AW-11011636949/ke9NCPrZh9obENX94IIp',
-        'value': 1.0,
-        'currency': 'ZAR'
-    });
-  </script>
 </body>
 </html>
