@@ -23,7 +23,7 @@ export const testimonials: Testimonial[] = [
     rating: 5,
     image: 'https://images.unsplash.com/photo-1605638868237-0660a05a135b?w=200&h=200&fit=crop',
     puppyName: 'Milo',
-    text: "We got our little Milo from Montessa Kennel and he has been the greatest addition to our family! The team was so helpful throughout the entire process and even checked in on us weeks after bringing him home."
+    text: "We got our little Milo from Jarocas Kennels and he has been the greatest addition to our family! The team was so helpful throughout the entire process and even checked in on us weeks after bringing him home."
   },
   {
     name: 'Pieter & Annika',
@@ -39,7 +39,7 @@ export const testimonials: Testimonial[] = [
     rating: 5,
     image: 'https://images.unsplash.com/photo-1635703705694-0da1f3b2f724?w=200&h=200&fit=crop',
     puppyName: 'Sophie',
-    text: "This was our first time getting a puppy and Montessa Kennel made it such a wonderful experience. Sophie is everything we dreamed of and more. Highly recommend to anyone looking for their perfect puppy!"
+    text: "This was our first time getting a puppy and Jarocas Kennels made it such a wonderful experience. Sophie is everything we dreamed of and more. Highly recommend to anyone looking for their perfect puppy!"
   }
 ];
 
@@ -48,7 +48,7 @@ export const testimonialPreviews: TestimonialPreview[] = [
     initials: 'TM',
     name: 'Thabo Molefe',
     rating: 5,
-    text: "We absolutely love our little Bella from Montessa Kennel! She came to us healthy, well-socialized, and full of personality. The team was so helpful throughout the entire process.",
+    text: "We absolutely love our little Bella from Jarocas Kennels! She came to us healthy, well-socialized, and full of personality. The team was so helpful throughout the entire process.",
     location: 'Johannesburg',
     timeAgo: '2 weeks ago'
   },
@@ -56,7 +56,7 @@ export const testimonialPreviews: TestimonialPreview[] = [
     initials: 'PV',
     name: 'Pieter van der Berg',
     rating: 5,
-    text: "Best decision we ever made! Our puppy Duke has brought so much joy to our family. Montessa Kennel provided excellent care and the health guarantee gave us peace of mind.",
+    text: "Best decision we ever made! Our puppy Duke has brought so much joy to our family. Jarocas Kennels provided excellent care and the health guarantee gave us peace of mind.",
     location: 'Durban',
     timeAgo: '1 month ago'
   },
@@ -80,7 +80,7 @@ export const testimonialPreviews: TestimonialPreview[] = [
     initials: 'LN',
     name: 'Lindiwe Nkosi',
     rating: 5,
-    text: "Our puppy Teddy is everything we hoped for and more. Beautiful coat, wonderful temperament, and so smart! Montessa Kennel truly cares about their puppies.",
+    text: "Our puppy Teddy is everything we hoped for and more. Beautiful coat, wonderful temperament, and so smart! Jarocas Kennels truly cares about their puppies.",
     location: 'Bloemfontein',
     timeAgo: '2 months ago'
   },
@@ -96,7 +96,7 @@ export const testimonialPreviews: TestimonialPreview[] = [
     initials: 'SM',
     name: 'Sibongile Mthembu',
     rating: 5,
-    text: "This was our second puppy from Montessa Kennel and the experience was just as wonderful as the first time. Daisy and her sister are best friends now!",
+    text: "This was our second puppy from Jarocas Kennels and the experience was just as wonderful as the first time. Daisy and her sister are best friends now!",
     location: 'East London',
     timeAgo: '3 months ago'
   },
@@ -112,7 +112,7 @@ export const testimonialPreviews: TestimonialPreview[] = [
     initials: 'ZD',
     name: 'Zodwa Dlamini',
     rating: 5,
-    text: "I was nervous about getting a puppy during the holidays, but Montessa Kennel made it magical. Our Luna is healthy, happy, and the star of our family!",
+    text: "I was nervous about getting a puppy during the holidays, but Jarocas Kennels made it magical. Our Luna is healthy, happy, and the star of our family!",
     location: 'Polokwane',
     timeAgo: '1 month ago'
   },
@@ -120,7 +120,7 @@ export const testimonialPreviews: TestimonialPreview[] = [
     initials: 'MJ',
     name: 'Marelize Jansen',
     rating: 5,
-    text: "Montessa Kennel exceeded all our expectations. Our puppy Rex is so well-behaved and loving. The whole family is in love with him!",
+    text: "Jarocas Kennels exceeded all our expectations. Our puppy Rex is so well-behaved and loving. The whole family is in love with him!",
     location: 'Stellenbosch',
     timeAgo: '2 weeks ago'
   },
@@ -128,7 +128,7 @@ export const testimonialPreviews: TestimonialPreview[] = [
     initials: 'BM',
     name: 'Bongani Mahlangu',
     rating: 5,
-    text: "We searched for months for the right breeder and Montessa Kennel was the perfect choice. Our puppy Max is healthy, playful, and has the best temperament.",
+    text: "We searched for months for the right breeder and Jarocas Kennels was the perfect choice. Our puppy Max is healthy, playful, and has the best temperament.",
     location: 'Sandton',
     timeAgo: '3 weeks ago'
   },
@@ -152,7 +152,7 @@ export const testimonialPreviews: TestimonialPreview[] = [
     initials: 'FD',
     name: 'Francois du Plessis',
     rating: 5,
-    text: "We've had our puppy Bruno for 3 months now and he's the best! Montessa Kennel provided all the support we needed. Will definitely recommend to friends.",
+    text: "We've had our puppy Bruno for 3 months now and he's the best! Jarocas Kennels provided all the support we needed. Will definitely recommend to friends.",
     location: 'Paarl',
     timeAgo: '3 months ago'
   },
@@ -160,7 +160,7 @@ export const testimonialPreviews: TestimonialPreview[] = [
     initials: 'PN',
     name: 'Palesa Ndaba',
     rating: 5,
-    text: "Getting our puppy Zara from Montessa Kennel was the highlight of our year. She's perfectly healthy and has the sweetest personality. Thank you!",
+    text: "Getting our puppy Zara from Jarocas Kennels was the highlight of our year. She's perfectly healthy and has the sweetest personality. Thank you!",
     location: 'Midrand',
     timeAgo: '6 weeks ago'
   },
@@ -176,7 +176,7 @@ export const testimonialPreviews: TestimonialPreview[] = [
     initials: 'MN',
     name: 'Mpho Nkomo',
     rating: 5,
-    text: "We couldn't be happier with our decision to get our puppy from Montessa Kennel. Rocky has settled in perfectly and loves playing with our kids.",
+    text: "We couldn't be happier with our decision to get our puppy from Jarocas Kennels. Rocky has settled in perfectly and loves playing with our kids.",
     location: 'Roodepoort',
     timeAgo: '1 month ago'
   },
@@ -184,7 +184,7 @@ export const testimonialPreviews: TestimonialPreview[] = [
     initials: 'EL',
     name: 'Elana Lombard',
     rating: 5,
-    text: "What a wonderful experience! The team at Montessa Kennel genuinely cares about matching the right puppy with the right family. Our Bella is proof of that.",
+    text: "What a wonderful experience! The team at Jarocas Kennels genuinely cares about matching the right puppy with the right family. Our Bella is proof of that.",
     location: 'Benoni',
     timeAgo: '4 weeks ago'
   },
@@ -192,7 +192,7 @@ export const testimonialPreviews: TestimonialPreview[] = [
     initials: 'SK',
     name: 'Siyabonga Kubheka',
     rating: 5,
-    text: "Professional, caring, and trustworthy. That's how I'd describe Montessa Kennel. Our puppy Ace is everything we wanted and more!",
+    text: "Professional, caring, and trustworthy. That's how I'd describe Jarocas Kennels. Our puppy Ace is everything we wanted and more!",
     location: 'Umhlanga',
     timeAgo: '2 weeks ago'
   }
