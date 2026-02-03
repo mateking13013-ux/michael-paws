@@ -1,24 +1,24 @@
 /* ================================
-   Santa's Little Wieners
+   Noble Weenie
    Main Stylesheet
-   Holiday Theme 2024
+   Warm Dachshund Theme
 ================================ */
 
 /* CSS Custom Properties (Theme) */
 :root {
-  /* Primary Colors - Warm Christmas Red */
-  --color-primary: #7118e2;
-  --color-primary-light: #D94444;
-  --color-primary-dark: #8B0000;
+  /* Primary Colors - Warm Dachshund Brown */
+  --color-primary: #8B4513;
+  --color-primary-light: #D2691E;
+  --color-primary-dark: #5C2E0A;
 
-  /* Secondary Colors - Forest Green */
-  --color-secondary: #228B22;
-  --color-secondary-light: #32CD32;
-  --color-secondary-dark: #006400;
+  /* Secondary Colors - Warm Amber/Gold */
+  --color-secondary: #C8872B;
+  --color-secondary-light: #E8A94A;
+  --color-secondary-dark: #A06B1F;
 
   /* Accent Colors */
-  --color-gold: #DAA520;
-  --color-cream: #FFFDD0;
+  --color-gold: #D4A054;
+  --color-cream: #FFF8F0;
 
   /* Neutrals */
   --color-white: #FFFFFF;
@@ -167,12 +167,12 @@ img {
 .btn-primary {
   background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
   color: var(--color-white);
-  box-shadow: 0 4px 15px rgba(178, 34, 34, 0.3);
+  box-shadow: 0 4px 15px rgba(139, 69, 19, 0.3);
 }
 
 .btn-primary:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(178, 34, 34, 0.4);
+  box-shadow: 0 8px 25px rgba(139, 69, 19, 0.4);
   color: var(--color-white);
 }
 

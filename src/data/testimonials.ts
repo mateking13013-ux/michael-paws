@@ -18,182 +18,214 @@ export interface TestimonialPreview {
 
 export const testimonials: Testimonial[] = [
   {
-    name: 'Thando M.',
-    location: 'Johannesburg',
+    name: 'Sarah & Mike T.',
+    location: 'Austin, TX',
     rating: 5,
-    image: 'https://images.unsplash.com/photo-1605638868237-0660a05a135b?w=200&h=200&fit=crop',
-    puppyName: 'Milo',
-    text: "We got our little Milo from Jarocas Kennels and he has been the greatest addition to our family! The team was so helpful throughout the entire process and even checked in on us weeks after bringing him home."
+    image: '/images/bella.jpeg',
+    puppyName: 'Bella',
+    text: "Bella is the sweetest little Dachshund! She came to us healthy, playful, and already started on potty training. Noble Weenie made the whole process so easy and even checked in on us weeks after bringing her home."
   },
   {
-    name: 'Pieter & Annika',
-    location: 'Cape Town',
+    name: 'Jessica R.',
+    location: 'Nashville, TN',
     rating: 5,
-    image: 'https://images.unsplash.com/photo-1596116082596-7a0da930b9aa?w=200&h=200&fit=crop',
-    puppyName: 'Buddy',
-    text: 'Buddy has brought so much joy into our lives! He came to us healthy, happy, and already started on potty training. The communication was excellent and we felt supported every step of the way.'
+    image: '/images/charlie.jpeg',
+    puppyName: 'Charlie',
+    text: "Charlie has the best personality of any Dachshund I've ever met! He's so smart and loves to cuddle. The team at Noble Weenie was incredibly helpful and answered all our questions about Dachshund care."
   },
   {
-    name: 'Lerato N.',
-    location: 'Pretoria',
+    name: 'David & Karen W.',
+    location: 'Denver, CO',
     rating: 5,
-    image: 'https://images.unsplash.com/photo-1635703705694-0da1f3b2f724?w=200&h=200&fit=crop',
-    puppyName: 'Sophie',
-    text: "This was our first time getting a puppy and Jarocas Kennels made it such a wonderful experience. Sophie is everything we dreamed of and more. Highly recommend to anyone looking for their perfect puppy!"
+    image: '/images/rosie.jpeg',
+    puppyName: 'Rosie',
+    text: "This was our first Dachshund and Noble Weenie made it such a wonderful experience. Rosie is everything we dreamed of — loyal, funny, and full of energy. The health guarantee gave us total peace of mind."
+  },
+  {
+    name: 'Emily C.',
+    location: 'Charlotte, NC',
+    rating: 5,
+    image: '/images/benny.jpeg',
+    puppyName: 'Benny',
+    text: "Benny is the star of our neighborhood! Everyone stops to ask about him. He's so well-socialized and confident. You can tell Noble Weenie raises their Dachshunds with genuine love and attention."
+  },
+  {
+    name: 'James & Lisa M.',
+    location: 'Scottsdale, AZ',
+    rating: 5,
+    image: '/images/hazel.jpeg',
+    puppyName: 'Hazel',
+    text: "Hazel has been the perfect addition to our family. Our kids are obsessed with her! She came with all her vaccinations, vet records, and a starter kit. Noble Weenie truly goes above and beyond."
+  },
+  {
+    name: 'Rachel P.',
+    location: 'Portland, OR',
+    rating: 5,
+    image: '/images/minnie.jpeg',
+    puppyName: 'Minnie',
+    text: "We flew Minnie home and the transport process was seamless. She arrived happy and healthy. Three months later, she's the most loving little Dachshund. Best decision we ever made!"
+  },
+  {
+    name: 'Brandon & Amy S.',
+    location: 'Atlanta, GA',
+    rating: 5,
+    image: '/images/rocky.jpeg',
+    puppyName: 'Rocky',
+    text: "Rocky is our second Dachshund from Noble Weenie and the experience was just as amazing. He and his sister are inseparable now. The breeding quality and temperament are consistently outstanding."
+  },
+  {
+    name: 'Michelle H.',
+    location: 'San Diego, CA',
+    rating: 5,
+    image: '/images/pascal.jpeg',
+    puppyName: 'Pascal',
+    text: "From the first inquiry to bringing Pascal home, Noble Weenie was professional and caring. Pascal's coat is gorgeous and his personality is even better. He's already mastered sit and shake!"
   }
 ];
 
 export const testimonialPreviews: TestimonialPreview[] = [
   {
-    initials: 'TM',
-    name: 'Thabo Molefe',
+    initials: 'ST',
+    name: 'Sarah Thompson',
     rating: 5,
-    text: "We absolutely love our little Bella from Jarocas Kennels! She came to us healthy, well-socialized, and full of personality. The team was so helpful throughout the entire process.",
-    location: 'Johannesburg',
+    text: "We absolutely love our little Bella from Noble Weenie! She's the sweetest Dachshund — healthy, well-socialized, and full of personality. The team was so helpful throughout the entire process.",
+    location: 'Austin, TX',
     timeAgo: '2 weeks ago'
   },
   {
-    initials: 'PV',
-    name: 'Pieter van der Berg',
+    initials: 'JR',
+    name: 'Jessica Reynolds',
     rating: 5,
-    text: "Best decision we ever made! Our puppy Duke has brought so much joy to our family. Jarocas Kennels provided excellent care and the health guarantee gave us peace of mind.",
-    location: 'Durban',
+    text: "Best decision we ever made! Our Dachshund Charlie has brought so much joy to our family. Noble Weenie provided excellent care and the health guarantee gave us peace of mind.",
+    location: 'Nashville, TN',
     timeAgo: '1 month ago'
   },
   {
-    initials: 'NZ',
-    name: 'Nomvula Zulu',
+    initials: 'DW',
+    name: 'David Williams',
     rating: 5,
-    text: 'Cooper is the sweetest puppy! He was already potty trained and knew basic commands. You can tell these puppies are raised with love and attention.',
-    location: 'Cape Town',
+    text: "Rosie is the sweetest Dachshund puppy! She was already potty trained and knew basic commands. You can tell these puppies are raised with love and attention.",
+    location: 'Denver, CO',
     timeAgo: '3 weeks ago'
   },
   {
-    initials: 'JB',
-    name: 'Johan Botha',
+    initials: 'EC',
+    name: 'Emily Carter',
     rating: 5,
-    text: "From the first phone call to bringing Rosie home, the experience was fantastic. They answered all our questions and even followed up to check on her. Highly recommend!",
-    location: 'Pretoria',
+    text: "From the first phone call to bringing Benny home, the experience was fantastic. They answered all our questions about Dachshund care and even followed up to check on him. Highly recommend!",
+    location: 'Charlotte, NC',
     timeAgo: '1 month ago'
   },
   {
-    initials: 'LN',
-    name: 'Lindiwe Nkosi',
+    initials: 'JM',
+    name: 'James Mitchell',
     rating: 5,
-    text: "Our puppy Teddy is everything we hoped for and more. Beautiful coat, wonderful temperament, and so smart! Jarocas Kennels truly cares about their puppies.",
-    location: 'Bloemfontein',
+    text: "Our Dachshund Hazel is everything we hoped for and more. Beautiful coat, wonderful temperament, and so smart! Noble Weenie truly cares about their puppies.",
+    location: 'Scottsdale, AZ',
     timeAgo: '2 months ago'
   },
   {
-    initials: 'WP',
-    name: 'Willem Pretorius',
+    initials: 'RP',
+    name: 'Rachel Patterson',
     rating: 5,
-    text: 'We drove 4 hours to pick up our puppy and it was worth every kilometer! The facility was clean, the puppies were happy, and our little Oscar has been the perfect addition to our home.',
-    location: 'Port Elizabeth',
+    text: "We had Minnie flown to us in Portland and the transport was seamless. She arrived happy and healthy. Three months later she's the most loving Dachshund. Worth every penny!",
+    location: 'Portland, OR',
     timeAgo: '6 weeks ago'
   },
   {
-    initials: 'SM',
-    name: 'Sibongile Mthembu',
+    initials: 'BS',
+    name: 'Brandon Scott',
     rating: 5,
-    text: "This was our second puppy from Jarocas Kennels and the experience was just as wonderful as the first time. Daisy and her sister are best friends now!",
-    location: 'East London',
+    text: "This was our second Dachshund from Noble Weenie and the experience was just as wonderful. Rocky and his sister are best friends now! Consistently amazing breeding quality.",
+    location: 'Atlanta, GA',
     timeAgo: '3 months ago'
   },
   {
-    initials: 'HS',
-    name: 'Hendrik Steyn',
+    initials: 'MH',
+    name: 'Michelle Harris',
     rating: 5,
-    text: 'The puppy starter kit they provided was so helpful for first-time puppy owners like us. Ginger settled into our home right away. Thank you for our beautiful girl!',
-    location: 'Nelspruit',
+    text: "The puppy starter kit they provided was so helpful for first-time Dachshund owners like us. Pascal settled into our home right away. Thank you for our beautiful boy!",
+    location: 'San Diego, CA',
     timeAgo: '2 months ago'
   },
   {
-    initials: 'ZD',
-    name: 'Zodwa Dlamini',
+    initials: 'KL',
+    name: 'Kevin Lawson',
     rating: 5,
-    text: "I was nervous about getting a puppy during the holidays, but Jarocas Kennels made it magical. Our Luna is healthy, happy, and the star of our family!",
-    location: 'Polokwane',
+    text: "Getting our Dachshund from Noble Weenie was the highlight of our year. She's perfectly healthy with the sweetest personality. The ongoing support has been incredible.",
+    location: 'Dallas, TX',
     timeAgo: '1 month ago'
   },
   {
-    initials: 'MJ',
-    name: 'Marelize Jansen',
+    initials: 'AJ',
+    name: 'Amanda Johnson',
     rating: 5,
-    text: "Jarocas Kennels exceeded all our expectations. Our puppy Rex is so well-behaved and loving. The whole family is in love with him!",
-    location: 'Stellenbosch',
-    timeAgo: '2 weeks ago'
-  },
-  {
-    initials: 'BM',
-    name: 'Bongani Mahlangu',
-    rating: 5,
-    text: "We searched for months for the right breeder and Jarocas Kennels was the perfect choice. Our puppy Max is healthy, playful, and has the best temperament.",
-    location: 'Sandton',
-    timeAgo: '3 weeks ago'
-  },
-  {
-    initials: 'AC',
-    name: 'Annemarie Coetzee',
-    rating: 5,
-    text: "From the moment we contacted them, we knew we were in good hands. Our little Coco has brought so much happiness to our home. Highly professional service!",
-    location: 'Centurion',
-    timeAgo: '1 month ago'
-  },
-  {
-    initials: 'TK',
-    name: 'Tshepiso Khumalo',
-    rating: 5,
-    text: "The puppies are raised with so much love and care. Our Simba was already socialized and comfortable around people from day one. Amazing experience!",
-    location: 'Soweto',
-    timeAgo: '5 weeks ago'
-  },
-  {
-    initials: 'FD',
-    name: 'Francois du Plessis',
-    rating: 5,
-    text: "We've had our puppy Bruno for 3 months now and he's the best! Jarocas Kennels provided all the support we needed. Will definitely recommend to friends.",
-    location: 'Paarl',
-    timeAgo: '3 months ago'
-  },
-  {
-    initials: 'PN',
-    name: 'Palesa Ndaba',
-    rating: 5,
-    text: "Getting our puppy Zara from Jarocas Kennels was the highlight of our year. She's perfectly healthy and has the sweetest personality. Thank you!",
-    location: 'Midrand',
-    timeAgo: '6 weeks ago'
-  },
-  {
-    initials: 'GV',
-    name: 'Gerhard Venter',
-    rating: 5,
-    text: "Excellent breeder! Our puppy came with all vaccinations up to date and proper documentation. The follow-up care has been outstanding.",
-    location: 'Krugersdorp',
+    text: "Excellent breeder! Our Dachshund came with all vaccinations up to date, KUSA registration, and proper documentation. The follow-up care has been outstanding.",
+    location: 'Chicago, IL',
     timeAgo: '2 months ago'
   },
   {
-    initials: 'MN',
-    name: 'Mpho Nkomo',
+    initials: 'TN',
+    name: 'Tyler Nelson',
     rating: 5,
-    text: "We couldn't be happier with our decision to get our puppy from Jarocas Kennels. Rocky has settled in perfectly and loves playing with our kids.",
-    location: 'Roodepoort',
+    text: "We couldn't be happier with our decision to get our Dachshund from Noble Weenie. He's settled in perfectly and loves playing with our kids. A true family dog!",
+    location: 'Miami, FL',
     timeAgo: '1 month ago'
   },
   {
-    initials: 'EL',
-    name: 'Elana Lombard',
+    initials: 'LB',
+    name: 'Lauren Baker',
     rating: 5,
-    text: "What a wonderful experience! The team at Jarocas Kennels genuinely cares about matching the right puppy with the right family. Our Bella is proof of that.",
-    location: 'Benoni',
+    text: "What a wonderful experience! The team at Noble Weenie genuinely cares about matching the right Dachshund with the right family. Our little girl is proof of that love.",
+    location: 'Seattle, WA',
     timeAgo: '4 weeks ago'
   },
   {
-    initials: 'SK',
-    name: 'Siyabonga Kubheka',
+    initials: 'CM',
+    name: 'Chris Martinez',
     rating: 5,
-    text: "Professional, caring, and trustworthy. That's how I'd describe Jarocas Kennels. Our puppy Ace is everything we wanted and more!",
-    location: 'Umhlanga',
+    text: "Professional, caring, and trustworthy. That's how I'd describe Noble Weenie. Our Dachshund is everything we wanted — playful, healthy, and so loyal!",
+    location: 'Phoenix, AZ',
     timeAgo: '2 weeks ago'
+  },
+  {
+    initials: 'NW',
+    name: 'Nicole Walker',
+    rating: 5,
+    text: "We drove from Houston to pick up our Dachshund and it was absolutely worth the trip. Noble Weenie's dedication to their puppies is evident the moment you meet them.",
+    location: 'Houston, TX',
+    timeAgo: '5 weeks ago'
+  },
+  {
+    initials: 'RD',
+    name: 'Ryan Davis',
+    rating: 5,
+    text: "Our miniature Dachshund from Noble Weenie has the most amazing temperament. He's great with strangers, kids, and other dogs. Couldn't have asked for a better breeder experience.",
+    location: 'Boston, MA',
+    timeAgo: '3 weeks ago'
+  },
+  {
+    initials: 'SW',
+    name: 'Stephanie Wilson',
+    rating: 5,
+    text: "I researched Dachshund breeders for months and Noble Weenie stood out. The communication was excellent from day one, and our puppy arrived healthy with a beautiful coat.",
+    location: 'Minneapolis, MN',
+    timeAgo: '6 weeks ago'
+  },
+  {
+    initials: 'JA',
+    name: 'Jason Andrews',
+    rating: 5,
+    text: "Noble Weenie exceeded all our expectations. Our Dachshund is so well-behaved and loving. The whole family is obsessed with him. Already planning to get a second!",
+    location: 'Raleigh, NC',
+    timeAgo: '2 weeks ago'
+  },
+  {
+    initials: 'HT',
+    name: 'Hannah Taylor',
+    rating: 5,
+    text: "The birth certificate, vet records, and health guarantee that came with our Dachshund gave us complete confidence. She's thriving and we couldn't be more grateful!",
+    location: 'Columbus, OH',
+    timeAgo: '1 month ago'
   }
 ];

@@ -3,18 +3,17 @@
 ---
 
 <div class="top-bar">
-  <span class="message">Find Your Perfect Furry Companion Today</span>
+  <span class="message">Welcome to Noble Weenie — Your Dachshund Family Starts Here</span>
   <a href="/contact" class="btn">Contact Us</a>
 </div>
 
 <style>
   .top-bar {
-    display: block;
-    background: #7118e2;
+    display: flex;
+    background: linear-gradient(135deg, #8B4513 0%, #6B3410 100%);
     color: white;
     font-family: var(--font-family, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif);
     padding: 0.5rem 1.5rem;
-    display: flex;
     align-items: center;
     justify-content: center;
     gap: 1rem;
@@ -26,19 +25,20 @@
   }
 
   .btn {
-    background: white;
-    color: #7118e2;
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
     padding: 0.35rem 0.9rem;
     border-radius: 50px;
     font-size: 0.8rem;
-    font-weight: 700;
+    font-weight: 600;
     text-decoration: none;
     transition: all 0.3s ease;
     white-space: nowrap;
+    border: 1px solid rgba(255, 255, 255, 0.3);
   }
 
   .btn:hover {
-    background: #f0f0f0;
+    background: rgba(255, 255, 255, 0.25);
     transform: scale(1.02);
   }
 
@@ -54,6 +54,12 @@
     .btn {
       font-size: 0.75rem;
       padding: 0.3rem 0.75rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .message {
+      font-size: 0.72rem;
     }
   }
 </style>

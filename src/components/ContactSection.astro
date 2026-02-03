@@ -1,13 +1,14 @@
 ---
 // ContactSection component
+const puppyNames = ["Bella", "Benny", "Charlie", "Doxie", "Harold", "Hazel", "Minnie", "Myla", "Pascal", "Rocky", "Rosie", "Coni", "Lunga", "Obilo", "Skyde", "Slinky"];
 ---
 
 <section class="contact-section" id="contact">
   <div class="contact-container">
     <div class="section-header">
       <span class="section-badge">Get In Touch</span>
-      <h2 class="section-title">Ready to Find Your <span>Perfect Puppy</span>?</h2>
-      <p class="section-subtitle">Have questions or ready to welcome a new furry family member? We'd love to hear from you!</p>
+      <h2 class="section-title">Ready to Welcome a <span>Dachshund</span>?</h2>
+      <p class="section-subtitle">Have questions about our Dachshund puppies or ready to bring one home? We'd love to hear from you!</p>
     </div>
 
     <div class="contact-grid">
@@ -15,43 +16,63 @@
         <h3 class="form-title">Puppy Inquiry Form</h3>
         <form class="contact-form" id="homeContactForm">
           <input type="hidden" name="access_key" value="dbb568ae-a29f-4450-b284-00eb05527be7">
-          <input type="hidden" name="subject" value="New Puppy Inquiry - Jarocas Kennels">
-          <input type="hidden" name="from_name" value="Jarocas Kennels Website">
+          <input type="hidden" name="subject" value="New Puppy Inquiry - Noble Weenie">
+          <input type="hidden" name="from_name" value="Noble Weenie Website">
 
           <div class="form-row">
             <div class="form-group">
-              <label for="homeFirstName">First Name</label>
+              <label for="homeFirstName">First Name *</label>
               <input type="text" id="homeFirstName" name="firstName" required>
             </div>
             <div class="form-group">
-              <label for="homeLastName">Last Name</label>
+              <label for="homeLastName">Last Name *</label>
               <input type="text" id="homeLastName" name="lastName" required>
             </div>
           </div>
 
           <div class="form-row">
             <div class="form-group">
-              <label for="homeEmail">Email</label>
+              <label for="homeEmail">Email *</label>
               <input type="email" id="homeEmail" name="email" required>
             </div>
             <div class="form-group">
-              <label for="homePhone">Phone</label>
-              <input type="tel" id="homePhone" name="phone">
+              <label for="homePhone">Phone *</label>
+              <input type="tel" id="homePhone" name="phone" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="homeState">State</label>
+              <input type="text" id="homeState" name="state" placeholder="e.g. California">
+            </div>
+            <div class="form-group">
+              <label for="homeAddress">Address</label>
+              <input type="text" id="homeAddress" name="address">
             </div>
           </div>
 
           <div class="form-group">
-            <label for="homeAddress">Address</label>
-            <input type="text" id="homeAddress" name="address">
+            <label>Puppy(s) of Interest</label>
+            <p class="puppy-select-note">Select the puppy(s) you're interested in:</p>
+            <div class="puppy-checkbox-grid">
+              {puppyNames.map((name) => (
+                <label class="puppy-checkbox">
+                  <input type="checkbox" name="puppies" value={name}>
+                  <span class="checkbox-custom"></span>
+                  <span class="checkbox-label">{name}</span>
+                </label>
+              ))}
+            </div>
           </div>
 
           <div class="form-group">
             <label for="homeMessage">Message</label>
-            <textarea id="homeMessage" name="message"></textarea>
+            <textarea id="homeMessage" name="message" placeholder="Tell us about yourself and why you'd love a Dachshund..."></textarea>
           </div>
 
           <button type="submit" class="btn-submit">
-            Send Message
+            Send Inquiry
             <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
           </button>
         </form>
@@ -66,7 +87,7 @@
           </div>
           <div class="info-content">
             <h4>Email Us</h4>
-            <p><a href="mailto:info@jarocaskennels.co.za">info@jarocaskennels.co.za</a></p>
+            <p><a href="mailto:info@nobleweenie.com">info@nobleweenie.com</a></p>
           </div>
         </div>
 
@@ -80,9 +101,29 @@
           </div>
         </div>
 
+        <div class="info-item">
+          <div class="info-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          </div>
+          <div class="info-content">
+            <h4>Based In</h4>
+            <p>United States</p>
+          </div>
+        </div>
+
         <div class="info-note">
           <h4>Our Location</h4>
-          <p>We operate as a family-based home breeder, so for the safety and privacy of our family and puppies, we do not publicly list our address. Once you contact us, we'll gladly share our exact location and arrange a convenient visit.</p>
+          <p>We operate as a family-based home breeder. For the safety and privacy of our family and Dachshund puppies, we do not publicly list our address. Once you contact us, we'll gladly share our location and arrange a convenient visit or delivery.</p>
+        </div>
+
+        <div class="info-puppies-card">
+          <h4>Available Puppies</h4>
+          <div class="info-puppies-list">
+            {puppyNames.map((name) => (
+              <span class="info-puppy-tag">{name}</span>
+            ))}
+          </div>
+          <a href="/available-puppies" class="info-puppies-link">View All Puppies &rarr;</a>
         </div>
       </div>
     </div>
@@ -100,6 +141,13 @@
     const emailInput = form.querySelector('#homeEmail') as HTMLInputElement;
 
     formData.append("replyto", emailInput.value);
+
+    // Collect checked puppies into a single string
+    const checkedPuppies = Array.from(form.querySelectorAll('input[name="puppies"]:checked'))
+      .map((cb: any) => cb.value)
+      .join(', ');
+    formData.delete('puppies');
+    formData.append('puppies_interested', checkedPuppies || 'None selected');
 
     const originalHTML = submitBtn.innerHTML;
     submitBtn.innerHTML = "Sending...";
@@ -131,7 +179,7 @@
   .contact-section {
     display: block;
     font-family: var(--font-family, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif);
-    background: #faf5eb;
+    background: #FDF6EE;
     padding: 4rem 1.5rem;
   }
 
@@ -147,7 +195,7 @@
 
   .section-badge {
     display: inline-block;
-    background: #7118e2;
+    background: #8B4513;
     color: white;
     padding: 0.4rem 1rem;
     border-radius: 50px;
@@ -164,15 +212,14 @@
   }
 
   .section-title span {
-    color: #7118e2;
+    color: #8B4513;
   }
 
   .section-subtitle {
     font-size: 1.05rem;
     color: #666;
-    margin: 0;
-    max-width: 550px;
     margin: 0 auto;
+    max-width: 550px;
     line-height: 1.6;
   }
 
@@ -207,7 +254,7 @@
   .info-icon {
     width: 45px;
     height: 45px;
-    background: linear-gradient(135deg, #7118e2, #7118e2);
+    background: linear-gradient(135deg, #8B4513, #D2691E);
     border-radius: 12px;
     display: flex;
     align-items: center;
@@ -236,21 +283,21 @@
   }
 
   .info-content a {
-    color: #7118e2;
+    color: #8B4513;
     text-decoration: none;
     font-weight: 500;
   }
 
   .info-content a:hover {
-    color: #7118e2;
+    color: #D2691E;
   }
 
   .info-note {
-    background: #faf5eb;
+    background: #FDF6EE;
     border-radius: 12px;
     padding: 1.25rem;
     margin-top: 1rem;
-    border-left: 3px solid #7118e2;
+    border-left: 3px solid #8B4513;
   }
 
   .info-note h4 {
@@ -265,6 +312,51 @@
     color: #666;
     margin: 0;
     line-height: 1.6;
+  }
+
+  .info-puppies-card {
+    background: #fff;
+    border: 1px solid #f0ebe4;
+    border-radius: 12px;
+    padding: 1.25rem;
+    margin-top: 1.25rem;
+  }
+
+  .info-puppies-card h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #8B4513;
+    margin: 0 0 0.75rem;
+  }
+
+  .info-puppies-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .info-puppy-tag {
+    display: inline-block;
+    background: #FDF6EE;
+    color: #5C2E0A;
+    padding: 0.25rem 0.6rem;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border: 1px solid rgba(139, 69, 19, 0.15);
+  }
+
+  .info-puppies-link {
+    display: inline-block;
+    color: #8B4513;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .info-puppies-link:hover {
+    color: #D2691E;
   }
 
   .contact-form-wrapper {
@@ -321,7 +413,7 @@
   .form-group select:focus,
   .form-group textarea:focus {
     outline: none;
-    border-color: #7118e2;
+    border-color: #8B4513;
     background: white;
   }
 
@@ -330,15 +422,67 @@
     resize: vertical;
   }
 
-  .available-puppies-label {
+  .puppy-select-note {
     font-size: 0.8rem;
-    color: #666;
-    margin: 0 0 0.5rem;
-    line-height: 1.4;
+    color: #888;
+    margin: 0;
   }
 
-  .available-puppies-label strong {
-    color: #333;
+  .puppy-checkbox-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+  }
+
+  .puppy-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    cursor: pointer;
+    font-size: 0.85rem;
+    color: #444;
+    padding: 0.4rem 0.5rem;
+    border-radius: 6px;
+    transition: background 0.2s;
+  }
+
+  .puppy-checkbox:hover {
+    background: #FDF6EE;
+  }
+
+  .puppy-checkbox input[type="checkbox"] {
+    display: none;
+  }
+
+  .checkbox-custom {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.2s;
+  }
+
+  .puppy-checkbox input[type="checkbox"]:checked + .checkbox-custom {
+    background: #8B4513;
+    border-color: #8B4513;
+  }
+
+  .puppy-checkbox input[type="checkbox"]:checked + .checkbox-custom::after {
+    content: '';
+    width: 5px;
+    height: 9px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    margin-top: -2px;
+  }
+
+  .checkbox-label {
+    font-weight: 500;
   }
 
   .btn-submit {
@@ -346,7 +490,7 @@
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    background: #7118e2;
+    background: #8B4513;
     color: white;
     padding: 1rem 2rem;
     border: none;
@@ -359,7 +503,7 @@
   }
 
   .btn-submit:hover {
-    background: #7118e2;
+    background: #D2691E;
     transform: translateY(-2px);
   }
 
@@ -391,6 +535,10 @@
 
     .form-row {
       grid-template-columns: 1fr;
+    }
+
+    .puppy-checkbox-grid {
+      grid-template-columns: repeat(2, 1fr);
     }
 
     .contact-info,

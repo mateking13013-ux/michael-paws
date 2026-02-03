@@ -1,0 +1,666 @@
+---
+// PuppyCard Component - Available Puppies Page
+
+const puppies = [
+  {
+    name: "Bella",
+    sex: "Female",
+    age: "11 Weeks",
+    puppyId: "NW001",
+    breed: "Dachshund",
+    registration: "Yes, KUSA* AKC",
+    color: "Silver dapple and cream",
+    status: "Available",
+    price: 800,
+    description: "Hi! I'm Bella, a precious little Dachshund girl! Are you going to be my new fur-ever family? I hope so! I enjoy going for short walks and playing with my toys, but even more than that, I love to snuggle! We can curl up together on the couch while we enjoy some quality time together. I am a social butterfly, so showing me off to all your friends and family will be a treat for you and me. Bring me home soon so I can show you how much I love and adore you!",
+    images: ["/images/bella.jpeg"],
+  },
+  {
+    name: "Benny",
+    sex: "Male",
+    age: "11 Weeks",
+    puppyId: "NW002",
+    breed: "Dachshund",
+    registration: "Yes, KUSA* AKC",
+    color: "Chocolate dapple and tan",
+    status: "Available",
+    price: 800,
+    description: "Hey there! I'm Benny, a handsome little Dachshund boy with the most stunning blue eyes! I'm brave, curious, and always ready for an adventure. Whether it's exploring the garden or chasing a squeaky toy across the living room, I bring the fun wherever I go. I also love a good belly rub after a big day of playing. I'm looking for my forever family to share all my love with — could that be you?",
+    images: ["/images/benny.jpeg"],
+  },
+  {
+    name: "Charlie",
+    sex: "Male",
+    age: "11 Weeks",
+    puppyId: "NW003",
+    breed: "Dachshund",
+    registration: "Yes, KUSA* AKC",
+    color: "Chocolate and tan",
+    status: "Available",
+    price: 800,
+    description: "Hello! I'm Charlie, a charming little Dachshund boy who loves his toys more than anything! I'm playful, loyal, and always up for a game of fetch. When playtime is over, you'll find me curled up in the cosiest spot in the house. I'm gentle, well-mannered, and great with kids. I can't wait to find my forever home and be your best friend for life!",
+    images: ["/images/charlie.jpeg"],
+  },
+  {
+    name: "Doxie",
+    sex: "Female",
+    age: "11 Weeks",
+    puppyId: "NW004",
+    breed: "Dachshund",
+    registration: "Yes, KUSA* AKC",
+    color: "Chocolate dapple and cream",
+    status: "Available",
+    price: 800,
+    description: "Hi there! I'm Doxie, a sweet little Dachshund girl with the most adorable face you've ever seen! I love wearing my cute outfits and posing for photos. I'm gentle, affectionate, and love being held close. Cuddle time is my favourite time! I get along great with other pets and I'm looking for a loving family who will spoil me with all the treats and belly rubs I deserve!",
+    images: ["/images/doxie.jpeg"],
+  },
+  {
+    name: "Harold",
+    sex: "Female",
+    age: "11 Weeks",
+    puppyId: "NW005",
+    breed: "Dachshund",
+    registration: "Yes, KUSA* AKC",
+    color: "English cream",
+    status: "Available",
+    price: 800,
+    description: "Hello! I'm Harold, a gorgeous little Dachshund girl with a beautiful cream coat that shines in the sun! I love spending time outdoors, rolling in the grass and soaking up the warm weather. I'm calm, sweet-natured, and love gentle head scratches. I'll be your loyal companion through thick and thin. Come take me home and let's start making wonderful memories together!",
+    images: ["/images/harold.jpeg"],
+  },
+  {
+    name: "Hazel",
+    sex: "Female",
+    age: "11 Weeks",
+    puppyId: "NW006",
+    breed: "Dachshund",
+    registration: "Yes, KUSA* AKC",
+    color: "Chocolate dapple and tan",
+    status: "Available",
+    price: 800,
+    description: "Hi! I'm Hazel, a beautiful little Dachshund girl with the sweetest eyes you'll ever see! I'm curious about everything and love exploring new places. I enjoy snuggling on soft blankets and taking cosy naps after a fun play session. I'm friendly, loving, and can't wait to meet my new family. Take me home and I promise to fill your days with joy and endless puppy kisses!",
+    images: ["/images/hazel.jpeg"],
+  },
+  {
+    name: "Minnie",
+    sex: "Female",
+    age: "11 Weeks",
+    puppyId: "NW007",
+    breed: "Dachshund",
+    registration: "Yes, KUSA* AKC",
+    color: "Black and tan dapple",
+    status: "Available",
+    price: 800,
+    description: "Hey! I'm Minnie, a tiny little Dachshund girl with a big personality! Don't let my small size fool you — I'm full of energy and love to play. I look adorable in my little sweaters and I know it! I'm affectionate, playful, and love being the centre of attention. I'm looking for a family who will give me all the love and cuddles I can handle. Will you be my person?",
+    images: ["/images/minnie.jpeg"],
+  },
+  {
+    name: "Myla",
+    sex: "Female",
+    age: "11 Weeks",
+    puppyId: "NW008",
+    breed: "Dachshund",
+    registration: "Yes, KUSA* AKC",
+    color: "Black and tan",
+    status: "Available",
+    price: 800,
+    description: "Hello there! I'm Myla, a stunning little Dachshund girl with a sleek black and tan coat! I'm full of sass and personality. I love playing outside and I've been told my tongue-out smile is absolutely irresistible! I'm energetic, friendly, and get along with everyone I meet. I'm ready for my forever home where I can be loved, pampered, and taken on lots of fun adventures!",
+    images: ["/images/myla.jpeg"],
+  },
+  {
+    name: "Pascal",
+    sex: "Male",
+    age: "11 Weeks",
+    puppyId: "NW009",
+    breed: "Dachshund",
+    registration: "Yes, KUSA* AKC",
+    color: "Chocolate dapple and tan",
+    status: "Available",
+    price: 800,
+    description: "Hey! I'm Pascal, a cool little Dachshund boy who loves rocking my pink hoodie! I'm confident, curious, and always the life of the party. I enjoy playing with my toys and then crashing out for a nap on the couch. I'm loyal, loving, and will follow you everywhere you go. I'm looking for an active family who loves adventures as much as I do. Let's go explore together!",
+    images: ["/images/pascal.jpeg"],
+  },
+  {
+    name: "Rocky",
+    sex: "Male",
+    age: "11 Weeks",
+    puppyId: "NW010",
+    breed: "Dachshund",
+    registration: "Yes, KUSA* AKC",
+    color: "Chocolate dapple and cream",
+    status: "Available",
+    price: 800,
+    description: "What's up! I'm Rocky, a tough little Dachshund boy with a heart of gold! I may be small but I've got big dreams and an even bigger personality. I love exploring around the house and playing with anything I can get my paws on. After a big day, I love curling up next to my favourite human. I'm brave, loyal, and ready to be your number one companion. Let's do this!",
+    images: ["/images/rocky.jpeg"],
+  },
+  {
+    name: "Rosie",
+    sex: "Female",
+    age: "11 Weeks",
+    puppyId: "NW011",
+    breed: "Dachshund",
+    registration: "Yes, KUSA* AKC",
+    color: "Chocolate dapple and tan",
+    status: "Available",
+    price: 800,
+    description: "Hi! I'm Rosie, a darling little Dachshund girl wearing my favourite orange sweater! I'm sweet, gentle, and absolutely love cuddle time. I enjoy lounging on soft blankets and getting pampered by my humans. I'm well-behaved, easy-going, and perfect for a family looking for a calm, loving companion. Come meet me and I'll steal your heart in seconds — I promise!",
+    images: ["/images/rosie.jpeg"],
+  },
+  {
+    name: "Coni",
+    sex: "Male",
+    age: "11 Weeks",
+    puppyId: "NW012",
+    breed: "Dachshund",
+    registration: "Yes, KUSA* AKC",
+    color: "Black and tan",
+    status: "Available",
+    price: 800,
+    imagePosition: "center center",
+    description: "Hello! I'm Coni, a handsome little Dachshund boy with a gorgeous long black and tan coat! I'm gentle, loyal, and love being close to my humans. I have the most soulful eyes that will melt your heart. I enjoy quiet evenings and gentle pats, but I'm also up for a good play session. I'm looking for a loving family to call my own — could you be the one?",
+    images: ["/images/coni.jpeg"],
+  },
+  {
+    name: "Lunga",
+    sex: "Male",
+    age: "11 Weeks",
+    puppyId: "NW013",
+    breed: "Dachshund",
+    registration: "Yes, KUSA* AKC",
+    color: "Chocolate and tan",
+    status: "Available",
+    price: 800,
+    description: "Hey there! I'm Lunga, a playful little Dachshund boy who loves his toys! I'm always chewing on something fun and I've got endless energy for playtime. My beautiful chocolate and tan coat is super soft — perfect for snuggling! I'm friendly, outgoing, and love meeting new people. I'm ready to join my forever family and bring so much happiness to your home!",
+    images: ["/images/lunga.jpeg"],
+  },
+  {
+    name: "Obilo",
+    sex: "Female",
+    age: "11 Weeks",
+    puppyId: "NW014",
+    breed: "Dachshund",
+    registration: "Yes, KUSA* AKC",
+    color: "Blue and tan dapple with white",
+    status: "Available",
+    price: 800,
+    description: "Hi! I'm Obilo, a stunning little Dachshund girl with the most unique blue dapple coat and beautiful two-toned eyes! I'm one of a kind and I know it. I love sitting pretty on the couch surrounded by pillows. I'm calm, gentle, and absolutely adore being the centre of attention. I'm looking for a special family who appreciates how unique and beautiful I am. Let's be best friends!",
+    images: ["/images/obilo.jpeg"],
+  },
+  {
+    name: "Skyde",
+    sex: "Female",
+    age: "11 Weeks",
+    puppyId: "NW015",
+    breed: "Dachshund",
+    registration: "Yes, KUSA* AKC",
+    color: "Chocolate dapple and white",
+    status: "Available",
+    price: 800,
+    description: "Hello! I'm Skyde, a gorgeous little Dachshund girl with a beautiful chocolate and white coat! I'm sweet, playful, and love my toys — especially anything I can chew on! I'm curious about the world and always ready for a little adventure. After playtime, I love snuggling up close and drifting off to sleep. I'm looking for a warm, loving home to call my own. Take me home today!",
+    images: ["/images/skyde.jpeg"],
+  },
+  {
+    name: "Slinky",
+    sex: "Female",
+    age: "11 Weeks",
+    puppyId: "NW016",
+    breed: "Dachshund",
+    registration: "Yes, KUSA* AKC",
+    color: "Chocolate and tan",
+    status: "Available",
+    price: 800,
+    description: "Hi there! I'm Slinky, an adorable little Dachshund girl with my own personalised bone toy! I'm confident, sassy, and love posing for the camera in my cute little sweater. I enjoy playtime, treat time, and nap time — basically all the times! I'm well-socialised, friendly, and ready to be your new best friend. Come meet me and I guarantee you won't be able to resist!",
+    images: ["/images/slinky.jpeg"],
+  },
+];
+---
+
+<section class="puppies-section">
+  <div class="container">
+    {puppies.map((puppy, puppyIndex) => (
+      <div class="puppy-card">
+        <div class="puppy-gallery">
+          <div class="main-image">
+            <img id={`main-img-${puppyIndex}`} src={puppy.images[0]} alt={puppy.name} style={puppy.imagePosition ? `object-position: ${puppy.imagePosition}` : ''} />
+          </div>
+        </div>
+
+        <div class="puppy-details">
+          <div class="details-header">
+            <div class="name-section">
+              <h2>{puppy.name}</h2>
+              <p class="subtitle">Puppy ID: {puppy.puppyId}</p>
+            </div>
+            <span class={`status-badge ${puppy.status.toLowerCase()}`}>{puppy.status}</span>
+          </div>
+
+          <div class="price-banner">
+            <span class="price-amount">${puppy.price}</span>
+            <span class="price-text">Price Includes All Paperwork & Starter Kit</span>
+          </div>
+
+          <div class="stats-row">
+            <div class="stat-item">
+              <div class="stat-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <circle cx="4.5" cy="9.5" r="2.5"/>
+                  <circle cx="9" cy="5.5" r="2.5"/>
+                  <circle cx="15" cy="5.5" r="2.5"/>
+                  <circle cx="19.5" cy="9.5" r="2.5"/>
+                  <path d="M17.34 14.86c-.87-1.02-1.6-1.89-2.48-2.91-.46-.54-1.05-1.08-1.75-1.32-.11-.04-.22-.07-.33-.09-.25-.04-.52-.04-.78-.04s-.53 0-.79.05c-.11.02-.22.05-.33.09-.7.24-1.28.78-1.75 1.32-.87 1.02-1.6 1.89-2.48 2.91-1.31 1.31-2.92 2.76-2.62 4.79.29 1.02 1.02 2.03 2.33 2.32.73.15 3.06-.44 5.54-.44h.18c2.48 0 4.81.58 5.54.44 1.31-.29 2.04-1.31 2.33-2.32.31-2.04-1.3-3.49-2.61-4.8z"/>
+                </svg>
+              </div>
+              <span class="stat-value">{puppy.sex}</span>
+              <span class="stat-label">Sex</span>
+            </div>
+            <div class="stat-item">
+              <div class="stat-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM9 10H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm-8 4H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2z"/>
+                </svg>
+              </div>
+              <span class="stat-value">{puppy.age}</span>
+              <span class="stat-label">Age</span>
+            </div>
+            <div class="stat-item">
+              <div class="stat-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <circle cx="4.5" cy="9.5" r="2.5"/>
+                  <circle cx="9" cy="5.5" r="2.5"/>
+                  <circle cx="15" cy="5.5" r="2.5"/>
+                  <circle cx="19.5" cy="9.5" r="2.5"/>
+                  <path d="M17.34 14.86c-.87-1.02-1.6-1.89-2.48-2.91-.46-.54-1.05-1.08-1.75-1.32-.11-.04-.22-.07-.33-.09-.25-.04-.52-.04-.78-.04s-.53 0-.79.05c-.11.02-.22.05-.33.09-.7.24-1.28.78-1.75 1.32-.87 1.02-1.6 1.89-2.48 2.91-1.31 1.31-2.92 2.76-2.62 4.79.29 1.02 1.02 2.03 2.33 2.32.73.15 3.06-.44 5.54-.44h.18c2.48 0 4.81.58 5.54.44 1.31-.29 2.04-1.31 2.33-2.32.31-2.04-1.3-3.49-2.61-4.8z"/>
+                </svg>
+              </div>
+              <span class="stat-value">{puppy.breed}</span>
+              <span class="stat-label">Breed</span>
+            </div>
+            <div class="stat-item">
+              <div class="stat-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9c.83 0 1.5-.67 1.5-1.5 0-.39-.15-.74-.39-1.01-.23-.26-.38-.61-.38-.99 0-.83.67-1.5 1.5-1.5H16c2.76 0 5-2.24 5-5 0-4.42-4.03-8-9-8zm-5.5 9c-.83 0-1.5-.67-1.5-1.5S5.67 9 6.5 9 8 9.67 8 10.5 7.33 12 6.5 12zm3-4C8.67 8 8 7.33 8 6.5S8.67 5 9.5 5s1.5.67 1.5 1.5S10.33 8 9.5 8zm5 0c-.83 0-1.5-.67-1.5-1.5S13.67 5 14.5 5s1.5.67 1.5 1.5S15.33 8 14.5 8zm3 4c-.83 0-1.5-.67-1.5-1.5S16.67 9 17.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+                </svg>
+              </div>
+              <span class="stat-value">{puppy.color}</span>
+              <span class="stat-label">Color</span>
+            </div>
+          </div>
+
+          <div class="info-row">
+            <div class="info-item">
+              <span class="info-label">Puppy ID:</span>
+              <span class="info-value">{puppy.puppyId}</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Registration:</span>
+              <span class="info-value">{puppy.registration}</span>
+            </div>
+          </div>
+
+          <p class="description">{puppy.description}</p>
+
+          <div class="comes-with-card">
+            <p><em>Comes with birth certificate, vet records & 1 year health guarantee</em></p>
+          </div>
+
+          <div class="buttons-row">
+            <a href="/contact" class="btn btn-primary">Inquire Now</a>
+            <a href={`https://wa.me/27713044651?text=${encodeURIComponent(`Hi! I'm interested in ${puppy.name} the Dachshund puppy from Noble Weenie.`)}`} target="_blank" rel="noopener noreferrer" class="btn btn-outline">Take Me Home</a>
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
+<style>
+  .puppies-section {
+    padding: 40px 20px;
+    background: #FDF6EE;
+  }
+
+  .puppies-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .puppy-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+  }
+
+  .puppy-gallery {
+    position: relative;
+    min-height: 380px;
+  }
+
+  .main-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center bottom;
+    display: block;
+  }
+
+  .puppy-details {
+    padding: 20px 25px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .details-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+  }
+
+  .name-section h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 0 0 3px;
+  }
+
+  .subtitle {
+    font-size: 0.8rem;
+    color: #888;
+    margin: 0;
+  }
+
+  .status-badge {
+    padding: 6px 12px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+  }
+
+  .status-badge.available {
+    background: #8B4513;
+    color: #fff;
+  }
+
+  .status-badge.reserved {
+    background: #E8A94A;
+    color: #5C2E0A;
+  }
+
+  .price-banner {
+    background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%);
+    color: #fff;
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .price-amount {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #fff;
+  }
+
+  .price-text {
+    font-size: 0.9rem;
+    font-weight: 600;
+    opacity: 0.95;
+  }
+
+  .stats-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 12px 0;
+    border-top: 1px solid #f0ebe4;
+    border-bottom: 1px solid #f0ebe4;
+    margin-bottom: 12px;
+  }
+
+  .stat-item {
+    text-align: center;
+  }
+
+  .stat-icon {
+    width: 28px;
+    height: 28px;
+    margin: 0 auto 5px;
+    color: #8B4513;
+  }
+
+  .stat-icon svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .stat-value {
+    display: block;
+    font-weight: 700;
+    color: #333;
+    font-size: 0.85rem;
+    margin-bottom: 1px;
+  }
+
+  .stat-label {
+    font-size: 0.65rem;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .info-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+  }
+
+  .info-item {
+    display: flex;
+    gap: 6px;
+  }
+
+  .info-label {
+    color: #888;
+    font-size: 0.8rem;
+  }
+
+  .info-value {
+    color: #333;
+    font-weight: 600;
+    font-size: 0.8rem;
+  }
+
+  .description {
+    font-size: 0.85rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    flex-grow: 1;
+  }
+
+  .comes-with-card {
+    background: #FDF6EE;
+    border: 1px solid #D2691E;
+    border-radius: 8px;
+    padding: 10px 14px;
+    margin-bottom: 15px;
+  }
+
+  .comes-with-card p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #5C2E0A;
+    line-height: 1.5;
+  }
+
+  .buttons-row {
+    display: flex;
+    gap: 10px;
+  }
+
+  .buttons-row .btn {
+    flex: 1;
+    text-align: center;
+    padding: 10px 15px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    border-radius: 5px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .btn-primary {
+    background: #8B4513;
+    color: #fff;
+    border: 2px solid #8B4513;
+  }
+
+  .btn-primary:hover {
+    background: #5C2E0A;
+    border-color: #5C2E0A;
+    color: #fff;
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: #8B4513;
+    border: 2px solid #8B4513;
+  }
+
+  .btn-outline:hover {
+    background: #8B4513;
+    color: #fff;
+  }
+
+  @media (max-width: 900px) {
+    .puppy-card {
+      grid-template-columns: 1fr;
+    }
+
+    .puppy-gallery {
+      min-height: auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .main-image {
+      position: relative;
+      height: 300px;
+    }
+
+    .buttons-row {
+      flex-direction: column;
+      gap: 8px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .puppies-section {
+      padding: 20px 10px;
+    }
+
+    .main-image {
+      height: 380px;
+    }
+
+    .puppy-details {
+      padding: 15px;
+    }
+
+    .details-header {
+      margin-bottom: 10px;
+    }
+
+    .price-banner {
+      padding: 10px 12px;
+      margin-bottom: 12px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4px;
+      text-align: center;
+    }
+
+    .price-amount {
+      font-size: 1.3rem;
+      width: 100%;
+    }
+
+    .price-text {
+      font-size: 0.8rem;
+      width: 100%;
+    }
+
+    .name-section h2 {
+      font-size: 1.25rem;
+    }
+
+    .subtitle {
+      font-size: 0.75rem;
+    }
+
+    .status-badge {
+      padding: 5px 10px;
+      font-size: 0.65rem;
+    }
+
+    .stats-row {
+      padding: 10px 0;
+      margin-bottom: 10px;
+      gap: 5px;
+    }
+
+    .stat-icon {
+      width: 22px;
+      height: 22px;
+      margin-bottom: 3px;
+    }
+
+    .stat-value {
+      font-size: 0.7rem;
+    }
+
+    .stat-label {
+      font-size: 0.55rem;
+    }
+
+    .info-row {
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+
+    .info-label,
+    .info-value {
+      font-size: 0.75rem;
+    }
+
+    .description {
+      font-size: 0.8rem;
+      line-height: 1.5;
+      margin-bottom: 12px;
+    }
+
+    .buttons-row .btn {
+      padding: 10px 12px;
+      font-size: 0.75rem;
+    }
+  }
+</style>

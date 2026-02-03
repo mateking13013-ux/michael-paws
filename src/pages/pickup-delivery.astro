@@ -1,87 +1,170 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHeader from '../components/PageHeader.astro';
-import InfoBox from '../components/InfoBox.astro';
 ---
 
 <BaseLayout
-  title="Pickup & Delivery | Jarocas Kennels"
-  description="Learn about our pickup and delivery options for our puppies."
-  keywords="puppy delivery, puppy pickup, dog shipping"
+  title="Pickup & Delivery | Noble Weenie"
+  description="Learn about our safe and reliable shipping, pickup, and delivery options for your new Dachshund puppy."
+  keywords="puppy delivery, puppy shipping, dachshund puppy transport, pet safe delivery"
 >
   <PageHeader
     title="Pickup & Delivery"
-    subtitle="Getting your new puppy home safely"
+    subtitle="Safe, comfortable transport for your new Dachshund puppy"
   />
 
-  <section class="info-content">
-    <div class="content-container">
-      <h2>Bringing Your Puppy Home</h2>
-      <p>We offer flexible options to ensure your new puppy arrives safely and comfortably at their forever home.</p>
+  <section class="shipping-section">
+    <div class="shipping-container">
 
-      <InfoBox type="success" title="Holiday Delivery Update">
-        <p>During the holiday season, we offer fast and reliable delivery within 24 hours. We're fully open and ready to help your new furry family member arrive safely and on time for the holidays!</p>
-      </InfoBox>
+      <div class="intro-card">
+        <h2>Our Shipping Process</h2>
+        <p>We consider shipping as an option and we make the shipping arrangements — this is because most often we find suitable homes for our Dachshund puppies but they might not be located within driving distance. We can guess what question you have in mind right now: <strong>"Flying a puppy! Is it safe?"</strong> This question is often asked. We certainly wouldn't consider it if it wasn't.</p>
+      </div>
 
-      <h3>In-Person Pickup (Preferred)</h3>
-      <p>We love meeting the families who will be caring for our puppies! In-person pickup offers several benefits:</p>
-      <ul>
-        <li>Meet us and see where your puppy was raised</li>
-        <li>Receive hands-on guidance for your puppy's care</li>
-        <li>Ask any last-minute questions in person</li>
-        <li>Begin bonding with your puppy immediately</li>
-        <li>No additional shipping fees</li>
-      </ul>
+      <div class="process-cards">
+        <div class="process-card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg>
+          </div>
+          <h3>Safe & Approved Airlines</h3>
+          <p>We make inquiries about a company's shipping reputation before using them. When we book a flight for a puppy, it is only on safe and approved airlines that have pet-safe programs following USDA guidelines.</p>
+        </div>
 
-      <InfoBox type="info" title="Location">
-        <p>We operate as a family-based home breeder. Once you contact us and reserve your puppy, we'll share our exact location and arrange a convenient pickup time.</p>
-      </InfoBox>
+        <div class="process-card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
+          </div>
+          <h3>Passenger Cabin — Not Cargo</h3>
+          <p>Your puppy will have the same air as the pilot flying the plane. Someone will be there to cater to him/her on board. We <strong>don't fly puppies in the cargo section</strong> — they are shipped in the passenger section together with pet nannies until delivery is completed.</p>
+        </div>
 
-      <h3>Delivery Options</h3>
-      <p>For families who cannot pick up in person, we offer delivery throughout South Africa.</p>
+        <div class="process-card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+          </div>
+          <h3>Same-Day Arrival</h3>
+          <p>The average flight is approximately 4 to 6 hours. We always ask about any delays or layovers and know the exact times and departures of the flights, so we know where the puppy is and can give you the information as well. Your puppy will arrive the same day it is sent.</p>
+        </div>
 
-      <h4>Ground Transport</h4>
-      <ul>
-        <li>Professional pet transport services</li>
-        <li>Climate-controlled vehicles</li>
-        <li>Door-to-door delivery available</li>
-        <li>Pricing varies by distance</li>
-      </ul>
+        <div class="process-card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+          </div>
+          <h3>Comfort & Care</h3>
+          <p>With many years of experience, we prep your baby to be most comfortable. We have a big fluffy bed of shredded newspapers in the crate for the puppy to nestle in, a pig's ear chew (they love them!), a toy or sock with a familiar scent, and frozen water that gradually thaws during the trip.</p>
+        </div>
+      </div>
 
-      <h4>Air Transport</h4>
-      <ul>
-        <li>For longer distances</li>
-        <li>Pet-safe airline carriers</li>
-        <li>Direct flights when possible</li>
-        <li>Health certificate included</li>
-      </ul>
+      <div class="detail-card">
+        <div class="detail-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+        </div>
+        <h3>Why Flying Is Safe</h3>
+        <p>Shipping your puppy by itself to a new location always sounds concerning, but with many years of experience, we've never had any issues shipping a puppy. The airlines are not going to mistreat the puppy for fear of lawsuit and customer dissatisfaction. We tape the puppy's food and feeding instructions to the top of the crate, and the puppies are offered food along the ride.</p>
+        <p>Research and statistics show that it is much better to fly a puppy on a 2–6 hour flight than to drive over 4 hours in an environment that may not be climate-controlled. Plus, there is always the added benefit that we are dealing with professionals who have transported thousands of pets safely and comfortably.</p>
+      </div>
 
-      <h3>What's Included</h3>
-      <p>No matter how your puppy arrives, they'll come with:</p>
-      <ul>
-        <li>Puppy starter kit with food, treats, and toys</li>
-        <li>Vaccination and health records</li>
-        <li>Blanket with familiar scents</li>
-        <li>Care instructions and tips</li>
-        <li>Our contact information for ongoing support</li>
-      </ul>
+      <div class="detail-card">
+        <div class="detail-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM12 17c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+        </div>
+        <h3>Direct Flights Only</h3>
+        <p>When we go to book a flight for our pets, we always call ahead and find the most direct flight available — much as if you were looking for a flight for yourself. Our Dachshund puppies have always arrived safe and sound in their new homes.</p>
+      </div>
 
-      <h3>Delivery Fees</h3>
-      <p>Delivery fees depend on your location and chosen method. Contact us for a quote based on your specific situation.</p>
+      <h2 class="section-heading">Delivery Options</h2>
 
-      <InfoBox type="tip" title="Travel Tips">
-        <p>If you're driving to pick up your puppy, bring:</p>
-        <ul>
-          <li>A secure carrier or crate</li>
-          <li>Puppy pads for accidents</li>
-          <li>Water and a small bowl</li>
-          <li>Paper towels and bags</li>
-        </ul>
-      </InfoBox>
+      <div class="options-grid">
+        <div class="option-card">
+          <div class="option-header">
+            <h3>In-Person Pickup</h3>
+            <span class="option-badge">Preferred</span>
+          </div>
+          <p>We love meeting the families who will be caring for our Dachshund puppies! In-person pickup is always our preferred option.</p>
+          <ul>
+            <li>Meet us and see where your puppy was raised</li>
+            <li>Receive hands-on guidance for your puppy's care</li>
+            <li>Ask any last-minute questions in person</li>
+            <li>Begin bonding with your puppy immediately</li>
+            <li>No additional shipping fees</li>
+          </ul>
+        </div>
+
+        <div class="option-card">
+          <div class="option-header">
+            <h3>Air Transport</h3>
+            <span class="option-badge highlight">Most Popular</span>
+          </div>
+          <p>For families who can't pick up in person, we arrange safe air transport with pet nanny service across the United States.</p>
+          <ul>
+            <li>Passenger cabin — never cargo</li>
+            <li>Pet nanny accompanies your puppy</li>
+            <li>Direct flights when available</li>
+            <li>Same-day delivery (4–6 hours)</li>
+            <li>Health certificate included</li>
+          </ul>
+        </div>
+
+        <div class="option-card">
+          <div class="option-header">
+            <h3>Ground Transport</h3>
+            <span class="option-badge">Regional</span>
+          </div>
+          <p>For shorter distances, we can arrange ground transport with professional, climate-controlled pet transport services.</p>
+          <ul>
+            <li>Professional pet transport services</li>
+            <li>Climate-controlled vehicles</li>
+            <li>Door-to-door delivery available</li>
+            <li>Pricing varies by distance</li>
+            <li>Best for distances under 4 hours</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="whats-included">
+        <h2>What's Included With Every Puppy</h2>
+        <div class="included-grid">
+          <div class="included-item">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            <span>Puppy starter kit with food, treats & toys</span>
+          </div>
+          <div class="included-item">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            <span>Vaccination & health records</span>
+          </div>
+          <div class="included-item">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            <span>Blanket with familiar scents</span>
+          </div>
+          <div class="included-item">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            <span>Care instructions & tips</span>
+          </div>
+          <div class="included-item">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            <span>Birth certificate</span>
+          </div>
+          <div class="included-item">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            <span>Ongoing breeder support</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tip-card">
+        <h3>Travel Tips for Pickup</h3>
+        <p>If you're driving to pick up your Dachshund puppy, bring:</p>
+        <div class="tip-grid">
+          <div class="tip-item">A secure carrier or crate</div>
+          <div class="tip-item">Puppy pads for accidents</div>
+          <div class="tip-item">Water and a small bowl</div>
+          <div class="tip-item">Paper towels and bags</div>
+        </div>
+      </div>
 
       <div class="cta-box">
         <h3>Ready to Arrange Pickup or Delivery?</h3>
-        <p>Contact us to discuss the best option for getting your puppy home.</p>
+        <p>Contact us to discuss the best option for getting your new Dachshund puppy home safely.</p>
         <a href="/contact" class="btn">Contact Us</a>
       </div>
     </div>
@@ -89,64 +172,300 @@ import InfoBox from '../components/InfoBox.astro';
 </BaseLayout>
 
 <style>
-  .info-content {
+  .shipping-section {
     padding: 4rem 1.5rem;
-    background: #fff;
+    background: #FDF6EE;
   }
 
-  .content-container {
-    max-width: 800px;
+  .shipping-container {
+    max-width: 1000px;
     margin: 0 auto;
   }
 
-  h2 {
-    font-size: 2rem;
+  .intro-card {
+    background: white;
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    margin-bottom: 2rem;
+  }
+
+  .intro-card h2 {
+    font-size: 1.75rem;
     font-weight: 700;
-    color: #2a2a2a;
-    margin: 0 0 1.5rem;
-  }
-
-  h3 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #7118e2;
-    margin: 2rem 0 1rem;
-  }
-
-  h4 {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #2a2a2a;
-    margin: 1.5rem 0 0.75rem;
-  }
-
-  p {
-    font-size: 1rem;
-    color: #5a5a5a;
-    line-height: 1.8;
+    color: #8B4513;
     margin: 0 0 1rem;
   }
 
-  ul {
-    margin: 0 0 1.5rem 1.5rem;
-    color: #5a5a5a;
+  .intro-card p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.8;
+    margin: 0;
   }
 
-  li {
-    margin-bottom: 0.5rem;
+  .process-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+  }
+
+  .process-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.75rem;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(139, 69, 19, 0.08);
+  }
+
+  .card-icon {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, #8B4513, #D2691E);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  .card-icon svg {
+    width: 24px;
+    height: 24px;
+    fill: white;
+  }
+
+  .process-card h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #2a2a2a;
+    margin: 0 0 0.75rem;
+  }
+
+  .process-card p {
+    font-size: 0.9rem;
+    color: #555;
     line-height: 1.7;
+    margin: 0;
+  }
+
+  .detail-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+    margin-bottom: 1.25rem;
+    border-left: 4px solid #8B4513;
+    position: relative;
+  }
+
+  .detail-icon {
+    width: 36px;
+    height: 36px;
+    background: #8B4513;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.75rem;
+  }
+
+  .detail-icon svg {
+    width: 20px;
+    height: 20px;
+    fill: white;
+  }
+
+  .detail-card h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #2a2a2a;
+    margin: 0 0 0.75rem;
+  }
+
+  .detail-card p {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.7;
+    margin: 0 0 0.75rem;
+  }
+
+  .detail-card p:last-child {
+    margin-bottom: 0;
+  }
+
+  .section-heading {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #2a2a2a;
+    margin: 3rem 0 1.5rem;
+    text-align: center;
+  }
+
+  .options-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .option-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.75rem;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(139, 69, 19, 0.08);
+  }
+
+  .option-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .option-header h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #2a2a2a;
+    margin: 0;
+  }
+
+  .option-badge {
+    background: #FDF6EE;
+    color: #8B4513;
+    padding: 0.25rem 0.6rem;
+    border-radius: 50px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+  }
+
+  .option-badge.highlight {
+    background: #8B4513;
+    color: white;
+  }
+
+  .option-card p {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.6;
+    margin: 0 0 1rem;
+  }
+
+  .option-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .option-card li {
+    font-size: 0.85rem;
+    color: #555;
+    padding: 0.35rem 0;
+    padding-left: 1.25rem;
+    position: relative;
+  }
+
+  .option-card li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 6px;
+    background: #8B4513;
+    border-radius: 50%;
+  }
+
+  .whats-included {
+    background: white;
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    margin-bottom: 2rem;
+  }
+
+  .whats-included h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2a2a2a;
+    margin: 0 0 1.5rem;
+    text-align: center;
+  }
+
+  .included-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+
+  .included-item {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.9rem;
+    color: #444;
+  }
+
+  .included-item svg {
+    width: 20px;
+    height: 20px;
+    fill: #2E7D32;
+    flex-shrink: 0;
+  }
+
+  .tip-card {
+    background: white;
+    border: 1px solid #D2691E;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .tip-card h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #8B4513;
+    margin: 0 0 0.5rem;
+  }
+
+  .tip-card p {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 0 0 1rem;
+  }
+
+  .tip-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+
+  .tip-item {
+    background: #FDF6EE;
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    color: #5C2E0A;
+    font-weight: 500;
   }
 
   .cta-box {
-    background: linear-gradient(135deg, #7118e2, #7118e2);
+    background: linear-gradient(135deg, #8B4513, #D2691E);
     color: white;
-    padding: 2rem;
-    border-radius: 12px;
+    padding: 2.5rem;
+    border-radius: 16px;
     text-align: center;
-    margin-top: 3rem;
+    margin-top: 2rem;
   }
 
   .cta-box h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
     color: white;
     margin: 0 0 0.5rem;
   }
@@ -154,14 +473,15 @@ import InfoBox from '../components/InfoBox.astro';
   .cta-box p {
     color: rgba(255, 255, 255, 0.9);
     margin: 0 0 1.5rem;
+    font-size: 1rem;
   }
 
   .btn {
     display: inline-block;
-    background: #7118e2;
-    color: white;
+    background: white;
+    color: #8B4513;
     padding: 0.875rem 2rem;
-    border-radius: 8px;
+    border-radius: 50px;
     font-size: 1rem;
     font-weight: 600;
     text-decoration: none;
@@ -169,20 +489,40 @@ import InfoBox from '../components/InfoBox.astro';
   }
 
   .btn:hover {
-    background: #d63c3c;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   }
 
-  @media (max-width: 768px) {
-    .info-content {
-      padding: 3rem 1rem;
+  @media (max-width: 900px) {
+    .process-cards {
+      grid-template-columns: 1fr;
     }
 
-    h2 {
-      font-size: 1.75rem;
+    .options-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .shipping-section {
+      padding: 2rem 1rem;
     }
 
-    h3 {
-      font-size: 1.25rem;
+    .intro-card,
+    .whats-included {
+      padding: 1.5rem;
+    }
+
+    .included-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .tip-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .cta-box {
+      padding: 2rem 1.5rem;
     }
   }
 </style>

@@ -230,6 +230,6 @@ export function getBreedSeoContent(breedName: string): {
     title: `${breedName} For Sale | Find Your Perfect ${cleanName} Companion`,
     description: `Discover our beautiful ${breedName} available for adoption. Health guaranteed, vet checked, and ready for their forever homes. Browse our selection of adorable ${cleanName} puppies today.`,
     heroSubtitle: `Find your perfect ${cleanName} companion from our carefully raised, health-guaranteed puppies`,
-    holidayMessage: `Bring home a loving ${cleanName} this season! We prioritize fast, safe delivery within 24 hours. Our ${breedName} come with complete health guarantees, up-to-date vaccinations, and lifetime support. Whether you choose pickup or delivery across South Africa, your new family member will arrive healthy and happy. Reserve your ${cleanName} puppy today and experience the joy of a well-bred companion.`,
+    holidayMessage: `Bring home a loving ${cleanName} this season! We prioritize fast, safe delivery within 24 hours. Our ${breedName} come with complete health guarantees, up-to-date vaccinations, and lifetime support. Whether you choose pickup or delivery across the United States, your new family member will arrive healthy and happy. Reserve your ${cleanName} puppy today and experience the joy of a well-bred companion.`,
   };
 }
