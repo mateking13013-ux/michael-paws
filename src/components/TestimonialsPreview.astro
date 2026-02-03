@@ -1,6 +1,23 @@
 ---
 // TestimonialsPreview component
 import { testimonialPreviews } from '../data/testimonials';
+
+const testimonialImages = [
+  '/images/testimonial-2.jpeg',
+  '/images/testimonial-3.jpeg',
+  '/images/testimonial-4.jpeg',
+  '/images/testimonial-5.jpeg',
+  '/images/testimonial-6.jpeg',
+  '/images/testimonial-7.jpeg',
+  '/images/testimonial-8.jpeg',
+  '/images/testimonial-9.jpeg',
+  '/images/testimonial-10.jpeg',
+  '/images/testimonial-11.jpeg',
+];
+
+// Split testimonials: ones with images first, then text-only
+const testimonialsWithImages = testimonialPreviews.slice(0, testimonialImages.length);
+const testimonialsTextOnly = testimonialPreviews.slice(testimonialImages.length);
 ---
 
 <section class="testimonials-section">
@@ -13,47 +30,49 @@ import { testimonialPreviews } from '../data/testimonials';
       <p class="section-subtitle">Read reviews from happy puppy owners</p>
     </div>
 
-    <div class="testimonials-grid">
-      {testimonialPreviews.map((t) => (
+    <div class="testimonials-masonry">
+      {[...testimonialsWithImages, ...testimonialsTextOnly].map((t, index) => (
         <div class="testimonial-card">
-          <div class="card-header">
-            <div class="avatar">
-              {t.initials}
-              <span class="verified-badge">
-                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              </span>
+          {index < testimonialImages.length && (
+            <div class="card-image">
+              <img src={testimonialImages[index]} alt={`${t.name}'s dachshund`} loading="lazy">
             </div>
-            <div class="reviewer-info">
-              <h4>{t.name}</h4>
-              <p class="reviewer-label">Reviewer</p>
+          )}
+          <div class="card-content">
+            <div class="card-header">
+              <div class="avatar">
+                {t.initials}
+                <span class="verified-badge">
+                  <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                </span>
+              </div>
+              <div class="reviewer-info">
+                <h4>{t.name}</h4>
+                <p class="reviewer-label">Reviewer</p>
+              </div>
             </div>
-          </div>
 
-          <div class="rating-row">
-            <div class="stars">
-              {Array(5).fill(null).map(() => (
-                <svg class="star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-              ))}
+            <div class="rating-row">
+              <div class="stars">
+                {Array(5).fill(null).map(() => (
+                  <svg class="star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                ))}
+              </div>
+              <span class="rating-text">{t.rating}/5</span>
             </div>
-            <span class="rating-text">{t.rating}/5</span>
-          </div>
 
-          <p class="review-text">{t.text}</p>
+            <p class="review-text">{t.text}</p>
 
-          <p class="review-meta">{t.timeAgo} - {t.location}</p>
+            <p class="review-meta">{t.timeAgo} - {t.location}</p>
 
-          <div class="card-footer">
-            <img src="/images/image copy.png" alt="Google" class="google-icon">
-            <span class="business-name">Noble Weenie</span>
+            <div class="card-footer">
+              <img src="/images/image copy.png" alt="Google" class="google-icon">
+              <span class="business-name">Noble Weenie</span>
+            </div>
           </div>
         </div>
       ))}
     </div>
-
-    <a href="/testimonials" class="view-all-btn">
-      View All Reviews
-      <svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
-    </a>
   </div>
 </section>
 
@@ -98,21 +117,40 @@ import { testimonialPreviews } from '../data/testimonials';
     margin: 0;
   }
 
-  .testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-    margin-bottom: 3rem;
+  /* Masonry Grid for Testimonials */
+  .testimonials-masonry {
+    columns: 3;
+    column-gap: 1.5rem;
   }
 
   .testimonial-card {
+    break-inside: avoid;
     background: white;
     border-radius: 12px;
-    padding: 1.5rem;
+    overflow: hidden;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
     border: 1px solid #e8e8e8;
-    display: flex;
-    flex-direction: column;
+    margin-bottom: 1.5rem;
+  }
+
+  .card-image {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .card-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+
+  .testimonial-card:hover .card-image img {
+    transform: scale(1.05);
+  }
+
+  .card-content {
+    padding: 1.5rem;
   }
 
   .card-header {
@@ -201,7 +239,6 @@ import { testimonialPreviews } from '../data/testimonials';
     font-size: 0.95rem;
     line-height: 1.6;
     color: #333;
-    flex-grow: 1;
   }
 
   .review-meta {
@@ -216,10 +253,6 @@ import { testimonialPreviews } from '../data/testimonials';
     gap: 0.75rem;
     padding-top: 1rem;
     border-top: 1px solid #eee;
-    background: #f8f9fa;
-    margin: 0 -1.5rem -1.5rem;
-    padding: 1rem 1.5rem;
-    border-radius: 0 0 12px 12px;
   }
 
   .google-icon {
@@ -234,39 +267,9 @@ import { testimonialPreviews } from '../data/testimonials';
     text-decoration: underline;
   }
 
-  .view-all-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    background: linear-gradient(135deg, #8B4513, #8B4513);
-    color: white;
-    padding: 1rem 2.5rem;
-    border-radius: 8px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    margin: 0 auto;
-    display: block;
-    width: fit-content;
-    box-shadow: 0 4px 15px rgba(9, 81, 54, 0.3);
-  }
-
-  .view-all-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(9, 81, 54, 0.4);
-  }
-
-  .view-all-btn svg {
-    width: 20px;
-    height: 20px;
-    fill: currentColor;
-  }
-
   @media (max-width: 1024px) {
-    .testimonials-grid {
-      grid-template-columns: repeat(2, 1fr);
+    .testimonials-masonry {
+      columns: 2;
     }
   }
 
@@ -279,8 +282,10 @@ import { testimonialPreviews } from '../data/testimonials';
       font-size: 1.75rem;
     }
 
-    .testimonials-grid {
-      grid-template-columns: 1fr;
+    .testimonials-masonry {
+      columns: 1;
+      max-width: 500px;
+      margin: 0 auto;
     }
 
     .google-reviews-badge img {

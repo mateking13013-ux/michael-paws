@@ -227,5 +227,69 @@ export const testimonialPreviews: TestimonialPreview[] = [
     text: "The birth certificate, vet records, and health guarantee that came with our Dachshund gave us complete confidence. She's thriving and we couldn't be more grateful!",
     location: 'Columbus, OH',
     timeAgo: '1 month ago'
+  },
+  {
+    initials: 'MG',
+    name: 'Michael Green',
+    rating: 5,
+    text: "Our little Dachshund has been the best addition to our family. She's so playful and loves everyone she meets. Noble Weenie made the whole process stress-free!",
+    location: 'Tampa, FL',
+    timeAgo: '3 weeks ago'
+  },
+  {
+    initials: 'KR',
+    name: 'Katie Robinson',
+    rating: 5,
+    text: "I can't say enough good things about Noble Weenie. Our puppy arrived healthy, happy, and already knew basic commands. The support we've received has been amazing.",
+    location: 'Salt Lake City, UT',
+    timeAgo: '1 month ago'
+  },
+  {
+    initials: 'DP',
+    name: 'Daniel Parker',
+    rating: 5,
+    text: "This is our third Dachshund and by far the best experience. The puppy's temperament is perfect and you can tell she was raised with love.",
+    location: 'Indianapolis, IN',
+    timeAgo: '2 weeks ago'
+  },
+  {
+    initials: 'AC',
+    name: 'Ashley Cooper',
+    rating: 5,
+    text: "We were nervous about getting a puppy shipped to us, but Noble Weenie handled everything perfectly. Our Dachshund arrived safe and sound!",
+    location: 'Kansas City, MO',
+    timeAgo: '5 weeks ago'
+  },
+  {
+    initials: 'BH',
+    name: 'Brian Hughes',
+    rating: 5,
+    text: "The communication from Noble Weenie was excellent throughout the entire process. They sent us updates and photos before our puppy came home.",
+    location: 'San Antonio, TX',
+    timeAgo: '3 weeks ago'
+  },
+  {
+    initials: 'JL',
+    name: 'Jennifer Lewis',
+    rating: 5,
+    text: "Our Dachshund has the sweetest personality. She loves to cuddle and play. Noble Weenie truly cares about finding the right homes for their puppies.",
+    location: 'Pittsburgh, PA',
+    timeAgo: '1 month ago'
+  },
+  {
+    initials: 'RB',
+    name: 'Robert Brown',
+    rating: 5,
+    text: "We've had our puppy for 6 months now and she's absolutely perfect. Healthy, happy, and full of energy. Thank you Noble Weenie!",
+    location: 'Oklahoma City, OK',
+    timeAgo: '6 weeks ago'
+  },
+  {
+    initials: 'SJ',
+    name: 'Samantha Jones',
+    rating: 5,
+    text: "From start to finish, Noble Weenie provided exceptional service. Our Dachshund is everything we wanted and more. Highly recommend to anyone!",
+    location: 'Milwaukee, WI',
+    timeAgo: '2 weeks ago'
   }
 ];
