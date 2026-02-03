@@ -149,6 +149,56 @@ export const puppies: Puppy[] = [
     price: 750,
     description: 'Polly is a classic black and tan puppy with a glossy short coat and petite frame. She is the perfect lap dog who loves nothing more than being close to her humans. Her sweet, gentle nature makes her ideal for families or individuals seeking a loving companion. Polly is ready to steal your heart',
     coat: 'Black-and-tan puppy with a smooth, short coat. Tan eyebrows, tan muzzle, and tan legs with long floppy ears.'
+  },
+  {
+    name: 'Wiener',
+    image: '/images/wiener.jpeg',
+    sex: 'Male',
+    age: '10 Weeks',
+    status: 'Available',
+    price: 750,
+    description: 'Wiener is an absolutely stunning chocolate dapple with a gorgeous long-haired coat that is silky soft to the touch. His beautiful marbled pattern with tan and cream highlights makes him a true showstopper. He has a sweet, affectionate personality and loves to cuddle. Wiener is looking for a family who will appreciate his unique beauty',
+    coat: 'Chocolate dapple puppy with tan and cream marbling throughout. Long, silky coat with feathery ears and a gentle expression.'
+  },
+  {
+    name: 'Moose',
+    image: '/images/moose.jpeg',
+    sex: 'Female',
+    age: '10 Weeks',
+    status: 'Available',
+    price: 750,
+    description: 'Moose is an adorable chocolate dapple girl with the most expressive eyes and sweet face. Her long, flowing coat with beautiful dark chocolate and tan markings is absolutely stunning. She has a gentle, loving personality and enjoys being the center of attention. Moose would make a wonderful addition to any loving family',
+    coat: 'Chocolate dapple puppy with dark chocolate and tan markings. Long, silky coat with feathery ears and a white chest patch.'
+  },
+  {
+    name: 'Cheddar',
+    image: '/images/cheddar.jpeg',
+    sex: 'Male',
+    age: '10 Weeks',
+    status: 'Available',
+    price: 750,
+    description: 'Cheddar is a handsome chocolate dapple boy with striking blue eyes that will melt your heart. His gorgeous long coat features beautiful chocolate and tan marbling with a soft, silky texture. He is curious, playful, and loves to explore. Cheddar is ready to bring joy and adventure to his forever home',
+    coat: 'Chocolate dapple puppy with striking blue eyes and tan/chocolate marbling. Long, silky coat with a soft, fluffy texture.'
+  },
+  {
+    name: 'Pita',
+    image: '/images/pita.jpeg',
+    sex: 'Female',
+    age: '10 Weeks',
+    status: 'Available',
+    price: 750,
+    description: 'Pita is a rare and beautiful Isabella dapple with an incredibly soft, cream-colored coat with subtle gray dapple markings. Her long, fluffy fur and sweet face make her look like a little teddy bear. She has a calm, gentle nature and loves to be pampered. Pita is searching for a family who will treasure her unique beauty',
+    coat: 'Isabella dapple puppy with cream and silver-gray marbling. Long, fluffy coat with soft feathery ears and a delicate appearance.'
+  },
+  {
+    name: 'Vino',
+    image: '/images/vino.jpeg',
+    sex: 'Male',
+    age: '10 Weeks',
+    status: 'Available',
+    price: 750,
+    description: 'Vino is a charming black and tan long-haired dachshund with a playful, happy personality. His sleek black coat with rich tan markings and long fluffy ears give him a distinguished look. He loves to play, explore, and always has a smile on his face. Vino is ready to bring laughter and love to his new family',
+    coat: 'Black and tan puppy with a long, silky coat. Rich tan markings on face, chest, and paws with long feathery ears.'
   }
 ];
 
