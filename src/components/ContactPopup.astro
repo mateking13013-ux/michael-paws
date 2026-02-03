@@ -6,9 +6,28 @@
   <div class="popup-container">
     <button class="popup-close" aria-label="Close popup">&times;</button>
 
+    <div class="popup-puppy-preview" id="popup-puppy-preview" style="display: none;">
+      <div class="puppy-preview-image">
+        <img id="popup-puppy-image" src="" alt="Puppy">
+      </div>
+      <div class="puppy-preview-info">
+        <span class="puppy-status-badge">Available</span>
+        <h3 id="popup-puppy-title">Puppy Name</h3>
+        <p id="popup-puppy-details">Details</p>
+        <div class="puppy-price-row">
+          <span class="puppy-price">$800</span>
+          <span class="puppy-includes">Includes paperwork & starter kit</span>
+        </div>
+        <div class="puppy-guarantee">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+          <span>1-Year Health Guarantee</span>
+        </div>
+      </div>
+    </div>
+
     <div class="popup-header">
-      <h2 class="popup-title">Inquire About <span id="popup-puppy-name">This Puppy</span></h2>
-      <p class="popup-subtitle">Fill out the form below and we'll get back to you as soon as possible.</p>
+      <h2 class="popup-title">Take Home <span id="popup-puppy-name">This Puppy</span></h2>
+      <p class="popup-subtitle">Fill out the form below and we'll contact you with next steps to bring this puppy home!</p>
     </div>
 
     <form id="popup-contact-form" class="popup-form">
@@ -63,25 +82,39 @@
 </div>
 
 <script is:inline>
-  function openContactPopup(puppyName) {
+  function openContactPopup(puppyName, puppyImage, puppyDetails) {
     const popup = document.getElementById('contact-popup');
     const puppyNameSpan = document.getElementById('popup-puppy-name');
     const formSubject = document.getElementById('form-subject');
     const formPuppyName = document.getElementById('form-puppy-name');
     const formSourcePage = document.getElementById('form-source-page');
-    const messageField = document.getElementById('popup-message');
+    const puppyPreview = document.getElementById('popup-puppy-preview');
+    const puppyImageEl = document.getElementById('popup-puppy-image');
+    const puppyTitle = document.getElementById('popup-puppy-title');
+    const puppyDetailsEl = document.getElementById('popup-puppy-details');
 
     // Set source page URL
     formSourcePage.value = window.location.href;
 
     if (puppyName) {
       puppyNameSpan.textContent = puppyName;
-      formSubject.value = `Inquiry about ${puppyName} - Noble Weenie`;
+      formSubject.value = `Take Home Request: ${puppyName} - Noble Weenie`;
       formPuppyName.value = puppyName;
     } else {
       puppyNameSpan.textContent = 'Our Puppies';
       formSubject.value = 'New Puppy Inquiry - Noble Weenie';
       formPuppyName.value = 'General Inquiry';
+    }
+
+    // Show puppy preview if image provided
+    if (puppyImage) {
+      puppyImageEl.src = puppyImage;
+      puppyImageEl.alt = puppyName;
+      puppyTitle.textContent = puppyName;
+      puppyDetailsEl.textContent = puppyDetails || '';
+      puppyPreview.style.display = 'flex';
+    } else {
+      puppyPreview.style.display = 'none';
     }
 
     popup.setAttribute('aria-hidden', 'false');
@@ -178,6 +211,95 @@
     padding: 1rem;
   }
 
+  .popup-puppy-preview {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+    background: #FDF6EE;
+    border-radius: 12px;
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+    border: 2px solid #8B4513;
+  }
+
+  .puppy-preview-image {
+    width: 180px;
+    height: 180px;
+    border-radius: 12px;
+    overflow: hidden;
+    flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+
+  .puppy-preview-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .puppy-preview-info {
+    flex: 1;
+  }
+
+  .puppy-status-badge {
+    display: inline-block;
+    background: #8B4513;
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+  }
+
+  .puppy-preview-info h3 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #8B4513;
+    margin: 0 0 0.25rem;
+  }
+
+  .puppy-preview-info p {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 0 0 0.75rem;
+    line-height: 1.4;
+  }
+
+  .puppy-price-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .puppy-price {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #2a2a2a;
+  }
+
+  .puppy-includes {
+    font-size: 0.75rem;
+    color: #888;
+  }
+
+  .puppy-guarantee {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: #8B4513;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  .puppy-guarantee svg {
+    width: 16px;
+    height: 16px;
+  }
+
   .popup-overlay.active {
     opacity: 1;
     visibility: visible;
@@ -202,20 +324,26 @@
 
   .popup-close {
     position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background: none;
+    top: 0.75rem;
+    right: 0.75rem;
+    background: #f5f5f5;
     border: none;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: #666;
     cursor: pointer;
     line-height: 1;
-    padding: 0.25rem;
-    transition: color 0.3s ease;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
   }
 
   .popup-close:hover {
-    color: #8B4513;
+    background: #8B4513;
+    color: white;
   }
 
   .popup-header {

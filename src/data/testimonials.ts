@@ -160,7 +160,7 @@ export const testimonialPreviews: TestimonialPreview[] = [
     initials: 'AJ',
     name: 'Amanda Johnson',
     rating: 5,
-    text: "Excellent breeder! Our Dachshund came with all vaccinations up to date, KUSA registration, and proper documentation. The follow-up care has been outstanding.",
+    text: "Excellent breeder! Our Dachshund came with all vaccinations up to date, AKC registration, and proper documentation. The follow-up care has been outstanding.",
     location: 'Chicago, IL',
     timeAgo: '2 months ago'
   },
