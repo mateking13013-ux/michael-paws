@@ -3,278 +3,381 @@
 
 const puppies = [
   {
+    name: "Alex",
+    sex: "Male",
+    age: "9 Weeks",
+    puppyId: "MP001",
+    breed: "Staffordshire Bull Terrier",
+    registration: "Yes, AKC",
+    color: "Brindle with white chest",
+    status: "Available",
+    price: 800,
+    description: "Hi! I'm Alex, a confident and playful Staffie boy with a bold personality! I love exploring my surroundings and I'm always ready for an adventure. My muscular build and bright eyes make me a real head-turner. I would thrive with an active family who enjoys outdoor fun. Bring me home and let's start our amazing journey together!",
+    images: ["/images/alex.webp"],
+  },
+  {
+    name: "Ashley",
+    sex: "Female",
+    age: "9 Weeks",
+    puppyId: "MP002",
+    breed: "Staffordshire Bull Terrier",
+    registration: "Yes, AKC",
+    color: "Fawn with white markings",
+    status: "Available",
+    price: 800,
+    description: "Hey there! I'm Ashley, a sweet and affectionate Staffie girl who loves cuddles and belly rubs! I have a gentle temperament and get along wonderfully with everyone I meet. My beautiful coat and expressive eyes will melt your heart. I'm looking for a loving forever home where I can shower my family with love!",
+    images: ["/images/ashley.webp"],
+  },
+  {
     name: "Bella",
-    sex: "Female",
-    age: "11 Weeks",
-    puppyId: "NW001",
-    breed: "Dachshund",
-    registration: "Yes, AKC",
-    color: "Silver dapple and cream",
-    status: "Available",
-    price: 800,
-    description: "Hi! I'm Bella, a precious little Dachshund girl! Are you going to be my new fur-ever family? I hope so! I enjoy going for short walks and playing with my toys, but even more than that, I love to snuggle! We can curl up together on the couch while we enjoy some quality time together. I am a social butterfly, so showing me off to all your friends and family will be a treat for you and me. Bring me home soon so I can show you how much I love and adore you!",
-    images: ["/images/bella.jpeg"],
-  },
-  {
-    name: "Benny",
     sex: "Male",
     age: "11 Weeks",
-    puppyId: "NW002",
-    breed: "Dachshund",
+    puppyId: "MP003",
+    breed: "Staffordshire Bull Terrier",
     registration: "Yes, AKC",
-    color: "Chocolate dapple and tan",
+    color: "Blue with white chest",
     status: "Available",
     price: 800,
-    description: "Hey there! I'm Benny, a handsome little Dachshund boy with the most stunning blue eyes! I'm brave, curious, and always ready for an adventure. Whether it's exploring the garden or chasing a squeaky toy across the living room, I bring the fun wherever I go. I also love a good belly rub after a big day of playing. I'm looking for my forever family to share all my love with — could that be you?",
-    images: ["/images/benny.jpeg"],
+    description: "Hello! I'm Bella, a strong and sturdy Staffie with a heart of gold! Despite my muscular build, I'm incredibly gentle and love nothing more than snuggling on the couch. I'm well-socialized and confident in new situations. I'm ready to become your loyal best friend for life!",
+    images: ["/images/bella.webp"],
   },
   {
-    name: "Charlie",
+    name: "Belly",
+    sex: "Female",
+    age: "9 Weeks",
+    puppyId: "MP004",
+    breed: "Staffordshire Bull Terrier",
+    registration: "Yes, AKC",
+    color: "Red brindle with white blaze",
+    status: "Available",
+    price: 800,
+    description: "Hi there! I'm Belly, an adorable and energetic Staffie puppy who keeps everyone entertained! I have a wonderful temperament and love being the center of attention. My compact, muscular frame and cheerful disposition make me irresistible. I'm searching for my perfect family!",
+    images: ["/images/belly.webp"],
+  },
+  {
+    name: "Boston",
+    sex: "Male",
+    age: "9 Weeks",
+    puppyId: "MP005",
+    breed: "Staffordshire Bull Terrier",
+    registration: "Yes, AKC",
+    color: "Black brindle with white chest",
+    status: "Available",
+    price: 800,
+    description: "Hey! I'm Boston, a handsome and outgoing Staffie with a charming personality! I'm curious about everything and love to play with toys. My strong build and friendly nature make me perfect for families. I can't wait to find my forever home and be your best friend!",
+    images: ["/images/boston.webp"],
+  },
+  {
+    name: "Carlos",
+    sex: "Male",
+    age: "9 Weeks",
+    puppyId: "MP006",
+    breed: "Staffordshire Bull Terrier",
+    registration: "Yes, AKC",
+    color: "Brindle and white",
+    status: "Available",
+    price: 800,
+    description: "What's up! I'm Carlos, a bold and confident Staffie puppy with a love for adventure! I have excellent energy and love to run and play. My striking appearance and loyal personality make me a wonderful companion. I'm ready to bring joy to my new family!",
+    images: ["/images/carlos.webp"],
+  },
+  {
+    name: "Chill",
+    sex: "Male",
+    age: "9 Weeks",
+    puppyId: "MP007",
+    breed: "Staffordshire Bull Terrier",
+    registration: "Yes, AKC",
+    color: "Blue fawn with white markings",
+    status: "Sold",
+    price: 800,
+    description: "Hello! I'm Chill, a laid-back and easygoing Staffie who lives up to my name! I have a calm temperament but still enjoy a good play session. My gentle nature makes me great with children and other pets. I've found my forever home!",
+    images: ["/images/chill.webp"],
+  },
+  {
+    name: "Connie",
+    sex: "Female",
+    age: "9 Weeks",
+    puppyId: "MP008",
+    breed: "Staffordshire Bull Terrier",
+    registration: "Yes, AKC",
+    color: "Fawn brindle with white chest",
+    status: "Available",
+    price: 800,
+    description: "Hi! I'm Connie, a beautiful and sweet-natured Staffie with a loving personality! I adore people and will greet you with a wagging tail every time. My compact build and gorgeous coat make me a standout. I would make an excellent family companion!",
+    images: ["/images/connie.webp"],
+  },
+  {
+    name: "Cooper",
     sex: "Male",
     age: "11 Weeks",
-    puppyId: "NW003",
-    breed: "Dachshund",
+    puppyId: "MP009",
+    breed: "Staffordshire Bull Terrier",
     registration: "Yes, AKC",
-    color: "Chocolate and tan",
+    color: "Red with white blaze",
     status: "Available",
     price: 800,
-    description: "Hello! I'm Charlie, a charming little Dachshund boy who loves his toys more than anything! I'm playful, loyal, and always up for a game of fetch. When playtime is over, you'll find me curled up in the cosiest spot in the house. I'm gentle, well-mannered, and great with kids. I can't wait to find my forever home and be your best friend for life!",
-    images: ["/images/charlie.jpeg"],
+    description: "Hey there! I'm Cooper, a strong and athletic Staffie puppy who loves to stay active! I'm intelligent and pick up training quickly. My loyal and protective nature makes me an ideal family dog. I'm looking for an active household that will keep up with my energy!",
+    images: ["/images/cooper.webp"],
   },
   {
-    name: "Doxie",
-    sex: "Female",
-    age: "11 Weeks",
-    puppyId: "NW004",
-    breed: "Dachshund",
-    registration: "Yes, AKC",
-    color: "Chocolate dapple and cream",
-    status: "Available",
-    price: 800,
-    description: "Hi there! I'm Doxie, a sweet little Dachshund girl with the most adorable face you've ever seen! I love wearing my cute outfits and posing for photos. I'm gentle, affectionate, and love being held close. Cuddle time is my favourite time! I get along great with other pets and I'm looking for a loving family who will spoil me with all the treats and belly rubs I deserve!",
-    images: ["/images/doxie.jpeg"],
-  },
-  {
-    name: "Harold",
-    sex: "Female",
-    age: "11 Weeks",
-    puppyId: "NW005",
-    breed: "Dachshund",
-    registration: "Yes, AKC",
-    color: "English cream",
-    status: "Available",
-    price: 800,
-    description: "Hello! I'm Harold, a gorgeous little Dachshund girl with a beautiful cream coat that shines in the sun! I love spending time outdoors, rolling in the grass and soaking up the warm weather. I'm calm, sweet-natured, and love gentle head scratches. I'll be your loyal companion through thick and thin. Come take me home and let's start making wonderful memories together!",
-    images: ["/images/harold.jpeg"],
-  },
-  {
-    name: "Hazel",
-    sex: "Female",
-    age: "11 Weeks",
-    puppyId: "NW006",
-    breed: "Dachshund",
-    registration: "Yes, AKC",
-    color: "Chocolate dapple and tan",
-    status: "Available",
-    price: 800,
-    description: "Hi! I'm Hazel, a beautiful little Dachshund girl with the sweetest eyes you'll ever see! I'm curious about everything and love exploring new places. I enjoy snuggling on soft blankets and taking cosy naps after a fun play session. I'm friendly, loving, and can't wait to meet my new family. Take me home and I promise to fill your days with joy and endless puppy kisses!",
-    images: ["/images/hazel.jpeg"],
-  },
-  {
-    name: "Minnie",
-    sex: "Female",
-    age: "11 Weeks",
-    puppyId: "NW007",
-    breed: "Dachshund",
-    registration: "Yes, AKC",
-    color: "Black and tan dapple",
-    status: "Available",
-    price: 800,
-    description: "Hey! I'm Minnie, a tiny little Dachshund girl with a big personality! Don't let my small size fool you — I'm full of energy and love to play. I look adorable in my little sweaters and I know it! I'm affectionate, playful, and love being the centre of attention. I'm looking for a family who will give me all the love and cuddles I can handle. Will you be my person?",
-    images: ["/images/minnie.jpeg"],
-  },
-  {
-    name: "Myla",
-    sex: "Female",
-    age: "11 Weeks",
-    puppyId: "NW008",
-    breed: "Dachshund",
-    registration: "Yes, AKC",
-    color: "Black and tan",
-    status: "Available",
-    price: 800,
-    description: "Hello there! I'm Myla, a stunning little Dachshund girl with a sleek black and tan coat! I'm full of sass and personality. I love playing outside and I've been told my tongue-out smile is absolutely irresistible! I'm energetic, friendly, and get along with everyone I meet. I'm ready for my forever home where I can be loved, pampered, and taken on lots of fun adventures!",
-    images: ["/images/myla.jpeg"],
-  },
-  {
-    name: "Pascal",
+    name: "Coy",
     sex: "Male",
     age: "11 Weeks",
-    puppyId: "NW009",
-    breed: "Dachshund",
+    puppyId: "MP010",
+    breed: "Staffordshire Bull Terrier",
     registration: "Yes, AKC",
-    color: "Chocolate dapple and tan",
+    color: "Dark brindle with white chest",
     status: "Available",
     price: 800,
-    description: "Hey! I'm Pascal, a cool little Dachshund boy who loves rocking my pink hoodie! I'm confident, curious, and always the life of the party. I enjoy playing with my toys and then crashing out for a nap on the couch. I'm loyal, loving, and will follow you everywhere you go. I'm looking for an active family who loves adventures as much as I do. Let's go explore together!",
-    images: ["/images/pascal.jpeg"],
+    description: "Hello! I'm Coy, a charming Staffie with a playful spirit and a heart full of love! I enjoy interactive play and I'm always up for a game of fetch. My muscular frame and bright personality make me a joy to be around. I'm eager to find my forever family!",
+    images: ["/images/coy.webp"],
   },
   {
-    name: "Rocky",
+    name: "Echo",
+    sex: "Male",
+    age: "8 Weeks",
+    puppyId: "MP011",
+    breed: "Staffordshire Bull Terrier",
+    registration: "Yes, AKC",
+    color: "Blue brindle with white markings",
+    status: "Available",
+    price: 800,
+    description: "Hi! I'm Echo, a spirited and curious Staffie puppy who loves discovering new things! I have a wonderful temperament and I'm naturally sociable. My compact build and expressive face give me tons of character. I'm ready to fill your home with love and laughter!",
+    images: ["/images/echo.webp"],
+  },
+  {
+    name: "Gracie",
+    sex: "Female",
+    age: "8 Weeks",
+    puppyId: "MP012",
+    breed: "Staffordshire Bull Terrier",
+    registration: "Yes, AKC",
+    color: "Fawn with white chest and paws",
+    status: "Available",
+    price: 800,
+    description: "Hey! I'm Gracie, a gentle and loving Staffie girl with the sweetest personality! I enjoy quiet moments just as much as playtime. My beautiful coat and kind eyes make me absolutely adorable. I'm looking for a family who will cherish my gentle spirit!",
+    images: ["/images/gracie.webp"],
+  },
+  {
+    name: "Kobe",
+    sex: "Male",
+    age: "9 Weeks",
+    puppyId: "MP013",
+    breed: "Staffordshire Bull Terrier",
+    registration: "Yes, AKC",
+    color: "Red brindle",
+    status: "Available",
+    price: 800,
+    description: "What's up! I'm Kobe, an energetic and athletic Staffie with a competitive spirit! I love to run, play, and show off my strength. My confident demeanor and striking looks make me a natural standout. I'm perfect for someone who loves an active lifestyle!",
+    images: ["/images/kobe.webp"],
+  },
+  {
+    name: "Lucy",
+    sex: "Female",
+    age: "9 Weeks",
+    puppyId: "MP014",
+    breed: "Staffordshire Bull Terrier",
+    registration: "Yes, AKC",
+    color: "White with brindle patches",
+    status: "Available",
+    price: 800,
+    description: "Hi there! I'm Lucy, a sweet and affectionate Staffie puppy who loves nothing more than being close to her people! I have a calm and gentle temperament that makes me great with kids. My compact build and beautiful markings are truly eye-catching. I'm ready for my forever home!",
+    images: ["/images/lucy.webp"],
+  },
+  {
+    name: "Mabel",
+    sex: "Female",
+    age: "8 Weeks",
+    puppyId: "MP015",
+    breed: "Staffordshire Bull Terrier",
+    registration: "Yes, AKC",
+    color: "Brindle with white blaze and chest",
+    status: "Available",
+    price: 800,
+    description: "Hello! I'm Mabel, a delightful and playful Staffie with a fun-loving personality! I bring joy to everyone I meet with my happy-go-lucky attitude. My muscular little frame and adorable face make me irresistible. I'm searching for a family to call my own!",
+    images: ["/images/mabel.webp"],
+  },
+  {
+    name: "Mack",
     sex: "Male",
     age: "11 Weeks",
-    puppyId: "NW010",
-    breed: "Dachshund",
+    puppyId: "MP016",
+    breed: "Staffordshire Bull Terrier",
     registration: "Yes, AKC",
-    color: "Chocolate dapple and cream",
+    color: "Dark brindle with white chest",
     status: "Available",
     price: 800,
-    description: "What's up! I'm Rocky, a tough little Dachshund boy with a heart of gold! I may be small but I've got big dreams and an even bigger personality. I love exploring around the house and playing with anything I can get my paws on. After a big day, I love curling up next to my favourite human. I'm brave, loyal, and ready to be your number one companion. Let's do this!",
-    images: ["/images/rocky.jpeg"],
+    description: "Hey! I'm Mack, a robust and handsome Staffie with a bold personality! I'm confident, friendly, and love to be the center of attention. My powerful build and striking coat make me a real head-turner. I would thrive in an active household with plenty of love to give!",
+    images: ["/images/mack.webp"],
   },
   {
-    name: "Rosie",
+    name: "Maggie",
     sex: "Female",
-    age: "11 Weeks",
-    puppyId: "NW011",
-    breed: "Dachshund",
+    age: "8 Weeks",
+    puppyId: "MP017",
+    breed: "Staffordshire Bull Terrier",
     registration: "Yes, AKC",
-    color: "Chocolate dapple and tan",
+    color: "Fawn with white markings",
     status: "Available",
     price: 800,
-    description: "Hi! I'm Rosie, a darling little Dachshund girl wearing my favourite orange sweater! I'm sweet, gentle, and absolutely love cuddle time. I enjoy lounging on soft blankets and getting pampered by my humans. I'm well-behaved, easy-going, and perfect for a family looking for a calm, loving companion. Come meet me and I'll steal your heart in seconds — I promise!",
-    images: ["/images/rosie.jpeg"],
+    description: "Hi! I'm Maggie, an adorable Staffie puppy with a heart as big as my personality! I love playing with toys and giving kisses to everyone. My sweet nature and beautiful appearance make me the perfect family companion. I cannot wait to meet my new family!",
+    images: ["/images/maggie.webp"],
   },
   {
-    name: "Coni",
+    name: "Mia",
     sex: "Male",
     age: "11 Weeks",
-    puppyId: "NW012",
-    breed: "Dachshund",
+    puppyId: "MP018",
+    breed: "Staffordshire Bull Terrier",
     registration: "Yes, AKC",
-    color: "Black and tan",
+    color: "Blue with white chest and paws",
     status: "Available",
     price: 800,
-    imagePosition: "center center",
-    description: "Hello! I'm Coni, a handsome little Dachshund boy with a gorgeous long black and tan coat! I'm gentle, loyal, and love being close to my humans. I have the most soulful eyes that will melt your heart. I enjoy quiet evenings and gentle pats, but I'm also up for a good play session. I'm looking for a loving family to call my own — could you be the one?",
-    images: ["/images/coni.jpeg"],
+    description: "Hello there! I'm Mia, a strong and confident Staffie with an outgoing personality! I love to explore and I'm always up for an adventure. My well-built frame and friendly demeanor make me an ideal companion. I'm ready to bring endless joy to my new home!",
+    images: ["/images/mia.webp"],
   },
   {
-    name: "Lunga",
+    name: "Nevile",
     sex: "Male",
     age: "11 Weeks",
-    puppyId: "NW013",
-    breed: "Dachshund",
+    puppyId: "MP019",
+    breed: "Staffordshire Bull Terrier",
     registration: "Yes, AKC",
-    color: "Chocolate and tan",
+    color: "Red with white blaze",
     status: "Available",
     price: 800,
-    description: "Hey there! I'm Lunga, a playful little Dachshund boy who loves his toys! I'm always chewing on something fun and I've got endless energy for playtime. My beautiful chocolate and tan coat is super soft — perfect for snuggling! I'm friendly, outgoing, and love meeting new people. I'm ready to join my forever family and bring so much happiness to your home!",
-    images: ["/images/lunga.jpeg"],
+    description: "Hey! I'm Nevile, a distinguished and loyal Staffie puppy with a noble bearing! I have a calm confidence that sets me apart from the crowd. My muscular build and beautiful markings make me truly handsome. I'm looking for a family who will appreciate my gentle, devoted nature!",
+    images: ["/images/nevile.webp"],
   },
   {
-    name: "Obilo",
+    name: "Pip",
     sex: "Female",
     age: "11 Weeks",
-    puppyId: "NW014",
-    breed: "Dachshund",
+    puppyId: "MP020",
+    breed: "Staffordshire Bull Terrier",
     registration: "Yes, AKC",
-    color: "Blue and tan dapple with white",
+    color: "Brindle and white",
     status: "Available",
     price: 800,
-    description: "Hi! I'm Obilo, a stunning little Dachshund girl with the most unique blue dapple coat and beautiful two-toned eyes! I'm one of a kind and I know it. I love sitting pretty on the couch surrounded by pillows. I'm calm, gentle, and absolutely adore being the centre of attention. I'm looking for a special family who appreciates how unique and beautiful I am. Let's be best friends!",
-    images: ["/images/obilo.jpeg"],
+    description: "Hi! I'm Pip, a petite and charming Staffie girl with a lively personality! I'm full of energy and love to play but also enjoy quiet cuddle time. My compact frame and expressive eyes make me absolutely adorable. I'm ready to fill your life with love and happiness!",
+    images: ["/images/pip.webp"],
   },
   {
-    name: "Skyde",
-    sex: "Female",
+    name: "Rex",
+    sex: "Male",
+    age: "9 Weeks",
+    puppyId: "MP021",
+    breed: "Staffordshire Bull Terrier",
+    registration: "Yes, AKC",
+    color: "Black brindle with white chest",
+    status: "Available",
+    price: 800,
+    description: "What's up! I'm Rex, a powerful and athletic Staffie with a commanding presence! I'm brave, loyal, and incredibly affectionate with my family. My striking build and confident stride make me stand out wherever I go. I'm seeking a loving family who will give me the devotion I deserve!",
+    images: ["/images/rex.webp"],
+  },
+  {
+    name: "Roy",
+    sex: "Male",
     age: "11 Weeks",
-    puppyId: "NW015",
-    breed: "Dachshund",
+    puppyId: "MP022",
+    breed: "Staffordshire Bull Terrier",
     registration: "Yes, AKC",
-    color: "Chocolate dapple and white",
+    color: "Red brindle with white markings",
     status: "Available",
     price: 800,
-    description: "Hello! I'm Skyde, a gorgeous little Dachshund girl with a beautiful chocolate and white coat! I'm sweet, playful, and love my toys — especially anything I can chew on! I'm curious about the world and always ready for a little adventure. After playtime, I love snuggling up close and drifting off to sleep. I'm looking for a warm, loving home to call my own. Take me home today!",
-    images: ["/images/skyde.jpeg"],
+    description: "Hello! I'm Roy, a friendly and sociable Staffie puppy who gets along with everyone! I have a happy-go-lucky attitude that makes me a joy to be around. My well-proportioned build and glossy coat give me a distinguished appearance. I'm looking for a loving family to share my life with!",
+    images: ["/images/roy.webp"],
   },
   {
-    name: "Slinky",
-    sex: "Female",
+    name: "Royce",
+    sex: "Male",
+    age: "8 Weeks",
+    puppyId: "MP023",
+    breed: "Staffordshire Bull Terrier",
+    registration: "Yes, AKC",
+    color: "Blue fawn with white chest",
+    status: "Available",
+    price: 800,
+    description: "Hey there! I'm Royce, a premium Staffie puppy with a luxurious appearance and loving personality! I carry myself with confidence and love to show off my playful side. My well-built frame and beautiful coat make me truly special. I'm ready to be your loyal companion for life!",
+    images: ["/images/royce.webp"],
+  },
+  {
+    name: "Thor",
+    sex: "Male",
     age: "11 Weeks",
-    puppyId: "NW016",
-    breed: "Dachshund",
+    puppyId: "MP024",
+    breed: "Staffordshire Bull Terrier",
     registration: "Yes, AKC",
-    color: "Chocolate and tan",
+    color: "Dark brindle",
     status: "Available",
     price: 800,
-    description: "Hi there! I'm Slinky, an adorable little Dachshund girl with my own personalised bone toy! I'm confident, sassy, and love posing for the camera in my cute little sweater. I enjoy playtime, treat time, and nap time — basically all the times! I'm well-socialised, friendly, and ready to be your new best friend. Come meet me and I guarantee you won't be able to resist!",
-    images: ["/images/slinky.jpeg"],
+    description: "Hi! I'm Thor, a mighty and brave Staffie with a heart of gold! My powerful build and fearless spirit are matched only by my incredible sweetness. I love rough-and-tumble play but I'm equally gentle with children. I'm destined to be a beloved family protector!",
+    images: ["/images/thor.webp"],
   },
   {
-    name: "Wiener",
+    name: "Wild",
     sex: "Male",
-    age: "10 Weeks",
-    puppyId: "NW017",
-    breed: "Dachshund",
+    age: "11 Weeks",
+    puppyId: "MP025",
+    breed: "Staffordshire Bull Terrier",
     registration: "Yes, AKC",
-    color: "Chocolate dapple",
+    color: "Brindle with white blaze and chest",
     status: "Available",
     price: 800,
-    description: "Hi! I'm Wiener, an absolutely stunning chocolate dapple with a gorgeous long-haired coat that is silky soft to the touch! My beautiful marbled pattern with tan and cream highlights makes me a true showstopper. I have a sweet, affectionate personality and love to cuddle. I'm looking for a family who will appreciate my unique beauty and shower me with love!",
-    images: ["/images/wiener.jpeg"],
+    description: "Hello! I'm Wild, an adventurous and high-energy Staffie who lives up to my name! I love to run, play, and explore the great outdoors. Despite my energetic nature, I have a sweet and affectionate side too. I'm perfect for an active owner who enjoys outdoor activities!",
+    images: ["/images/wild.webp"],
   },
   {
-    name: "Moose",
+    name: "Yava",
     sex: "Female",
-    age: "10 Weeks",
-    puppyId: "NW018",
-    breed: "Dachshund",
+    age: "9 Weeks",
+    puppyId: "MP026",
+    breed: "Staffordshire Bull Terrier",
     registration: "Yes, AKC",
-    color: "Chocolate dapple",
+    color: "Fawn with white chest and paws",
     status: "Available",
     price: 800,
-    description: "Hello! I'm Moose, an adorable chocolate dapple girl with the most expressive eyes and sweet face! My long, flowing coat with beautiful dark chocolate and tan markings is absolutely stunning. I have a gentle, loving personality and enjoy being the center of attention. I would make a wonderful addition to any loving family!",
-    images: ["/images/moose.jpeg"],
+    description: "Hi there! I'm Yava, an elegant and graceful Staffie girl with a warm personality! I have a calm confidence and a loving nature that draws people to me. My beautiful coat and gentle eyes make me truly captivating. I would make a wonderful addition to any family!",
+    images: ["/images/yava.webp"],
   },
   {
-    name: "Cheddar",
+    name: "Zeus",
     sex: "Male",
-    age: "10 Weeks",
-    puppyId: "NW019",
-    breed: "Dachshund",
+    age: "9 Weeks",
+    puppyId: "MP027",
+    breed: "Staffordshire Bull Terrier",
     registration: "Yes, AKC",
-    color: "Chocolate dapple with blue eyes",
+    color: "Blue with white markings",
     status: "Available",
     price: 800,
-    description: "Hey there! I'm Cheddar, a handsome chocolate dapple boy with striking blue eyes that will melt your heart! My gorgeous long coat features beautiful chocolate and tan marbling with a soft, silky texture. I'm curious, playful, and love to explore. I'm ready to bring joy and adventure to my forever home!",
-    images: ["/images/cheddar.jpeg"],
+    description: "Hey! I'm Zeus, a powerful and majestic Staffie who commands attention wherever I go! I have a strong, muscular build and a confident personality. Despite my imposing appearance, I'm incredibly gentle and loving. I'm looking for a family worthy of my devotion!",
+    images: ["/images/zeus.webp"],
   },
   {
-    name: "Pita",
-    sex: "Female",
-    age: "10 Weeks",
-    puppyId: "NW020",
-    breed: "Dachshund",
-    registration: "Yes, AKC",
-    color: "Isabella dapple",
-    status: "Available",
-    price: 800,
-    description: "Hi! I'm Pita, a rare and beautiful Isabella dapple with an incredibly soft, cream-colored coat with subtle gray dapple markings. My long, fluffy fur and sweet face make me look like a little teddy bear! I have a calm, gentle nature and love to be pampered. I'm searching for a family who will treasure my unique beauty!",
-    images: ["/images/pita.jpeg"],
-  },
-  {
-    name: "Vino",
+    name: "Ziggy",
     sex: "Male",
-    age: "10 Weeks",
-    puppyId: "NW021",
-    breed: "Dachshund",
+    age: "11 Weeks",
+    puppyId: "MP028",
+    breed: "Staffordshire Bull Terrier",
     registration: "Yes, AKC",
-    color: "Black and tan",
+    color: "Brindle with white chest patch",
     status: "Available",
     price: 800,
-    description: "What's up! I'm Vino, a charming black and tan long-haired dachshund with a playful, happy personality! My sleek black coat with rich tan markings and long fluffy ears give me a distinguished look. I love to play, explore, and always have a smile on my face. I'm ready to bring laughter and love to my new family!",
-    images: ["/images/vino.jpeg"],
+    description: "What's up! I'm Ziggy, a fun and quirky Staffie puppy with a unique personality! I'm always making my family laugh with my playful antics. My well-built frame and cheerful expression make me impossible to resist. I'm ready to bring endless entertainment to my new home!",
+    images: ["/images/ziggy.webp"],
+  },
+  {
+    name: "Lime",
+    sex: "Male",
+    age: "9 Weeks",
+    puppyId: "MP029",
+    breed: "Staffordshire Bull Terrier",
+    registration: "Yes, AKC",
+    color: "Fawn brindle with white markings",
+    status: "Available",
+    price: 800,
+    description: "Hello! I'm Lime, a fresh and lively Staffie with a zest for life! I bring energy and excitement to everything I do. My compact, muscular build and bright personality make me an absolute delight. I'm eager to find a family who matches my enthusiasm for life!",
+    images: ["/images/lime.webp"],
   },
 ];
 ---
@@ -364,7 +467,14 @@ const puppies = [
           <p class="description">{puppy.description}</p>
 
           <div class="comes-with-card">
-            <p><em>Comes with birth certificate, vet records & 1 year health guarantee</em></p>
+            <p class="comes-with-title">Every Puppy Comes With:</p>
+            <ul class="comes-with-list">
+              <li>Lifetime health guarantee</li>
+              <li>Potty and crate trained</li>
+              <li>Up to date vaccinations</li>
+              <li>Up to date de-worming</li>
+              <li>Starter Kit</li>
+            </ul>
           </div>
 
           <div class="buttons-row">
@@ -380,7 +490,7 @@ const puppies = [
 <style>
   .puppies-section {
     padding: 40px 20px;
-    background: #FDF6EE;
+    background: #F0F4F8;
   }
 
   .puppies-section .container {
@@ -454,17 +564,17 @@ const puppies = [
   }
 
   .status-badge.available {
-    background: #8B4513;
+    background: #1B2A4A;
     color: #fff;
   }
 
   .status-badge.reserved {
     background: #E8A94A;
-    color: #5C2E0A;
+    color: #0F1B33;
   }
 
   .price-banner {
-    background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%);
+    background: linear-gradient(135deg, #1B2A4A 0%, #2E8B8B 100%);
     color: #fff;
     padding: 12px 16px;
     border-radius: 8px;
@@ -492,8 +602,8 @@ const puppies = [
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
     padding: 12px 0;
-    border-top: 1px solid #f0ebe4;
-    border-bottom: 1px solid #f0ebe4;
+    border-top: 1px solid #E2E8F0;
+    border-bottom: 1px solid #E2E8F0;
     margin-bottom: 12px;
   }
 
@@ -505,7 +615,7 @@ const puppies = [
     width: 28px;
     height: 28px;
     margin: 0 auto 5px;
-    color: #8B4513;
+    color: #1B2A4A;
   }
 
   .stat-icon svg {
@@ -560,18 +670,41 @@ const puppies = [
   }
 
   .comes-with-card {
-    background: #FDF6EE;
-    border: 1px solid #D2691E;
+    background: #F0F4F8;
+    border: 1px solid #2E8B8B;
     border-radius: 8px;
     padding: 10px 14px;
     margin-bottom: 15px;
   }
 
-  .comes-with-card p {
-    margin: 0;
+  .comes-with-card .comes-with-title {
+    margin: 0 0 8px;
     font-size: 0.85rem;
-    color: #5C2E0A;
+    color: #0F1B33;
+    font-weight: 700;
     line-height: 1.5;
+  }
+
+  .comes-with-card .comes-with-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .comes-with-card .comes-with-list li {
+    font-size: 0.8rem;
+    color: #0F1B33;
+    padding: 2px 0;
+    padding-left: 18px;
+    position: relative;
+  }
+
+  .comes-with-card .comes-with-list li::before {
+    content: "\2713";
+    position: absolute;
+    left: 0;
+    color: #2E8B8B;
+    font-weight: 700;
   }
 
   .buttons-row {
@@ -594,25 +727,25 @@ const puppies = [
   }
 
   .btn-primary {
-    background: #8B4513;
+    background: #1B2A4A;
     color: #fff;
-    border: 2px solid #8B4513;
+    border: 2px solid #1B2A4A;
   }
 
   .btn-primary:hover {
-    background: #5C2E0A;
-    border-color: #5C2E0A;
+    background: #0F1B33;
+    border-color: #0F1B33;
     color: #fff;
   }
 
   .btn-outline {
     background: transparent;
-    color: #8B4513;
-    border: 2px solid #8B4513;
+    color: #1B2A4A;
+    border: 2px solid #1B2A4A;
   }
 
   .btn-outline:hover {
-    background: #8B4513;
+    background: #1B2A4A;
     color: #fff;
   }
 

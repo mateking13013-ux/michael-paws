@@ -3,16 +3,16 @@
 import { testimonialPreviews } from '../data/testimonials';
 
 const testimonialImages = [
-  '/images/testimonial-2.jpeg',
-  '/images/testimonial-3.jpeg',
-  '/images/testimonial-4.jpeg',
-  '/images/testimonial-5.jpeg',
-  '/images/testimonial-6.jpeg',
-  '/images/testimonial-7.jpeg',
-  '/images/testimonial-8.jpeg',
-  '/images/testimonial-9.jpeg',
-  '/images/testimonial-10.jpeg',
-  '/images/testimonial-11.jpeg',
+  '/images/alex.webp',
+  '/images/ashley.webp',
+  '/images/bella.webp',
+  '/images/belly.webp',
+  '/images/boston.webp',
+  '/images/carlos.webp',
+  '/images/chill.webp',
+  '/images/connie.webp',
+  '/images/cooper.webp',
+  '/images/coy.webp',
 ];
 
 // Split testimonials: ones with images first, then text-only
@@ -35,7 +35,7 @@ const testimonialsTextOnly = testimonialPreviews.slice(testimonialImages.length)
         <div class="testimonial-card">
           {index < testimonialImages.length && (
             <div class="card-image">
-              <img src={testimonialImages[index]} alt={`${t.name}'s dachshund`} loading="lazy">
+              <img src={testimonialImages[index]} alt={`${t.name}'s Staffie`} loading="lazy">
             </div>
           )}
           <div class="card-content">
@@ -67,7 +67,7 @@ const testimonialsTextOnly = testimonialPreviews.slice(testimonialImages.length)
 
             <div class="card-footer">
               <img src="/images/image copy.png" alt="Google" class="google-icon">
-              <span class="business-name">Noble Weenie</span>
+              <span class="business-name">Michael Paws</span>
             </div>
           </div>
         </div>

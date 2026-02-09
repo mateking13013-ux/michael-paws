@@ -1,24 +1,24 @@
 /* ================================
-   Noble Weenie
+   Michael Paws
    Main Stylesheet
-   Warm Dachshund Theme
+   Deep Navy & Teal Theme
 ================================ */
 
 /* CSS Custom Properties (Theme) */
 :root {
-  /* Primary Colors - Warm Dachshund Brown */
-  --color-primary: #8B4513;
-  --color-primary-light: #D2691E;
-  --color-primary-dark: #5C2E0A;
+  /* Primary Colors - Deep Navy */
+  --color-primary: #1B2A4A;
+  --color-primary-light: #2E8B8B;
+  --color-primary-dark: #0F1B33;
 
-  /* Secondary Colors - Warm Amber/Gold */
-  --color-secondary: #C8872B;
-  --color-secondary-light: #E8A94A;
-  --color-secondary-dark: #A06B1F;
+  /* Secondary Colors - Teal Accents */
+  --color-secondary: #2E8B8B;
+  --color-secondary-light: #4EADAD;
+  --color-secondary-dark: #245D5D;
 
   /* Accent Colors */
-  --color-gold: #D4A054;
-  --color-cream: #FFF8F0;
+  --color-gold: #3BA0A0;
+  --color-cream: #F0F4F8;
 
   /* Neutrals */
   --color-white: #FFFFFF;
@@ -167,12 +167,12 @@ img {
 .btn-primary {
   background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
   color: var(--color-white);
-  box-shadow: 0 4px 15px rgba(139, 69, 19, 0.3);
+  box-shadow: 0 4px 15px rgba(27, 42, 74, 0.3);
 }
 
 .btn-primary:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(139, 69, 19, 0.4);
+  box-shadow: 0 8px 25px rgba(27, 42, 74, 0.4);
   color: var(--color-white);
 }
 

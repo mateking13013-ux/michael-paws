@@ -9,7 +9,7 @@ const displayPuppies = puppies.slice(0, 1);
 <section class="puppies-section" id="puppies">
   <div class="section-header">
     <span class="section-badge">Available Now</span>
-    <h2 class="section-title">Our Available Dachshund Puppies</h2>
+    <h2 class="section-title">Our Available Staffordshire Bull Terrier Puppies</h2>
     <p class="section-subtitle">Each puppy comes with birth certificate, vet records, and a 1-year health guarantee. All puppies are up to date on vaccinations and de-worming.</p>
   </div>
 
@@ -18,7 +18,7 @@ const displayPuppies = puppies.slice(0, 1);
       {displayPuppies.map((puppy) => (
         <article class="puppy-card">
           <div class="puppy-image">
-            <img src={puppy.image} alt={`${puppy.name} - ${puppy.sex} Dachshund puppy`} loading="lazy">
+            <img src={puppy.image} alt={`${puppy.name} - ${puppy.sex} Staffordshire Bull Terrier puppy`} loading="lazy">
             <span class="status-tag">{puppy.status}</span>
           </div>
 
@@ -43,7 +43,7 @@ const displayPuppies = puppies.slice(0, 1);
               </div>
               <div class="detail-row">
                 <span class="detail-label">Breed</span>
-                <span class="detail-value">Dachshund</span>
+                <span class="detail-value">Staffordshire Bull Terrier</span>
               </div>
             </div>
             <div class="puppy-includes">
@@ -89,7 +89,7 @@ const displayPuppies = puppies.slice(0, 1);
   .puppies-section {
     display: block;
     font-family: var(--font-family, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif);
-    background: #FDF6EE;
+    background: #F0F4F8;
     padding: 3.5rem 1.5rem;
   }
 
@@ -100,7 +100,7 @@ const displayPuppies = puppies.slice(0, 1);
 
   .section-badge {
     display: inline-block;
-    background: #8B4513;
+    background: #1B2A4A;
     color: white;
     padding: 0.4rem 1rem;
     border-radius: 50px;
@@ -143,7 +143,7 @@ const displayPuppies = puppies.slice(0, 1);
     border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-    border: 1px solid rgba(139, 69, 19, 0.08);
+    border: 1px solid rgba(27, 42, 74, 0.08);
   }
 
   /* Image column */
@@ -180,13 +180,13 @@ const displayPuppies = puppies.slice(0, 1);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border-right: 1px solid #f0ebe4;
+    border-right: 1px solid #E2E8F0;
   }
 
   .puppy-name {
     font-size: 1.6rem;
     font-weight: 700;
-    color: #8B4513;
+    color: #1B2A4A;
     margin: 0 0 1.25rem;
   }
 
@@ -227,7 +227,7 @@ const displayPuppies = puppies.slice(0, 1);
   }
 
   .puppy-includes {
-    background: #FDF6EE;
+    background: #F0F4F8;
     border-radius: 10px;
     padding: 1rem 1.25rem;
   }
@@ -235,7 +235,7 @@ const displayPuppies = puppies.slice(0, 1);
   .includes-title {
     font-size: 0.85rem;
     font-weight: 600;
-    color: #8B4513;
+    color: #1B2A4A;
     margin: 0 0 0.5rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -283,7 +283,7 @@ const displayPuppies = puppies.slice(0, 1);
   .price-amount {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #8B4513;
+    color: #1B2A4A;
     margin-bottom: 0.25rem;
     line-height: 1;
   }
@@ -299,7 +299,7 @@ const displayPuppies = puppies.slice(0, 1);
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    background: linear-gradient(135deg, #8B4513, #D2691E);
+    background: linear-gradient(135deg, #1B2A4A, #2E8B8B);
     color: white;
     padding: 0.875rem 1.75rem;
     border-radius: 50px;
@@ -307,14 +307,14 @@ const displayPuppies = puppies.slice(0, 1);
     font-weight: 600;
     text-decoration: none;
     transition: all 0.3s ease;
-    box-shadow: 0 3px 12px rgba(139, 69, 19, 0.25);
+    box-shadow: 0 3px 12px rgba(27, 42, 74, 0.25);
     width: 100%;
     margin-bottom: 1.5rem;
   }
 
   .btn-available:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(139, 69, 19, 0.35);
+    box-shadow: 0 6px 20px rgba(27, 42, 74, 0.35);
     color: white;
   }
 
@@ -376,7 +376,7 @@ const displayPuppies = puppies.slice(0, 1);
       grid-column: 2;
       grid-row: 1;
       border-right: none;
-      border-bottom: 1px solid #f0ebe4;
+      border-bottom: 1px solid #E2E8F0;
     }
 
     .puppy-price-card {
@@ -407,7 +407,7 @@ const displayPuppies = puppies.slice(0, 1);
     .puppy-info {
       grid-column: 1;
       grid-row: 2;
-      border-bottom: 1px solid #f0ebe4;
+      border-bottom: 1px solid #E2E8F0;
       padding: 1.5rem;
     }
 

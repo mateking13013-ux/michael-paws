@@ -3,23 +3,23 @@
 import { testimonials } from '../data/testimonials';
 
 const testimonialImages = [
-  '/images/testimonial-2.jpeg',
-  '/images/testimonial-3.jpeg',
-  '/images/testimonial-4.jpeg',
-  '/images/testimonial-5.jpeg',
-  '/images/testimonial-6.jpeg',
-  '/images/testimonial-7.jpeg',
-  '/images/testimonial-8.jpeg',
-  '/images/testimonial-9.jpeg',
-  '/images/testimonial-10.jpeg',
-  '/images/testimonial-11.jpeg',
+  '/images/alex.webp',
+  '/images/ashley.webp',
+  '/images/bella.webp',
+  '/images/belly.webp',
+  '/images/boston.webp',
+  '/images/carlos.webp',
+  '/images/chill.webp',
+  '/images/connie.webp',
+  '/images/cooper.webp',
+  '/images/coy.webp',
 ];
 ---
 
 <section class="testimonials-section" id="testimonials">
   <div class="testimonials-container">
     <div class="section-header">
-      <span class="section-badge">Happy Dachshund Families</span>
+      <span class="section-badge">Happy Staffie Families</span>
       <h2 class="section-title">What Our Families Say</h2>
       <p class="section-subtitle">Real stories from families who found their perfect companion with us.</p>
     </div>
@@ -28,7 +28,7 @@ const testimonialImages = [
     <div class="image-gallery">
       {testimonialImages.map((img, index) => (
         <div class={`gallery-item gallery-item-${(index % 4) + 1}`}>
-          <img src={img} alt="Happy dachshund family" loading="lazy">
+          <img src={img} alt="Happy Staffie family" loading="lazy">
         </div>
       ))}
     </div>
@@ -66,7 +66,7 @@ const testimonialImages = [
   .testimonials-section {
     display: block;
     font-family: var(--font-family, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif);
-    background: linear-gradient(135deg, #8B4513 0%, #5C2E0A 100%);
+    background: linear-gradient(135deg, #1B2A4A 0%, #0F1B33 100%);
     padding: 4rem 1.5rem;
     position: relative;
     overflow: hidden;
@@ -175,7 +175,7 @@ const testimonialImages = [
     height: 55px;
     border-radius: 50%;
     overflow: hidden;
-    border: 3px solid #8B4513;
+    border: 3px solid #1B2A4A;
     flex-shrink: 0;
   }
 
@@ -227,18 +227,18 @@ const testimonialImages = [
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
-    background: #FDF6EE;
+    background: #F0F4F8;
     padding: 0.4rem 0.9rem;
     border-radius: 50px;
     font-size: 0.8rem;
-    color: #8B4513;
+    color: #1B2A4A;
     font-weight: 600;
   }
 
   .puppy-tag svg {
     width: 14px;
     height: 14px;
-    fill: #8B4513;
+    fill: #1B2A4A;
   }
 
   @media (max-width: 1100px) {

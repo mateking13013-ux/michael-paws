@@ -4,13 +4,13 @@ import PageHeader from '../components/PageHeader.astro';
 ---
 
 <BaseLayout
-  title="Thank You | Noble Weenie"
-  description="Thank you for your interest in Noble Weenie. We appreciate you reaching out to us."
-  keywords="thank you, Noble Weenie, puppy inquiry"
+  title="Thank You | Michael Paws"
+  description="Thank you for your interest in Michael Paws. We appreciate you reaching out to us."
+  keywords="thank you, Michael Paws, puppy inquiry"
 >
   <PageHeader
     title="Thank You!"
-    subtitle="We appreciate your interest in Noble Weenie"
+    subtitle="We appreciate your interest in Michael Paws"
   />
 
   <section class="thank-you-section">
@@ -24,7 +24,7 @@ import PageHeader from '../components/PageHeader.astro';
 
         <h2>Your Message Has Been Received!</h2>
 
-        <p>Thank you for reaching out to us at Noble Weenie. We truly appreciate your interest in our puppies and our family.</p>
+        <p>Thank you for reaching out to us at Michael Paws. We truly appreciate your interest in our puppies and our family.</p>
 
         <p>Our team will review your inquiry and get back to you as soon as possible, usually within 24-48 hours.</p>
 
@@ -55,6 +55,22 @@ import PageHeader from '../components/PageHeader.astro';
         </div>
       </div>
 
+      <div class="book-card">
+        <div class="book-card-layout">
+          <div class="book-card-cover">
+            <img src="/images/pdfbookcover.jpeg" alt="The Happy Staffordshire Bull Terrier - Book Cover" />
+          </div>
+          <div class="book-card-content">
+            <h3>A Gift From Us To You</h3>
+            <p>While you wait to hear back from us, enjoy our free guide — <strong>The Happy Staffordshire Bull Terrier</strong>. With years of breeding experience, we've put this book together to help you understand and care for your Staffie.</p>
+            <a href="/books/the-happy-staffordshire-bull-terrier.pdf" download class="btn-download">
+              <svg viewBox="0 0 24 24" class="download-icon"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+              Download Free PDF
+            </a>
+          </div>
+        </div>
+      </div>
+
       <div class="info-card">
         <h3>What Happens Next?</h3>
         <p>We carefully review each inquiry to ensure we can provide you with the best possible service. Our team will reach out to discuss your needs and answer any questions you may have about our puppies.</p>
@@ -67,7 +83,7 @@ import PageHeader from '../components/PageHeader.astro';
 <style>
   .thank-you-section {
     padding: 4rem 1.5rem;
-    background: #FDF6EE;
+    background: #F0F4F8;
   }
 
   .thank-you-container {
@@ -87,7 +103,7 @@ import PageHeader from '../components/PageHeader.astro';
   .icon-wrapper {
     width: 80px;
     height: 80px;
-    background: linear-gradient(135deg, #8B4513, #8B4513);
+    background: linear-gradient(135deg, #1B2A4A, #1B2A4A);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -138,16 +154,16 @@ import PageHeader from '../components/PageHeader.astro';
   }
 
   .check {
-    color: #8B4513;
+    color: #1B2A4A;
     font-weight: 700;
     font-size: 1.1rem;
   }
 
   .note {
-    background: #fff8f0;
+    background: #F0F4F8;
     padding: 1rem 1.5rem;
     border-radius: 8px;
-    border-left: 4px solid #8B4513;
+    border-left: 4px solid #1B2A4A;
     margin: 2rem auto;
     max-width: 500px;
     text-align: left;
@@ -162,7 +178,7 @@ import PageHeader from '../components/PageHeader.astro';
   }
 
   .btn-primary {
-    background: #8B4513;
+    background: #1B2A4A;
     color: white;
     padding: 1rem 2rem;
     border-radius: 8px;
@@ -173,29 +189,100 @@ import PageHeader from '../components/PageHeader.astro';
   }
 
   .btn-primary:hover {
-    background: #D2691E;
+    background: #2E8B8B;
     transform: translateY(-2px);
   }
 
   .btn-secondary {
     background: transparent;
-    color: #8B4513;
+    color: #1B2A4A;
     padding: 1rem 2rem;
     border-radius: 8px;
     font-size: 1rem;
     font-weight: 600;
     text-decoration: none;
-    border: 2px solid #8B4513;
+    border: 2px solid #1B2A4A;
     transition: all 0.3s ease;
   }
 
   .btn-secondary:hover {
-    background: #D2691E;
+    background: #2E8B8B;
     color: white;
   }
 
+  .book-card {
+    background: white;
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    margin-bottom: 2rem;
+  }
+
+  .book-card-layout {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .book-card-cover {
+    flex-shrink: 0;
+    width: 180px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(27, 42, 74, 0.15);
+  }
+
+  .book-card-cover img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .book-card-content h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #1B2A4A;
+    margin: 0 0 0.75rem;
+  }
+
+  .book-card-content p {
+    font-size: 0.95rem;
+    color: #5a5a5a;
+    line-height: 1.7;
+    margin: 0 0 1.25rem;
+    max-width: none;
+    text-align: left;
+  }
+
+  .btn-download {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, #1B2A4A, #2E8B8B);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 12px rgba(27, 42, 74, 0.25);
+  }
+
+  .btn-download:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(27, 42, 74, 0.35);
+    color: white;
+  }
+
+  .download-icon {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+  }
+
   .info-card {
-    background: linear-gradient(135deg, #8B4513, #8B4513);
+    background: linear-gradient(135deg, #1B2A4A, #1B2A4A);
     color: white;
     border-radius: 16px;
     padding: 2.5rem;
@@ -237,6 +324,23 @@ import PageHeader from '../components/PageHeader.astro';
 
     .action-buttons {
       flex-direction: column;
+    }
+
+    .book-card {
+      padding: 1.5rem;
+    }
+
+    .book-card-layout {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .book-card-cover {
+      width: 150px;
+    }
+
+    .book-card-content p {
+      text-align: center;
     }
 
     .info-card {

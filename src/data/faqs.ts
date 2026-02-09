@@ -5,24 +5,24 @@ export interface Faq {
 
 export const faqs: Faq[] = [
   {
-    question: 'Is a puppy a good breed?',
-    answer: 'puppys are affectionate and playful dogs that require training and care.'
+    question: 'Is a Staffordshire Bull Terrier a good breed?',
+    answer: 'Staffordshire Bull Terriers are loyal, affectionate, and courageous dogs known for being excellent family companions. They are often called "nanny dogs" for their natural love of children.'
   },
   {
-    question: 'Is a puppy Puppy good for beginners?',
-    answer: 'Yes puppys are great dogs for first time dog owners. They are affectionate and easy to get along with.'
+    question: 'Is a Staffie good for beginners?',
+    answer: 'Yes, Staffies can be great for first-time dog owners. They are eager to please, intelligent, and respond well to positive reinforcement training. Their loving and loyal nature makes them wonderful companions.'
   },
   {
-    question: 'Do puppys make good family pets?',
-    answer: 'Not only are puppys amazing companions but they are also great family pets. They tend to get along with other pets and good with kids.'
+    question: 'Do Staffies make good family pets?',
+    answer: 'Absolutely! Staffordshire Bull Terriers are known for being fantastic family pets. They are gentle with children, loyal to their families, and form strong bonds with all household members.'
   },
   {
-    question: 'Do our puppies smell bad?',
-    answer: 'With proper grooming and care, your puppy will not have a foul smell. You should consider taking your dog to a professional groomer from time to time. Also, prioritize using the best products like dog shampoos.'
+    question: 'How much exercise does a Staffie need?',
+    answer: 'Staffies are active and energetic dogs that need at least 1 hour of exercise daily. This can include walks, playtime, and mental stimulation. They love interactive games like fetch and tug-of-war.'
   },
   {
-    question: 'What not to do with puppys?',
-    answer: 'puppys should not be made to jump very high. They can easily damage their backs due to their skeletal structure.'
+    question: 'Are Staffies easy to train?',
+    answer: 'Staffies are intelligent and eager to please, making them responsive to training. They do best with consistent, positive reinforcement methods. Early socialization and puppy training classes are highly recommended.'
   }
 ];
 
@@ -53,5 +53,5 @@ export const expenseNotes: ExpenseNote[] = [
   { label: 'Veterinary Care', text: 'This includes routine check-ups, vaccinations, and preventative care.' },
   { label: 'Pet Insurance', text: 'Costs can vary based on coverage and provider.' },
   { label: 'Training Classes', text: 'Group classes may be less expensive than private sessions.' },
-  { label: 'Grooming', text: 'Costs depend on coat type and grooming frequency.' }
+  { label: 'Grooming', text: 'Staffies have short coats that are easy to maintain with regular brushing.' }
 ];

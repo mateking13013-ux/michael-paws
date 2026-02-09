@@ -1,0 +1,240 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
+---
+
+<BaseLayout
+  title="Our Book | Michael Paws"
+  description="Download The Happy Staffordshire Bull Terrier - a complete guide to raising a healthy, happy Staffie, written from years of breeding experience."
+  keywords="Staffordshire Bull Terrier book, Staffie guide, Staffie care book, Michael Paws book"
+>
+  <PageHeader
+    title="Our Book"
+    subtitle="Everything you need to know about raising a happy, healthy Staffie"
+  />
+
+  <section class="book-section">
+    <div class="book-container">
+      <div class="book-layout">
+        <div class="book-cover">
+          <img src="/images/pdfbookcover.jpeg" alt="The Happy Staffordshire Bull Terrier - Book Cover" />
+        </div>
+
+        <div class="book-details">
+          <h2>The Happy Staffordshire Bull Terrier</h2>
+          <p class="book-tagline">Your Complete Guide to Raising a Thriving Staffie</p>
+
+          <p>With years of experience breeding and raising Staffordshire Bull Terriers, we've put together this comprehensive guide to help you give your Staffie the best life possible.</p>
+
+          <p>Whether you're a first-time Staffie owner or an experienced dog lover, this book covers everything from nutrition and exercise to training, socialization, and health care — all tailored specifically for the Staffordshire Bull Terrier breed.</p>
+
+          <div class="book-highlights">
+            <div class="highlight">
+              <span class="highlight-icon">&#10003;</span>
+              Feeding & nutrition guidelines
+            </div>
+            <div class="highlight">
+              <span class="highlight-icon">&#10003;</span>
+              Exercise & activity plans
+            </div>
+            <div class="highlight">
+              <span class="highlight-icon">&#10003;</span>
+              Training & socialization tips
+            </div>
+            <div class="highlight">
+              <span class="highlight-icon">&#10003;</span>
+              Health care & prevention
+            </div>
+            <div class="highlight">
+              <span class="highlight-icon">&#10003;</span>
+              Grooming & maintenance
+            </div>
+            <div class="highlight">
+              <span class="highlight-icon">&#10003;</span>
+              Understanding Staffie behavior
+            </div>
+          </div>
+
+          <a href="/books/the-happy-staffordshire-bull-terrier.pdf" download class="btn-download">
+            <svg viewBox="0 0 24 24" class="download-icon"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+            Download Free PDF
+          </a>
+        </div>
+      </div>
+
+      <div class="cta-box">
+        <h3>Have Questions About Your Staffie?</h3>
+        <p>Our team is always here to help. Reach out to us for personalized advice about your puppy.</p>
+        <a href="/contact" class="btn-contact">Contact Us</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .book-section {
+    padding: 4rem 1.5rem;
+    background: #fff;
+  }
+
+  .book-container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .book-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 3rem;
+    align-items: start;
+    margin-bottom: 3rem;
+  }
+
+  .book-cover {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(27, 42, 74, 0.15);
+  }
+
+  .book-cover img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .book-details h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1B2A4A;
+    margin: 0 0 0.5rem;
+  }
+
+  .book-tagline {
+    font-size: 1.1rem;
+    color: #2E8B8B;
+    font-weight: 600;
+    margin: 0 0 1.5rem;
+  }
+
+  .book-details p {
+    font-size: 1rem;
+    color: #5a5a5a;
+    line-height: 1.8;
+    margin: 0 0 1rem;
+  }
+
+  .book-highlights {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    margin: 1.5rem 0 2rem;
+  }
+
+  .highlight {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+    color: #333;
+  }
+
+  .highlight-icon {
+    color: #2E8B8B;
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
+
+  .btn-download {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, #1B2A4A, #2E8B8B);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(27, 42, 74, 0.25);
+  }
+
+  .btn-download:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(27, 42, 74, 0.35);
+    color: white;
+  }
+
+  .download-icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+  }
+
+  .cta-box {
+    background: #F0F4F8;
+    padding: 2.5rem;
+    border-radius: 16px;
+    text-align: center;
+    border: 1px solid #E2E8F0;
+  }
+
+  .cta-box h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1B2A4A;
+    margin: 0 0 0.75rem;
+  }
+
+  .cta-box p {
+    font-size: 1rem;
+    color: #5a5a5a;
+    margin: 0 0 1.5rem;
+    line-height: 1.7;
+  }
+
+  .btn-contact {
+    display: inline-block;
+    background: #2E8B8B;
+    color: white;
+    padding: 0.875rem 2rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .btn-contact:hover {
+    background: #3BA0A0;
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 768px) {
+    .book-section {
+      padding: 3rem 1rem;
+    }
+
+    .book-layout {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .book-cover {
+      max-width: 300px;
+      margin: 0 auto;
+    }
+
+    .book-details h2 {
+      font-size: 1.75rem;
+    }
+
+    .book-highlights {
+      grid-template-columns: 1fr;
+    }
+
+    .cta-box {
+      padding: 2rem;
+    }
+  }
+</style>
