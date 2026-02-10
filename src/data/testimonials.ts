@@ -21,7 +21,7 @@ export const testimonials: Testimonial[] = [
     name: 'Sarah & Mike T.',
     location: 'Austin, TX',
     rating: 5,
-    image: '/images/alex.webp',
+    image: '/images/testi-1.jpeg',
     puppyName: 'Alex',
     text: "Alex is the sweetest Staffie! He came to us healthy, playful, and already started on potty training. Michael Paws made the whole process so easy and even checked in on us weeks after bringing him home."
   },
@@ -29,7 +29,7 @@ export const testimonials: Testimonial[] = [
     name: 'Jessica R.',
     location: 'Nashville, TN',
     rating: 5,
-    image: '/images/cooper.webp',
+    image: '/images/testi-2.jpeg',
     puppyName: 'Cooper',
     text: "Cooper has the best personality of any Staffie I've ever met! He's so smart and loves to cuddle. The team at Michael Paws was incredibly helpful and answered all our questions about Staffie care."
   },
@@ -37,7 +37,7 @@ export const testimonials: Testimonial[] = [
     name: 'David & Karen W.',
     location: 'Denver, CO',
     rating: 5,
-    image: '/images/gracie.webp',
+    image: '/images/testi-3.jpeg',
     puppyName: 'Gracie',
     text: "This was our first Staffordshire Bull Terrier and Michael Paws made it such a wonderful experience. Gracie is everything we dreamed of — loyal, funny, and full of energy. The health guarantee gave us total peace of mind."
   },
@@ -45,7 +45,7 @@ export const testimonials: Testimonial[] = [
     name: 'Emily C.',
     location: 'Charlotte, NC',
     rating: 5,
-    image: '/images/kobe.webp',
+    image: '/images/testi-4.jpeg',
     puppyName: 'Kobe',
     text: "Kobe is the star of our neighborhood! Everyone stops to ask about him. He's so well-socialized and confident. You can tell Michael Paws raises their Staffies with genuine love and attention."
   },
@@ -53,7 +53,7 @@ export const testimonials: Testimonial[] = [
     name: 'James & Lisa M.',
     location: 'Scottsdale, AZ',
     rating: 5,
-    image: '/images/bella.webp',
+    image: '/images/testi-5.jpeg',
     puppyName: 'Bella',
     text: "Bella has been the perfect addition to our family. Our kids are obsessed with him! He came with all his vaccinations, vet records, and a starter kit. Michael Paws truly goes above and beyond."
   },
@@ -61,7 +61,7 @@ export const testimonials: Testimonial[] = [
     name: 'Rachel P.',
     location: 'Portland, OR',
     rating: 5,
-    image: '/images/ashley.webp',
+    image: '/images/testi-6.jpeg',
     puppyName: 'Ashley',
     text: "We flew Ashley home and the transport process was seamless. She arrived happy and healthy. Three months later, she's the most loving Staffie. Best decision we ever made!"
   },
@@ -69,7 +69,7 @@ export const testimonials: Testimonial[] = [
     name: 'Brandon & Amy S.',
     location: 'Atlanta, GA',
     rating: 5,
-    image: '/images/thor.webp',
+    image: '/images/testi-7.jpeg',
     puppyName: 'Thor',
     text: "Thor is our second Staffie from Michael Paws and the experience was just as amazing. He and his sister are inseparable now. The breeding quality and temperament are consistently outstanding."
   },
@@ -77,7 +77,7 @@ export const testimonials: Testimonial[] = [
     name: 'Michelle H.',
     location: 'San Diego, CA',
     rating: 5,
-    image: '/images/rex.webp',
+    image: '/images/testi-8.jpeg',
     puppyName: 'Rex',
     text: "From the first inquiry to bringing Rex home, Michael Paws was professional and caring. Rex's coat is gorgeous and his personality is even better. He's already mastered sit and shake!"
   }
