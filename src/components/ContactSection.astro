@@ -53,17 +53,13 @@ const puppyNames = ["Alex", "Ashley", "Bella", "Belly", "Boston", "Carlos", "Chi
           </div>
 
           <div class="form-group">
-            <label>Puppy(s) of Interest</label>
-            <p class="puppy-select-note">Select the puppy(s) you're interested in:</p>
-            <div class="puppy-checkbox-grid">
+            <label for="homePuppy">Puppy of Interest</label>
+            <select id="homePuppy" name="puppy_of_interest">
+              <option value="">Select a puppy...</option>
               {puppyNames.map((name) => (
-                <label class="puppy-checkbox">
-                  <input type="checkbox" name="puppies" value={name}>
-                  <span class="checkbox-custom"></span>
-                  <span class="checkbox-label">{name}</span>
-                </label>
+                <option value={name}>{name}</option>
               ))}
-            </div>
+            </select>
           </div>
 
           <div class="form-group">
@@ -141,13 +137,6 @@ const puppyNames = ["Alex", "Ashley", "Bella", "Belly", "Boston", "Carlos", "Chi
     const emailInput = form.querySelector('#homeEmail') as HTMLInputElement;
 
     formData.append("replyto", emailInput.value);
-
-    // Collect checked puppies into a single string
-    const checkedPuppies = Array.from(form.querySelectorAll('input[name="puppies"]:checked'))
-      .map((cb: any) => cb.value)
-      .join(', ');
-    formData.delete('puppies');
-    formData.append('puppies_interested', checkedPuppies || 'None selected');
 
     const originalHTML = submitBtn.innerHTML;
     submitBtn.innerHTML = "Sending...";

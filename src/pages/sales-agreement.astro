@@ -87,16 +87,13 @@ const puppyNames = ["Alex", "Ashley", "Bella", "Belly", "Boston", "Carlos", "Chi
             </div>
 
             <div class="form-group">
-              <label>Puppy(s) of Interest *</label>
-              <div class="puppy-checkbox-grid">
+              <label for="contractPuppy">Puppy of Interest *</label>
+              <select id="contractPuppy" name="puppy_of_interest" required>
+                <option value="">Select a puppy...</option>
                 {puppyNames.map((name) => (
-                  <label class="puppy-checkbox">
-                    <input type="checkbox" name="puppies" value={name}>
-                    <span class="checkbox-custom"></span>
-                    <span class="checkbox-label">{name}</span>
-                  </label>
+                  <option value={name}>{name}</option>
                 ))}
-              </div>
+              </select>
             </div>
           </div>
         </div>
@@ -176,12 +173,6 @@ const puppyNames = ["Alex", "Ashley", "Bella", "Belly", "Boston", "Carlos", "Chi
     const emailInput = form.querySelector('#buyerEmail') as HTMLInputElement;
 
     formData.append("replyto", emailInput.value);
-
-    const checkedPuppies = Array.from(form.querySelectorAll('input[name="puppies"]:checked'))
-      .map((cb: any) => cb.value)
-      .join(', ');
-    formData.delete('puppies');
-    formData.append('puppies_of_interest', checkedPuppies || 'None selected');
 
     formData.delete('agree_terms');
 
