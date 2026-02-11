@@ -23,141 +23,149 @@ const puppyNames = ["Alex", "Ashley", "Bella", "Belly", "Boston", "Carlos", "Chi
         <p>Please review the terms below and complete the form to sign our sales agreement. This contract is between <strong>Michael Paws</strong> (referred to as the Seller) and the Buyer identified below.</p>
       </div>
 
-      <!-- Agreement Terms -->
-      <div class="terms-card">
-        <h3>1. Health and Wellness Guarantee</h3>
-        <p>The Breeder ensures the puppy is in excellent health at the time of adoption and is up-to-date on all necessary vaccinations and deworming treatments. The Breeder provides the following comprehensive health and wellness guarantee:</p>
+      <form class="agreement-form" id="agreementForm">
+        <input type="hidden" name="access_key" value="dbb568ae-a29f-4450-b284-00eb05527be7">
+        <input type="hidden" name="subject" value="Sales Agreement Signed - Michael Paws">
+        <input type="hidden" name="from_name" value="Michael Paws Sales Agreement">
 
-        <div class="term-item">
-          <strong>a. Veterinary Examination:</strong> The Buyer must take the puppy to a licensed veterinarian for a thorough checkup within seven (7) days of receiving the puppy. If the veterinarian identifies any underlying illness or serious congenital defect, the Breeder will refund the full adoption fee, including any transportation costs, upon the puppy's return.
-        </div>
-
-        <div class="term-item">
-          <strong>b. Genetic Health Coverage:</strong> The Breeder guarantees the puppy against hereditary conditions including hip dysplasia, L-2 HGA, and hereditary cataracts for the entirety of the puppy's lifetime. If the puppy is diagnosed with any of these conditions by two (2) licensed veterinarians, the Breeder will either replace the puppy with another of equal value or refund the full adoption fee, including any transportation costs, upon the puppy's return.
-        </div>
-
-        <div class="term-item">
-          <strong>c. Communicable Diseases:</strong> If the puppy is diagnosed with a communicable disease within the first fourteen (14) days after the Buyer receives the puppy, the Breeder will refund the full adoption fee, including any transportation costs, upon the puppy's return.
-        </div>
-      </div>
-
-      <div class="terms-card">
-        <h3>2. Transportation and Delivery</h3>
-        <div class="term-item">
-          <strong>a. Shipping:</strong> If the puppy is to be shipped, the Buyer is responsible for all transportation costs. The puppy will be transported via a reputable pet transportation service, and the Buyer will be provided with detailed tracking information.
-        </div>
-        <div class="term-item">
-          <strong>b. Pickup:</strong> If the Buyer is picking up the puppy, a non-refundable deposit of $475 must be paid at the time of this agreement. The remaining balance must be paid in full upon pickup of the puppy.
-        </div>
-      </div>
-
-      <div class="terms-card">
-        <h3>3. Cost and Payment</h3>
-        <p>The full adoption fee for the puppy must be paid before the puppy is delivered to the Buyer, either by shipping or pickup. For pickup, a $475 non-refundable deposit is required at the time of this agreement, with the remaining balance due upon pickup of the puppy.</p>
-      </div>
-
-      <div class="terms-card">
-        <h3>4. Buyer's Responsibilities</h3>
-        <p>The Buyer agrees to provide the puppy with proper care, including adequate food, water, shelter, exercise, and regular veterinary check-ups. The Buyer also agrees to comply with all applicable state and local laws regarding dog ownership.</p>
-        <p>This agreement constitutes the entire understanding between the parties. Any modifications must be made in writing and signed by both the Breeder and the Buyer.</p>
-      </div>
-
-      <!-- Sign Contract Form -->
-      <div class="form-card">
-        <div class="form-header">
-          <h2>Sign Contract</h2>
-          <p>Complete the form below to sign our Staffordshire Bull Terrier Puppy Sales Agreement</p>
-        </div>
-
-        <form class="agreement-form" id="agreementForm">
-          <input type="hidden" name="access_key" value="dbb568ae-a29f-4450-b284-00eb05527be7">
-          <input type="hidden" name="subject" value="Sales Agreement Signed - Michael Paws">
-          <input type="hidden" name="from_name" value="Michael Paws Sales Agreement">
-
-          <div class="form-group">
-            <label for="saleDate">Puppy Sale Contract Date *</label>
-            <input type="date" id="saleDate" name="contract_date" required>
+        <!-- Buyer Info Form - TOP -->
+        <div class="form-card">
+          <div class="form-header">
+            <h2>Sign Contract</h2>
+            <p>Complete the form below to sign our Staffordshire Bull Terrier Puppy Sales Agreement</p>
           </div>
 
-          <div class="form-row">
+          <div class="form-fields">
             <div class="form-group">
-              <label for="buyerName">Your Full Name *</label>
-              <input type="text" id="buyerName" name="buyer_name" required placeholder="John Doe">
+              <label for="saleDate">Puppy Sale Contract Date *</label>
+              <input type="date" id="saleDate" name="contract_date" required>
             </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="buyerName">Your Full Name *</label>
+                <input type="text" id="buyerName" name="buyer_name" required placeholder="John Doe">
+              </div>
+              <div class="form-group">
+                <label for="buyerPhone">Your Phone Number *</label>
+                <input type="tel" id="buyerPhone" name="buyer_phone" required placeholder="(555) 123-4567">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="buyerEmail">Your Email *</label>
+                <input type="email" id="buyerEmail" name="buyer_email" required placeholder="you@example.com">
+              </div>
+              <div class="form-group">
+                <label for="buyerState">Your State *</label>
+                <input type="text" id="buyerState" name="buyer_state" required placeholder="e.g. California">
+              </div>
+            </div>
+
             <div class="form-group">
-              <label for="buyerPhone">Your Phone Number *</label>
-              <input type="tel" id="buyerPhone" name="buyer_phone" required placeholder="(555) 123-4567">
+              <label for="buyerAddress">Your Address *</label>
+              <input type="text" id="buyerAddress" name="buyer_address" required placeholder="123 Main St, City, State, ZIP">
             </div>
-          </div>
 
-          <div class="form-row">
             <div class="form-group">
-              <label for="buyerEmail">Your Email *</label>
-              <input type="email" id="buyerEmail" name="buyer_email" required placeholder="you@example.com">
+              <label>Available Payment Method</label>
+              <div class="radio-group">
+                <label class="radio-option"><input type="radio" name="payment_method" value="Apple Pay" checked> Apple Pay</label>
+                <label class="radio-option"><input type="radio" name="payment_method" value="Zelle"> Zelle</label>
+                <label class="radio-option"><input type="radio" name="payment_method" value="CashApp"> CashApp</label>
+                <label class="radio-option"><input type="radio" name="payment_method" value="Wire Transfer"> Wire Transfer</label>
+              </div>
             </div>
+
             <div class="form-group">
-              <label for="buyerState">Your State *</label>
-              <input type="text" id="buyerState" name="buyer_state" required placeholder="e.g. California">
+              <label>Shipping Option</label>
+              <div class="radio-group">
+                <label class="radio-option"><input type="radio" name="shipping_option" value="Ship To Buyer Airport" checked> Ship To Buyer's Airport (+$250, total $1,050)</label>
+                <label class="radio-option"><input type="radio" name="shipping_option" value="In-Person Pickup"> In-Person Pickup</label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Puppy(s) of Interest *</label>
+              <div class="puppy-checkbox-grid">
+                {puppyNames.map((name) => (
+                  <label class="puppy-checkbox">
+                    <input type="checkbox" name="puppies" value={name}>
+                    <span class="checkbox-custom"></span>
+                    <span class="checkbox-label">{name}</span>
+                  </label>
+                ))}
+              </div>
             </div>
           </div>
+        </div>
 
-          <div class="form-group">
-            <label for="buyerAddress">Your Address *</label>
-            <input type="text" id="buyerAddress" name="buyer_address" required placeholder="123 Main St, City, State, ZIP">
+        <!-- Agreement Terms - MIDDLE -->
+        <div class="terms-card">
+          <h3>1. Health and Wellness Guarantee</h3>
+          <p>The Breeder ensures the puppy is in excellent health at the time of adoption and is up-to-date on all necessary vaccinations and deworming treatments. The Breeder provides the following comprehensive health and wellness guarantee:</p>
+
+          <div class="term-item">
+            <strong>a. Veterinary Examination:</strong> The Buyer must take the puppy to a licensed veterinarian for a thorough checkup within seven (7) days of receiving the puppy. If the veterinarian identifies any underlying illness or serious congenital defect, the Breeder will refund the full adoption fee, including any transportation costs, upon the puppy's return.
           </div>
 
-          <div class="form-group">
-            <label>Available Payment Method</label>
-            <div class="radio-group">
-              <label class="radio-option"><input type="radio" name="payment_method" value="Apple Pay" checked> Apple Pay</label>
-              <label class="radio-option"><input type="radio" name="payment_method" value="Zelle"> Zelle</label>
-              <label class="radio-option"><input type="radio" name="payment_method" value="CashApp"> CashApp</label>
-              <label class="radio-option"><input type="radio" name="payment_method" value="Wire Transfer"> Wire Transfer</label>
-            </div>
+          <div class="term-item">
+            <strong>b. Genetic Health Coverage:</strong> The Breeder guarantees the puppy against hereditary conditions including hip dysplasia, L-2 HGA, and hereditary cataracts for the entirety of the puppy's lifetime. If the puppy is diagnosed with any of these conditions by two (2) licensed veterinarians, the Breeder will either replace the puppy with another of equal value or refund the full adoption fee, including any transportation costs, upon the puppy's return.
           </div>
 
-          <div class="form-group">
-            <label>Shipping Option</label>
-            <div class="radio-group">
-              <label class="radio-option"><input type="radio" name="shipping_option" value="Ship To Buyer Airport" checked> Ship To Buyer's Airport (+$250, total $1,050)</label>
-              <label class="radio-option"><input type="radio" name="shipping_option" value="In-Person Pickup"> In-Person Pickup</label>
-            </div>
+          <div class="term-item">
+            <strong>c. Communicable Diseases:</strong> If the puppy is diagnosed with a communicable disease within the first fourteen (14) days after the Buyer receives the puppy, the Breeder will refund the full adoption fee, including any transportation costs, upon the puppy's return.
           </div>
+        </div>
 
-          <div class="form-group">
-            <label>Puppy(s) of Interest *</label>
-            <div class="puppy-checkbox-grid">
-              {puppyNames.map((name) => (
-                <label class="puppy-checkbox">
-                  <input type="checkbox" name="puppies" value={name}>
-                  <span class="checkbox-custom"></span>
-                  <span class="checkbox-label">{name}</span>
-                </label>
-              ))}
-            </div>
+        <div class="terms-card">
+          <h3>2. Transportation and Delivery</h3>
+          <div class="term-item">
+            <strong>a. Shipping:</strong> If the puppy is to be shipped, the Buyer is responsible for all transportation costs. The puppy will be transported via a reputable pet transportation service, and the Buyer will be provided with detailed tracking information.
           </div>
+          <div class="term-item">
+            <strong>b. Pickup:</strong> If the Buyer is picking up the puppy, a non-refundable deposit of $475 must be paid at the time of this agreement. The remaining balance must be paid in full upon pickup of the puppy.
+          </div>
+        </div>
+
+        <div class="terms-card">
+          <h3>3. Cost and Payment</h3>
+          <p>The full adoption fee for the puppy must be paid before the puppy is delivered to the Buyer, either by shipping or pickup. For pickup, a $475 non-refundable deposit is required at the time of this agreement, with the remaining balance due upon pickup of the puppy.</p>
+        </div>
+
+        <div class="terms-card">
+          <h3>4. Buyer's Responsibilities</h3>
+          <p>The Buyer agrees to provide the puppy with proper care, including adequate food, water, shelter, exercise, and regular veterinary check-ups. The Buyer also agrees to comply with all applicable state and local laws regarding dog ownership.</p>
+          <p>This agreement constitutes the entire understanding between the parties. Any modifications must be made in writing and signed by both the Breeder and the Buyer.</p>
+        </div>
+
+        <!-- Signature & Acknowledgment - BOTTOM -->
+        <div class="form-card signature-card">
+          <h3 class="signature-card-title">Signature & Acknowledgment</h3>
 
           <div class="agreement-check">
             <label class="agree-checkbox">
               <input type="checkbox" name="agree_terms" required>
               <span class="checkbox-custom"></span>
-              <span>I have read and agree to the Michael Paws Staffordshire Bull Terrier Puppy Sales Agreement, website terms, and conditions.</span>
+              <span>I have read and agree to the <a href="/sales-agreement">Sales Agreement</a> and <a href="/return-refund-policy">Privacy Policy</a>.</span>
             </label>
           </div>
 
           <div class="signature-section">
-            <label for="signatureName">Sign Contract — Type Your Full Name *</label>
             <div class="signature-input-wrapper">
               <input type="text" id="signatureName" name="signature" required placeholder="Type your full name to sign">
             </div>
+            <p class="signature-hint">Typing your full name serves as an electronic signature.</p>
           </div>
 
-          <button type="submit" class="btn-submit">
-            Sign & Submit Agreement
-            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-          </button>
-        </form>
-      </div>
+          <div class="buttons-row">
+            <button type="submit" class="btn-submit">Submit Agreement</button>
+            <button type="button" class="btn-download" onclick="window.print()">Download Copy</button>
+          </div>
+        </div>
+
+      </form>
 
     </div>
   </section>
@@ -307,6 +315,12 @@ const puppyNames = ["Alex", "Ashley", "Bella", "Belly", "Boston", "Carlos", "Chi
   }
 
   .agreement-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .form-fields {
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
@@ -462,16 +476,36 @@ const puppyNames = ["Alex", "Ashley", "Bella", "Belly", "Boston", "Carlos", "Chi
     margin-top: 2px;
   }
 
+  .signature-card {
+    margin-top: 1.25rem;
+  }
+
+  .signature-card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1B2A4A;
+    margin: 0 0 1.25rem;
+  }
+
+  .signature-card .agreement-check {
+    margin-bottom: 1.25rem;
+  }
+
+  .signature-card .agreement-check a {
+    color: #2E8B8B;
+    text-decoration: underline;
+    font-weight: 600;
+  }
+
+  .signature-card .agreement-check a:hover {
+    color: #1B2A4A;
+  }
+
   .signature-section {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-  }
-
-  .signature-section label {
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: #333;
+    margin-bottom: 1.5rem;
   }
 
   .signature-input-wrapper {
@@ -509,6 +543,18 @@ const puppyNames = ["Alex", "Ashley", "Bella", "Belly", "Boston", "Carlos", "Chi
     color: #bbb;
   }
 
+  .signature-hint {
+    font-size: 0.85rem;
+    color: #888;
+    margin: 0;
+  }
+
+  .buttons-row {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
   .btn-submit {
     display: inline-flex;
     align-items: center;
@@ -523,7 +569,6 @@ const puppyNames = ["Alex", "Ashley", "Bella", "Belly", "Boston", "Carlos", "Chi
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
-    margin-top: 0.5rem;
   }
 
   .btn-submit:hover {
@@ -536,10 +581,26 @@ const puppyNames = ["Alex", "Ashley", "Bella", "Belly", "Boston", "Carlos", "Chi
     cursor: not-allowed;
   }
 
-  .btn-submit svg {
-    width: 18px;
-    height: 18px;
-    fill: currentColor;
+  .btn-download {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    border: 2px solid #1B2A4A;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1B2A4A;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .btn-download:hover {
+    background: #1B2A4A;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(27, 42, 74, 0.3);
   }
 
   @media (max-width: 600px) {
