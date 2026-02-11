@@ -479,7 +479,8 @@ const puppies = [
 
           <div class="buttons-row">
             <a href="/contact" class="btn btn-primary">Contact Us</a>
-            <button type="button" class="btn btn-outline" onclick={`openContactPopup('${puppy.name}', '${puppy.images[0]}', '${puppy.sex} • ${puppy.age} • ${puppy.color}')`}>Take Me Home</button>
+            <button type="button" class="btn btn-outline btn-popup" onclick={`openContactPopup('${puppy.name}', '${puppy.images[0]}', '${puppy.sex} • ${puppy.age} • ${puppy.color}')`}>Take Me Home</button>
+            <a href={`sms:+12130466056?&body=Hello%20I%20am%20interested%20in%20this%20Staffordshire%20Bull%20Terrier%20Puppy%20${puppy.name}%0Awebsite:%20https://michaelpaws.com/available-puppies`} class="btn btn-outline btn-sms">Send Text</a>
           </div>
         </div>
       </div>
@@ -749,6 +750,10 @@ const puppies = [
     color: #fff;
   }
 
+  .btn-sms {
+    display: none;
+  }
+
   @media (max-width: 900px) {
     .puppy-card {
       grid-template-columns: 1fr;
@@ -768,6 +773,14 @@ const puppies = [
     .buttons-row {
       flex-direction: column;
       gap: 8px;
+    }
+
+    .btn-popup {
+      display: none;
+    }
+
+    .btn-sms {
+      display: block;
     }
   }
 
