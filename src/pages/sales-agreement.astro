@@ -23,9 +23,7 @@ const puppyNames = ["Alex", "Ashley", "Bella", "Belly", "Boston", "Carlos", "Chi
         <p>Please review the terms below and complete the form to sign our sales agreement. This contract is between <strong>Michael Paws</strong> (referred to as the Seller) and the Buyer identified below.</p>
       </div>
 
-      <form class="agreement-form" id="agreementForm">
-        <input type="hidden" name="_email.subject" value="Sales Agreement Signed - Michael Paws">
-        <input type="hidden" name="_email.from" value="Michael Paws Sales Agreement">
+      <form class="agreement-form" id="agreementForm" action="https://submit-form.com/2lf3YfUv0" method="POST">
 
         <!-- Buyer Info Form - TOP -->
         <div class="form-card">
@@ -175,6 +173,7 @@ const puppyNames = ["Alex", "Ashley", "Bella", "Belly", "Boston", "Carlos", "Chi
 
     formData.delete('agree_terms');
     const data = Object.fromEntries(formData.entries());
+    data._email = { subject: "Sales Agreement Signed - Michael Paws", from: "Michael Paws Sales Agreement" };
 
     const originalHTML = submitBtn.innerHTML;
     submitBtn.innerHTML = "Submitting...";

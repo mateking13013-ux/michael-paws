@@ -14,9 +14,7 @@ const puppyNames = ["Alex", "Ashley", "Bella", "Belly", "Boston", "Carlos", "Chi
     <div class="contact-grid">
       <div class="contact-form-wrapper">
         <h3 class="form-title">Puppy Inquiry Form</h3>
-        <form class="contact-form" id="homeContactForm">
-          <input type="hidden" name="_email.subject" value="New Puppy Inquiry - Michael Paws">
-          <input type="hidden" name="_email.from" value="Michael Paws Website">
+        <form class="contact-form" id="homeContactForm" action="https://submit-form.com/2lf3YfUv0" method="POST">
 
           <div class="form-row">
             <div class="form-group">
@@ -143,6 +141,7 @@ const puppyNames = ["Alex", "Ashley", "Bella", "Belly", "Boston", "Carlos", "Chi
 
     const formData = new FormData(form);
     const data = Object.fromEntries(formData.entries());
+    data._email = { subject: "New Puppy Inquiry - Michael Paws", from: "Michael Paws Website" };
     const submitBtn = form.querySelector('button[type="submit"]') as HTMLButtonElement;
 
     const originalHTML = submitBtn.innerHTML;

@@ -61,9 +61,7 @@
 
         <div class="footer-newsletter">
           <p class="newsletter-text">Subscribe for puppy updates and specials!</p>
-          <form class="newsletter-form" id="newsletterForm">
-            <input type="hidden" name="_email.subject" value="New Newsletter Subscription - Michael Paws">
-            <input type="hidden" name="_email.from" value="Michael Paws Newsletter">
+          <form class="newsletter-form" id="newsletterForm" action="https://submit-form.com/2lf3YfUv0" method="POST">
             <input type="email" name="email" class="newsletter-input" placeholder="Your email" required>
             <button type="submit" class="newsletter-btn">Join</button>
           </form>
@@ -93,6 +91,7 @@
 
     const formData = new FormData(form);
     const data = Object.fromEntries(formData.entries());
+    data._email = { subject: "New Newsletter Subscription - Michael Paws", from: "Michael Paws Newsletter" };
     const submitBtn = form.querySelector('button[type="submit"]') as HTMLButtonElement;
 
     const originalText = submitBtn.textContent;
