@@ -142,6 +142,7 @@ const puppyNames = ["Alex", "Ashley", "Bella", "Belly", "Boston", "Carlos", "Chi
     e.preventDefault();
 
     const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
     const submitBtn = form.querySelector('button[type="submit"]') as HTMLButtonElement;
 
     const originalHTML = submitBtn.innerHTML;
@@ -151,8 +152,8 @@ const puppyNames = ["Alex", "Ashley", "Bella", "Belly", "Boston", "Carlos", "Chi
     try {
       const response = await fetch("https://submit-form.com/2lf3YfUv0", {
         method: "POST",
-        headers: { "Accept": "application/json" },
-        body: formData
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        body: JSON.stringify(data)
       });
 
       if (response.ok) {
