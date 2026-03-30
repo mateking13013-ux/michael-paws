@@ -75,9 +75,9 @@ export const puppies: Puppy[] = [
     image: '/images/chill.webp',
     sex: 'Male',
     age: '9 Weeks',
-    status: 'Sold',
+    status: 'Available',
     price: 800,
-    description: 'Chill is a laid-back and easygoing Staffie who lives up to his name. He has a calm temperament but still enjoys a good play session. His gentle nature makes him great with children and other pets. Chill has found his forever home!',
+    description: 'Chill is a laid-back and easygoing Staffie who lives up to his name. He has a calm temperament but still enjoys a good play session. His gentle nature makes him great with children and other pets. Chill is looking for his forever home!',
     coat: 'Blue fawn with white markings'
   },
   {
@@ -115,7 +115,7 @@ export const puppies: Puppy[] = [
     image: '/images/echo.webp',
     sex: 'Male',
     age: '8 Weeks',
-    status: 'Available',
+    status: 'Sold',
     price: 800,
     description: 'Echo is a spirited and curious Staffie puppy who loves discovering new things. He has a wonderful temperament and is naturally sociable. His compact build and expressive face give him tons of character. Echo is ready to fill your home with love and laughter.',
     coat: 'Blue brindle with white markings'
