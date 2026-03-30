@@ -33,11 +33,11 @@ export const puppies: Puppy[] = [
   {
     name: 'Bella',
     image: '/images/bella.webp',
-    sex: 'Male',
+    sex: 'Female',
     age: '11 Weeks',
     status: 'Available',
     price: 800,
-    description: 'Bella is a strong and sturdy Staffie with a heart of gold. Despite his muscular build, he is incredibly gentle and loves nothing more than snuggling on the couch. He is well-socialized and confident in new situations. Bella is ready to become your loyal best friend.',
+    description: 'Bella is a strong and sturdy Staffie with a heart of gold. Despite her muscular build, she is incredibly gentle and loves nothing more than snuggling on the couch. She is well-socialized and confident in new situations. Bella is ready to become your loyal best friend.',
     coat: 'Blue with white chest'
   },
   {
@@ -183,11 +183,11 @@ export const puppies: Puppy[] = [
   {
     name: 'Mia',
     image: '/images/mia.webp',
-    sex: 'Male',
+    sex: 'Female',
     age: '11 Weeks',
     status: 'Available',
     price: 800,
-    description: 'Mia is a strong and confident Staffordshire Bull Terrier with an outgoing personality. He loves to explore and is always up for an adventure. His well-built frame and friendly demeanor make him an ideal companion. Mia is ready to bring endless joy to his new home.',
+    description: 'Mia is a strong and confident Staffordshire Bull Terrier with an outgoing personality. She loves to explore and is always up for an adventure. Her well-built frame and friendly demeanor make her an ideal companion. Mia is ready to bring endless joy to her new home.',
     coat: 'Blue with white chest and paws'
   },
   {
