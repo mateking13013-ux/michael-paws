@@ -165,7 +165,7 @@ export const puppies: Puppy[] = [
     image: '/images/mack.webp',
     sex: 'Male',
     age: '11 Weeks',
-    status: 'Available',
+    status: 'Sold',
     price: 800,
     description: 'Mack is a robust and handsome Staffie with a bold personality. He is confident, friendly, and loves to be the center of attention. His powerful build and striking coat make him a real head-turner. Mack would thrive in an active household with plenty of love to give.',
     coat: 'Dark brindle with white chest'

@@ -205,7 +205,7 @@ const puppies = [
     breed: "Staffordshire Bull Terrier",
     registration: "Yes, AKC",
     color: "Dark brindle with white chest",
-    status: "Available",
+    status: "Sold",
     price: 750,
     description: "Hey! I'm Mack, a robust and handsome Staffie with a bold personality! I'm confident, friendly, and love to be the center of attention. My powerful build and striking coat make me a real head-turner. I would thrive in an active household with plenty of love to give!",
     images: ["/images/mack.webp"],
@@ -385,7 +385,8 @@ const puppies = [
 <section class="puppies-section">
   <div class="container">
     {puppies.map((puppy, puppyIndex) => (
-      <div class="puppy-card">
+      <div class={`puppy-card ${puppy.status === 'Sold' ? 'sold-card' : ''}`}>
+        {puppy.status === 'Sold' && <div class="sold-banner">SOLD</div>}
         <div class="puppy-gallery">
           <div class="main-image">
             <img id={`main-img-${puppyIndex}`} src={puppy.images[0]} alt={puppy.name} style={puppy.imagePosition ? `object-position: ${puppy.imagePosition}` : ''} />
@@ -500,6 +501,7 @@ const puppies = [
   }
 
   .puppy-card {
+    position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
     background: #fff;
@@ -507,6 +509,22 @@ const puppies = [
     overflow: hidden;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     margin-bottom: 30px;
+  }
+
+  .sold-banner {
+    position: absolute;
+    top: 28px;
+    left: -35px;
+    background: #e53e3e;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 8px 40px;
+    transform: rotate(-45deg);
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
   }
 
   .puppy-gallery {
@@ -572,6 +590,11 @@ const puppies = [
   .status-badge.reserved {
     background: #E8A94A;
     color: #0F1B33;
+  }
+
+  .status-badge.sold {
+    background: #e53e3e;
+    color: #fff;
   }
 
   .price-banner {
