@@ -225,7 +225,7 @@ export const puppies: Puppy[] = [
     image: '/images/roy.webp',
     sex: 'Male',
     age: '11 Weeks',
-    status: 'Available',
+    status: 'Sold',
     price: 800,
     description: 'Roy is a friendly and sociable Staffie puppy who gets along with everyone. He has a happy-go-lucky attitude that makes him a joy to be around. His well-proportioned build and glossy coat give him a distinguished appearance. Roy is looking for a loving family to share his life with.',
     coat: 'Red brindle with white markings'
